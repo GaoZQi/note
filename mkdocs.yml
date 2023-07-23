@@ -115,7 +115,10 @@ markdown_extensions:
 
 # 导航栏
 nav:
-  - 主页: index.md
+  - 主页: 
+      - 主页: index.md
+      - git: https://git.qwq.cc/
+      - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
   - 笔记:
       - mkdocs: md/Notes/MkDocs/mkdocs.md
       - mkdocs-material: md/Notes/MkDocs/mkdocs-material.md
@@ -128,5 +131,3 @@ nav:
       - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: md\WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
       - 2023年网络空间安全实验技能竞赛: md\WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
       - 第十六届全国大学生信息安全竞赛——创新实践能力赛: md\WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
-  - git: https://git.qwq.cc/
-  - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
