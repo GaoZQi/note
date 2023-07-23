@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://gaozqi.github.io/GDocs/</loc>
-         <lastmod>2023-07-22</lastmod>
+         <loc>https://GaoZQi.github.io/GDocs/</loc>
+         <lastmod>2023-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/GDocs/about/</loc>
+         <lastmod>2023-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/GDocs/MkDocs/mkdocs-material/</loc>
+         <lastmod>2023-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/GDocs/MkDocs/mkdocs/</loc>
+         <lastmod>2023-07-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
