@@ -47,7 +47,7 @@
 'This is also a string.'
 ```
 
-在字符串中如果又因好或者撇号可以这样处理：
+在字符串中如果又有引号或者撇号可以这样处理：
 
 ```python
 'I tolt my friend, "Python is my favorite language!"'
@@ -113,7 +113,7 @@ Ada Lovelace
 
 ```py
 >>> print("\tPython")
-	Python
+ Python
 ```
 
 ##### 换行符`\n`
@@ -202,4 +202,3 @@ JavaScript
 #### 常量
 
 #### 注释
-

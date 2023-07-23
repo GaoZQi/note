@@ -5,13 +5,21 @@ site_author: GaoZQi # 网站作者
 
 repo_name: GaoZQi/note  # 仓库名称
 repo_url: https://github.com/GaoZQi/note  # 仓库地址
-edit_uri: tree/main/docs  # 编辑链接
+edit_uri: tree/main/md  # 编辑链接
 
 theme: 
   name: 'material'  # 主题名称
   language: 'zh'  # 网站语言
   icon: 
     logo: material/notebook-outline
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate  
 #   features:
 #     - content.code.annotate
 #     - navigation.tracking
@@ -37,9 +45,6 @@ theme:
     #   bug: octicons/bug-16
     #   example: octicons/beaker-16
     #   quote: octicons/quote-16
-  features:
-    - content.code.copy
-    - content.code.annotate  
 
 
   palette:
@@ -65,7 +70,7 @@ theme:
         name: Switch to system preference
     
   # extra_css:
-  #     - stylesheets/extra.css # docs/stylesheets/extra.css
+  #     - stylesheets/extra.css # md/stylesheets/extra.css
   font:
     text: 'Noto Sans SC'
     code: 'Noto Sans Mono SC'
@@ -81,21 +86,47 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
 
 # 导航栏
 nav:
   - 主页: index.md
   - 笔记:
-      - mkdocs: markdown/Notes/MkDocs/mkdocs.md
-      - mkdocs-material: markdown/Notes/MkDocs/mkdocs-material.md
-      - Python: markdown/Notes/Python/Python.md
-      - ROS: markdown/Notes/ROS/ROS.md
+      - mkdocs: md/Notes/MkDocs/mkdocs.md
+      - mkdocs-material: md/Notes/MkDocs/mkdocs-material.md
+      - Python: md/Notes/Python/Python.md
+      - ROS: md/Notes/ROS/ROS.md
       - 其他:
-        - Matlab: markdown/Notes/other/Matlab.md
+        - Matlab: md/Notes/other/Matlab.md
       # - 关于: about.md
   - WP:
-      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: markdown\WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
-      - 2023年网络空间安全实验技能竞赛: markdown\WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
-      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: markdown\WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
+      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: md\WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
+      - 2023年网络空间安全实验技能竞赛: md\WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
+      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: md\WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
   - git: https://git.qwq.cc/
+  - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
