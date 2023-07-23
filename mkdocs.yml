@@ -1,16 +1,17 @@
-site_name: GDocs
-site_url: https://GaoZQi.github.io/GDocs/
-repo_name: GaoZQi/GDocs
-repo_url: https://github.com/GaoZQi/GDocs
-edit_uri: tree/main/docs
-site_description: 个人文档
-site_author: GaoZQi
+site_name: GaoZQi's Note  # 网站名称
+site_url: https://GaoZQi.github.io/note/ # 网站地址
+site_description: 个人文档  # 网站描述
+site_author: GaoZQi # 网站作者
+
+repo_name: GaoZQi/note  # 仓库名称
+repo_url: https://github.com/GaoZQi/note  # 仓库地址
+edit_uri: tree/main/docs  # 编辑链接
 
 theme: 
-  name: 'material'
-  language: 'zh'
-#   icon: 
-#     logo: material/notebook-outline
+  name: 'material'  # 主题名称
+  language: 'zh'  # 网站语言
+  icon: 
+    logo: material/notebook-outline
 #   features:
 #     - content.code.annotate
 #     - navigation.tracking
@@ -20,9 +21,9 @@ theme:
 #   font: false
 #   palette:
 #     - scheme: default
-  # logo: assets/logo.png # logo
-  favicon: images/favicon.png  # favicon
-  icon:
+  # logo: assets/logo.png # 网站logo
+  favicon: images/star.png  # 网站图标
+  # icon:
     # admonition:
     #   note: octicons/tag-16
     #   abstract: octicons/checklist-16
@@ -70,6 +71,7 @@ theme:
     code: 'Noto Sans Mono SC'
 
 
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -81,10 +83,19 @@ markdown_extensions:
   - pymdownx.superfences
 
 
-
+# 导航栏
 nav:
   - 主页: "index.md"
-  - 文档:
-      - mkdocs: MkDocs/mkdocs.md
-      - mkdocs-material: MkDocs/mkdocs-material.md
-      - 关于: about.md
+  - 笔记:
+      - mkdocs: Notes/MkDocs/mkdocs.md
+      - mkdocs-material: Notes/MkDocs/mkdocs-material.md
+      - Python: Notes/Python/Python.md
+      - ROS: Notes/ROS/ROS.md
+      - 其他:
+        - Matlab: Notes/other/Matlab.md
+      # - 关于: about.md
+  - WP:
+      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
+      - 2023年网络空间安全实验技能竞赛: WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
+      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
+  - git: https://git.qwq.cc/
