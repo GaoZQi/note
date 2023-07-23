@@ -1,0 +1,1235 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人文档">
+      
+      
+        <meta name="author" content="GaoZQi">
+      
+      
+        <link rel="canonical" href="https://GaoZQi.github.io/note/WriteUp/2023%E5%B9%B4%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B/2023%E5%B9%B4%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AE%9E%E9%AA%8C%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B/">
+      
+      
+        <link rel="prev" href="../../2023%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%99%95%E8%A5%BF%E7%9C%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B--%E6%9C%AC%E7%A7%91%E9%AB%98%E6%A0%A1%E7%BB%84/%E7%AD%BE%E5%88%B0%E9%A2%98/">
+      
+      
+        <link rel="next" href="../../%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E2%80%94%E2%80%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%E8%83%BD%E5%8A%9B%E8%B5%9B/%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E2%80%94%E2%80%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%E8%83%BD%E5%8A%9B%E8%B5%9B/">
+      
+      <link rel="icon" href="../../../images/star.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>2023年网络空间安全实验技能竞赛 - GaoZQi's Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CNoto+Sans+Mono+SC:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"Noto Sans Mono SC"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2023writeup" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="GaoZQi&#39;s Note" class="md-header__button md-logo" aria-label="GaoZQi's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GaoZQi's Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2023年网络空间安全实验技能竞赛
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GaoZQi/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GaoZQi/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="GaoZQi&#39;s Note" class="md-nav__button md-logo" aria-label="GaoZQi's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    GaoZQi's Note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GaoZQi/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GaoZQi/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Notes/MkDocs/mkdocs/" class="md-nav__link">
+        mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Notes/MkDocs/mkdocs-material/" class="md-nav__link">
+        mkdocs-material
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Notes/Python/Python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Notes/ROS/ROS/" class="md-nav__link">
+        ROS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          其他
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Notes/other/Matlab/" class="md-nav__link">
+        Matlab
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          WP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          WP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%B1%8A%E9%99%95%E8%A5%BF%E7%9C%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B--%E6%9C%AC%E7%A7%91%E9%AB%98%E6%A0%A1%E7%BB%84/%E7%AD%BE%E5%88%B0%E9%A2%98/" class="md-nav__link">
+        2023年第三届陕西省大学生网络安全技能大赛--本科高校组
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2023年网络空间安全实验技能竞赛
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2023年网络空间安全实验技能竞赛
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    签到
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    base
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatisthis" class="md-nav__link">
+    ;;what;;is;;this;;?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypot" class="md-nav__link">
+    Crypot
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rot13" class="md-nav__link">
+    rot13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    山岚
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsa-roll" class="md-nav__link">
+    Rsa Roll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    维吉尼亚
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwn" class="md-nav__link">
+    Pwn
+  </a>
+  
+    <nav class="md-nav" aria-label="Pwn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miao" class="md-nav__link">
+    miao~
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+    <nav class="md-nav" aria-label="Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cms" class="md-nav__link">
+    cms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E2%80%94%E2%80%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%E8%83%BD%E5%8A%9B%E8%B5%9B/%E7%AC%AC%E5%8D%81%E5%85%AD%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E2%80%94%E2%80%94%E5%88%9B%E6%96%B0%E5%AE%9E%E8%B7%B5%E8%83%BD%E5%8A%9B%E8%B5%9B/" class="md-nav__link">
+        第十六届全国大学生信息安全竞赛——创新实践能力赛
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://git.qwq.cc/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+    <nav class="md-nav" aria-label="Misc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    签到
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base" class="md-nav__link">
+    base
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatisthis" class="md-nav__link">
+    ;;what;;is;;this;;?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypot" class="md-nav__link">
+    Crypot
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rot13" class="md-nav__link">
+    rot13
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    山岚
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsa-roll" class="md-nav__link">
+    Rsa Roll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    维吉尼亚
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwn" class="md-nav__link">
+    Pwn
+  </a>
+  
+    <nav class="md-nav" aria-label="Pwn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#miao" class="md-nav__link">
+    miao~
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+    <nav class="md-nav" aria-label="Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cms" class="md-nav__link">
+    cms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="2023writeup">2023年网络空间安全实验技能竞赛（下午场）Writeup</h1>
+<h2 id="misc">Misc</h2>
+<h3 id="_1">签到</h3>
+<blockquote>
+<p>欢迎来到CTF。为了得取题目的分值，你需要通过题目给出的条件找寻特殊字符串。除非题目另行说明，否则通常是以<code>flag</code>开头的、以大括号<code>{ }</code>包裹的字符串。</p>
+<p>关注公众号<code>网联三航 安守四方</code>并发送<code>flag</code>获取本题<code>flag</code></p>
+<p>附件:</p>
+<p><img alt="img" src="../assets/ctf.jpg" /></p>
+</blockquote>
+<p>在公众号发送<code>flag</code>,获得flag</p>
+<p><img alt="" src="../assets/new%20ducument.jpg" /></p>
+<h3 id="base">base</h3>
+<blockquote>
+<p>base家族！</p>
+<p>附件:</p>
+<p><a href="attachment\base\attachment">attachment</a> </p>
+</blockquote>
+<p>打开获得一串文本:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>4C4A575851324332474E32475554544B4A5A5746555632574E524E45474D4C4E4C4A445645334B4D4B5249584F5453584B5632465356435A504A4847534D4C494C4A43475132435A504A4647535453484B5532453652325348453D3D3D3D3D3D
+</code></pre></div>
+<p>利用https://cyberchef.org/自动破解得到flag</p>
+<p><img alt="image-20230609224804977" src="../assets/image-20230609224804977.png" /></p>
+<h3 id="whatisthis">;;what;;is;;this;;?</h3>
+<blockquote>
+<p>附件:</p>
+<p><a href="../attachment/%3B%3Bwhat%3B%3Bis%3B%3Bthis%3B%3B/1.py">1.py</a> </p>
+</blockquote>
+<p>里面有加密脚本</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">L</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">perm</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">perm</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">msg</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/flag&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;;&quot;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="n">res</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="n">L</span><span class="p">][</span><span class="n">perm</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">res</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nb">print</span> <span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</code></pre></div>
+<p>打开实例,拿到加密后的文本</p>
+<p><img alt="image-20230609225115936" src="../assets/image-20230609225115936.png" /></p>
+<p><code>__Ic3W4w01A3;;9fmNla6;f;_}ga;O7_3Tl;z;;765;{;;;S</code></p>
+<p><strong>根据脚本尝试写破解脚本,观察到<code>perm</code>被随机排列,首先构造脚本尝试爆破<code>perm</code>的值:</strong></p>
+<ul>
+<li>观察到加密脚本第一步会在字符串后面添加<code>;</code>是其长度可以被16整除</li>
+<li>统计分号个数为12</li>
+<li>密文总长度48</li>
+<li>算出明文长度应为36</li>
+<li>同时明文满足<code>flag{...}</code>的特征</li>
+<li>统计其中<code>g, {, }</code>出现次数为一</li>
+<li>构造特征字符串<code>flag{012345678901234567890123456789};;;;;;;;;;;;</code></li>
+<li>通过加密判断特征字符出现位置与密文是否相同</li>
+</ul>
+<blockquote>
+<p>解密脚本</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">itertools</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">L</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">perm</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#将perm全排列</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">permutations</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">perm</span><span class="p">))</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">:</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;flag</span><span class="si">{012345678901234567890123456789}</span><span class="s1">;;;;;;;;;;;;&#39;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="c1"># 原加密部分</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>                <span class="n">res</span> <span class="o">+=</span> <span class="n">msg</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="n">L</span><span class="p">][</span><span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="n">res</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="c1"># __Ic3W4w01A3;;9fmNla6;f;_}ga;O7_3Tl;z;;765;{;;;S</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="k">if</span> <span class="n">msg</span><span class="p">[</span><span class="mi">26</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;g&#39;</span> <span class="ow">and</span> <span class="n">msg</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;{&#39;</span> <span class="ow">and</span> <span class="n">msg</span><span class="p">[</span><span class="mi">25</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;}&#39;</span><span class="p">:</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="nb">print</span> <span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;flag.txt&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>输出 <a href="attachment\;;what;;is;;this;;\flag">flag</a> :</p>
+<p><code>664891f;6421;049857a0;;2;}g3;39175l;3857;2;{;;;0 (1, 0, 3, 7, 4, 2, 5, 6)</code>
+<code>86489;1;3421;;90157a06079}g3;456f5l;3;;;;2;{;782 (1, 0, 3, 7, 4, 2, 6, 5)</code>
+<code>86489406;421;9;1557a0;;f2}g3;86;75l;331792;{;;;0 (1, 0, 3, 7, 4, 5, 2, 6)</code>
+<code>f64890123421;890;57a06789}g3;41675l;35;;;2;{;;;; (1, 0, 3, 7, 4, 5, 6, 2)</code>
+<code>16489;98;421;;07;57a0;606}g3;7;f35l;358;22;{;419 (1, 0, 3, 7, 4, 6, 2, 5)</code>
+<code>;6489;;2;421;795857a0f691}g3;1;735l;368402;{;;;0 (1, 0, 3, 7, 4, 6, 5, 2)</code>
+<code>264890108421;896;57a067;3}g3;45195l;3;;7;2;{;;;f (2, 0, 3, 7, 4, 1, 5, 6)</code>
+<code>;64890077421;;94;57a0;29;}g3;116;5l;3f85;2;{;368 (2, 0, 3, 7, 4, 1, 6, 5)</code>
+<code>264896908421;;;6;57a070;3}g3;;4195l;3817;2;{;;5f (2, 0, 3, 7, 4, 5, 1, 6)</code>
+<code>464896;98421;16f;57a02;;3}g3;01;95l;3577;2;{;08; (2, 0, 3, 7, 4, 5, 6, 1)</code>
+<code>964894062421;;;1557a0738f}g3;;0;;5l;3891;2;{;67; (2, 0, 3, 7, 4, 6, 1, 5)</code>
+<code>064896803421;61;757a0;f89}g3;;4175l;3;9;;2;{;2;5 (2, 0, 3, 7, 4, 6, 5, 1)</code>
+<code>;64890;7;421;965457a09;10}g3;76385l;382f;2;{;1;; (5, 0, 3, 7, 4, 1, 2, 6)</code>
+<code>764890024421;;68157a0;f;9}g3;15375l;3;;962;{;;;8 (5, 0, 3, 7, 4, 1, 6, 2)</code>
+<code>f6489;793421;819;57a0;286}g3;4;6;5l;300;52;{;71; (5, 0, 3, 7, 4, 2, 1, 6)</code>
+<code>f64890123421;890157a06789}g3;45675l;3;;;;2;{;;;; (5, 0, 3, 7, 4, 2, 6, 1)</code>
+<code>664899;21421;3;9f57a0;16;}g3;;8405l;305;;2;{;877 (5, 0, 3, 7, 4, 6, 1, 2)</code>
+<code>f64890123421;890157a06789}g3;45675l;3;;;;2;{;;;; (5, 0, 3, 7, 4, 6, 2, 1)</code>
+<code>664890;;0421;919757a01;2;}g3;8f475l;3;6;32;{;85; (6, 0, 3, 7, 4, 1, 2, 5)</code>
+<code>964890123421;891057a067;f}g3;45675l;3;;;;2;{;;;8 (6, 0, 3, 7, 4, 1, 5, 2)</code>
+<code>66489;8;;421;f19;57a0090;}g3;68575l;31;232;{;47; (6, 0, 3, 7, 4, 2, 1, 5)</code>
+<code>66489092;421;41;857a07;31}g3;;9575l;36;;02;{;f;8 (6, 0, 3, 7, 4, 2, 5, 1)</code>
+<code>964896923421;;;1057a070;f}g3;;4675l;381;;2;{;;58 (6, 0, 3, 7, 4, 5, 1, 2)</code>
+<code>;64898206421;48;157a0f7;9}g3;93175l;35;;;2;{;06; (6, 0, 3, 7, 4, 5, 2, 1)</code></p>
+</blockquote>
+<p>再次观察分号特征,选出唯一符合条件的结果:</p>
+<p><code>764890024421;;68157a0;f;9}g3;15375l;3;;962;{;;;8 (5, 0, 3, 7, 4, 1, 6, 2)</code></p>
+<p><strong>根据<code>perm</code>编写破解脚本：</strong></p>
+<blockquote>
+<p>破译脚本 <a href="../attachment/%3B%3Bwhat%3B%3Bis%3B%3Bthis%3B%3B/decode.py">decode.py</a> </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">L</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># 原perm = [5, 0, 3, 7, 4, 1, 6, 2]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># 求逆perm = [1, 5, 7, 2, 4, 0, 6, 3]</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">perm</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># 密文</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">encrypted_msg</span> <span class="o">=</span> <span class="s2">&quot;__Ic3W4w01A3;;9fmNla6;f;_}ga;O7_3Tl;z;;765;{;;;S&quot;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 明文</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="c1"># 第一步将密文按照求逆perm的顺序排列</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">encrypted_msg</span><span class="p">),</span><span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="n">msg</span> <span class="o">+=</span> <span class="n">encrypted_msg</span><span class="p">[</span><span class="n">j</span><span class="p">:</span><span class="n">j</span><span class="o">+</span><span class="n">L</span><span class="p">][</span><span class="n">perm</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="c1"># 第二步将密文左移一位</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">47</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">47</span><span class="p">]</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">encrypted_msg</span> <span class="o">=</span> <span class="n">msg</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="c1"># 将密文前24与后24交错拼接</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">24</span><span class="p">):</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        <span class="n">msg</span> <span class="o">+=</span> <span class="n">encrypted_msg</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">encrypted_msg</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="mi">24</span><span class="p">]</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="c1"># 将密文左移一位</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="mi">47</span><span class="p">:]</span> <span class="o">+</span> <span class="n">msg</span><span class="p">[:</span><span class="mi">47</span><span class="p">]</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    <span class="n">encrypted_msg</span> <span class="o">=</span> <span class="n">msg</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">))</span>
+</code></pre></div>
+</blockquote>
+<p>获得<code>flag{WOw_IT_lS_4mAz1N6_f7635a0793c3}</code></p>
+<h2 id="crypot">Crypot</h2>
+<h3 id="rot13">rot13</h3>
+<blockquote>
+<p>1Ebbg8Vf7Abg3Nyybjrq</p>
+</blockquote>
+<p>根据题干通过<code>rot13</code>破解获得　flag：<code>1root8is7not3allowed</code></p>
+<h3 id="_2">山岚</h3>
+<blockquote>
+<p>山岚f5-lf5aa9gc9{-8648cbfb4f979c-c2a851d6e5-c}</p>
+</blockquote>
+<p>猜测为栅栏密码选择爆破<code>flag{6cb9c256-5fac-4b47-a1ec-59988ff9c8d5}</code></p>
+<h3 id="rsa-roll">Rsa Roll</h3>
+<blockquote>
+<p>附件：</p>
+<p><a href="../attachment/Rsa%20Roll/RsaRoll.zip">RsaRoll.zip</a> </p>
+<p>题目：</p>
+<p>RSA roll！roll！roll！
+Only number and a-z
+（don't use editor
+which MS provide）</p>
+<p>data：</p>
+<p>{920139713,19}</p>
+<p>704796792
+752211152
+274704164
+18414022
+368270835
+483295235
+263072905
+459788476
+483295235
+459788476
+663551792
+475206804
+459788476
+428313374
+475206804
+459788476
+425392137
+704796792
+458265677
+341524652
+483295235
+534149509
+425392137
+428313374
+425392137
+341524652
+458265677
+263072905
+483295235
+828509797
+341524652
+425392137
+475206804
+428313374
+483295235
+475206804
+459788476
+306220148</p>
+</blockquote>
+<p>data很有特点~~直接搜<a href="https://blog.csdn.net/xiao__1bai/article/details/123567209">BUUCTF中Crypto的RSAROLL</a>~~</p>
+<p>获得<code>flag{13212je2ue28fy71w8u87y31r78eu1e2}</code></p>
+<h3 id="_3">维吉尼亚</h3>
+<blockquote>
+<p>小明发出来一串密文c：lvbcfstfly，他发出的明文m是什么？ flag{m} 题目提示：{34 18 25 13 36 13 14 13 vghn 0ol 12wa qwsz lkjn}</p>
+</blockquote>
+<p>根据提示后面字母投射到键盘</p>
+<p><img alt="image-20230609235638289" src="../assets/image-20230609235638289.png" /></p>
+<p>获得密钥<code>bpqam</code>，获得明文<code>kglctreplm</code></p>
+<h2 id="pwn">Pwn</h2>
+<h3 id="miao">miao~</h3>
+<blockquote>
+<p>帮我找找我的修猫</p>
+<p>附件： <a href="attachment\miao~\miao">miao</a> </p>
+<p>hint：签到题还想要提示？</p>
+</blockquote>
+<p>用IDA Pro(x64)打开：</p>
+<p><img alt="image-20230610000755534" src="../assets/image-20230610000755534.png" /></p>
+<p>注意到后面<code>system("/bin/sh");</code></p>
+<p>打开实例运行：</p>
+<p><img alt="image-20230610001002463" src="../assets/image-20230610001002463.png" /></p>
+<p>输入<code>cat flag</code>，发现被过滤：</p>
+<p><img alt="image-20230610001039497" src="../assets/image-20230610001039497.png" /></p>
+<p>通过<code>tac flag</code>成功绕过：</p>
+<p><img alt="image-20230610001111462" src="../assets/image-20230610001111462.png" /></p>
+<h2 id="web">Web</h2>
+<h3 id="cms">cms</h3>
+<blockquote>
+<p><a href="http://10.60.19.105/">http://10.60.19.105</a></p>
+<p>本题难度下降，分数下降</p>
+</blockquote>
+<p>使用<code>dirsearch</code>扫描目录，发现<code>/phpinfo.php</code>，搜索<code>flag</code></p>
+<p><img alt="image-20230610001505714" src="../assets/image-20230610001505714.png" /></p>
+<h1 id="2023writeup_1">2023年网络空间安全实验技能竞赛（上午场）Writeup</h1>
+<h2 id="misc_1">Misc</h2>
+<h3 id="linuxquestion">linuxquestion</h3>
+<blockquote>
+<p>查找名字包含GenerateCipher的应用程序xxx，其可读可执行且大小大于100000c。</p>
+<p>执行上述程序，输入自己的学号获得密文。</p>
+<p>查找系统定时任务，阅读定时执行的脚本。</p>
+<p>xxx应用程序使用与定时任务脚本相同的加密方法，请编写脚本，对步骤2获得的密文解密得到明文。flag形式为flag{xxxxx} </p>
+<p>ssh用户名口令如下 linuxexam cs2023</p>
+</blockquote>
+<p>1.第一步查找名字包含GenerateCipher的应用程序xxx，其可读可执行且大小大于100000c。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*GenerateCipher*&quot;</span><span class="w"> </span>-perm<span class="w"> </span>/u+rx<span class="w"> </span>-size<span class="w"> </span>+100000c<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+<p>得到<code>/etc/linuxexam_GenerateCipher/GenerateCipher6</code></p>
+<p>运行输入学号获得密文：<code>TpE2EfEdTpi3EpXrTZi1SJA1TCE0SfAfSfOfSJSeSfS3FJOcTfq2Fpi1TfO0UZW0S2KfSpScSfOfSpSfSfGfSfSdSfqfSG==</code></p>
+<p>2.查找系统定时任务，阅读定时执行的脚本。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/cron.d/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>vim<span class="w"> </span>./cronjob_linuxexam
+</code></pre></div>
+<p>获得加密脚本路径<code>/usr/bin/encrypto.sh</code></p>
+<p>查看加密脚本 <a href="../attachment/linuxquestion/cipher.sh">cipher.sh</a> </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># 加密函数</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>_cipher<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">text</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">shift</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">result</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">text</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="nv">char</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">text</span><span class="p">:</span><span class="nv">i</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$char</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">[</span>a-zA-Z<span class="o">]</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$char</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span><span class="o">[</span>a-z<span class="o">]</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">                </span><span class="nv">ascii_offset</span><span class="o">=</span><span class="m">97</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">            </span><span class="k">else</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">                </span><span class="nv">ascii_offset</span><span class="o">=</span><span class="m">65</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">            </span><span class="k">fi</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">            </span><span class="nv">ascii_code</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%d&quot;</span><span class="w"> </span><span class="s2">&quot;&#39;</span><span class="nv">$char</span><span class="s2">&quot;</span><span class="k">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">            </span><span class="nv">shifted_code</span><span class="o">=</span><span class="k">$((</span><span class="o">(</span><span class="nv">ascii_code</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">ascii_offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">shift</span><span class="o">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">ascii_offset</span><span class="k">))</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">            </span><span class="nv">shifted_char</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\\</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;%03o&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$shifted_code</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="k">)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">            </span><span class="nv">result</span><span class="o">+=</span><span class="s2">&quot;</span><span class="nv">$shifted_char</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="k">else</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">            </span><span class="nv">result</span><span class="o">+=</span><span class="s2">&quot;</span><span class="nv">$char</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="k">fi</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">    </span><span class="k">done</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$result</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="o">}</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="c1"># 加密明文</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>encrypt_plaintext<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">plaintext</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">encoded_text</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$plaintext</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xxd<span class="w"> </span>-p<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="k">)</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">encrypted_text</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$encoded_text</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="k">)</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">ciphertext</span><span class="o">=</span><span class="k">$(</span>_cipher<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$encrypted_text</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">15</span><span class="k">)</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ciphertext</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="o">}</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="c1"># 主函数</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>main<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">    </span><span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;请输入明文: &quot;</span><span class="w"> </span>plaintext
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">    </span><span class="nv">ciphertext</span><span class="o">=</span><span class="k">$(</span>encrypt_plaintext<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$plaintext</span><span class="s2">&quot;</span><span class="k">)</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;加密得到的密文: </span><span class="nv">$ciphertext</span><span class="s2">&quot;</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="o">}</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="c1"># 执行主函数</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>main
+</code></pre></div>
+<p>分析加密过程：</p>
+<ul>
+<li>将文本转成16进制编码</li>
+<li>base64加密</li>
+<li>恺撒密码，位移数15</li>
+</ul>
+<p>3.应用程序使用与定时任务脚本相同的加密方法，编写脚本 <a href="../attachment/linuxquestion/decode.py">decode.py</a> </p>
+<p>```：python</p>
+<h1 id="tpe2efedtpi3epxrtzi1sja1tce0sfafsfofsjsesfs3fjoctfq2fpi1tfo0uzw0s2kfspscsfofspsfsfgfsfsdsfqfsg">TpE2EfEdTpi3EpXrTZi1SJA1TCE0SfAfSfOfSJSeSfS3FJOcTfq2Fpi1TfO0UZW0S2KfSpScSfOfSpSfSfGfSfSdSfqfSG==</h1>
+<p>import base64</p>
+<p>def decrypt(text, shift):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            ascii_offset = 97 if char.islower() else 65
+            ascii_code = ord(char)
+            shifted_code = ((ascii_code - ascii_offset - shift) % 26) + ascii_offset
+            shifted_char = chr(shifted_code)
+            result += shifted_char
+        else:
+            result += char
+    return result</p>
+<p>def brute_force_decrypt(text):
+    for shift in range(26):  # 尝试所有可能的位移量
+        decrypted_text = decrypt(text, shift)
+        try:
+            decoded_text = base64.b64decode(decrypted_text).decode('utf-8')
+            print("尝试位移量：", shift)
+            print("解密后的文本：", decoded_text)
+            ascii_output = ""
+            for i in range(0, len(decoded_text), 2):
+                hex_code = decoded_text[i:i+2]
+                try:
+                    ascii_char = chr(int(hex_code, 16))
+                    ascii_output += ascii_char
+                except ValueError:
+                    pass  # 忽略数值错误
+            print("转换为ASCII：", ascii_output)
+        except (UnicodeDecodeError, ValueError):
+            pass  # 忽略解码错误和数值错误</p>
+<p>encrypted_text = input("请输入要解密的文本：")
+brute_force_decrypt(encrypted_text)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt; 输出：
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&gt; 请输入要解密的文本：`TpE2EfEdTpi3EpXrTZi1SJA1TCE0SfAfSfOfSJSeSfS3FJOcTfq2Fpi1TfO0UZW0S2KfSpScSfOfSpSfSfGfSfSdSfqfSG==`
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>&gt; 尝试位移量： 6
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>&gt; 解密后的文本： `666c61677b4e5750555f4353323032337d20796f757249443a32303232333033313930`
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>&gt; 转换为ASCII： **flag{NWPU_CS2023}** yourID:2022303190
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a># Web
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>### HTTP响应码
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>根据提示需要找到两个302和404响应码的页面，
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>通过`curl`工具
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>```bash
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>curl -i http://ip:port/xxx
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>curl -i http://ip:port/hint
+</code></pre></div></p>
+<p><img alt="302" src="../assets/302.jpg" /></p>
+<p>参看网页源代码获得两个flag</p>
+<p><code>flag{404--the-most-common-error-code}</code></p>
+<p><code>flag{302--You-need-to-go-somewhere-else}</code></p>
+<h3 id="sql">SQL注入</h3>
+<p>通过注入点注入获得<code>flag{michael1}</code></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
