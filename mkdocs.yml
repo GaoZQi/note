@@ -64,8 +64,8 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
     
-  extra_css:
-      - stylesheets/extra.css # docs/stylesheets/extra.css
+  # extra_css:
+  #     - stylesheets/extra.css # docs/stylesheets/extra.css
   font:
     text: 'Noto Sans SC'
     code: 'Noto Sans Mono SC'
@@ -85,17 +85,17 @@ markdown_extensions:
 
 # 导航栏
 nav:
-  - 主页: "index.md"
+  - 主页: index.md
   - 笔记:
-      - mkdocs: Notes/MkDocs/mkdocs.md
-      - mkdocs-material: Notes/MkDocs/mkdocs-material.md
-      - Python: Notes/Python/Python.md
-      - ROS: Notes/ROS/ROS.md
+      - mkdocs: markdown/Notes/MkDocs/mkdocs.md
+      - mkdocs-material: markdown/Notes/MkDocs/mkdocs-material.md
+      - Python: markdown/Notes/Python/Python.md
+      - ROS: markdown/Notes/ROS/ROS.md
       - 其他:
-        - Matlab: Notes/other/Matlab.md
+        - Matlab: markdown/Notes/other/Matlab.md
       # - 关于: about.md
   - WP:
-      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
-      - 2023年网络空间安全实验技能竞赛: WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
-      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
+      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: markdown\WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
+      - 2023年网络空间安全实验技能竞赛: markdown\WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
+      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: markdown\WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
   - git: https://git.qwq.cc/
