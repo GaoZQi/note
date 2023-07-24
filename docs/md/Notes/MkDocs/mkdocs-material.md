@@ -1,6 +1,6 @@
 # Material for MkDocs
 
-[:simple-github: Material for MkDocs](https://github.com/squidfunk/mkdocs-material) | [:material-link: Material for MkDocs官方参考](https://squidfunk.github.io/mkdocs-material/reference/)
+[:simple-github: Material for MkDocs](https://github.com/squidfunk/mkdocs-material) | [:material-link: Material for MkDock文档](https://squidfunk.github.io/mkdocs-material/reference/)
 
 ## 安装
 
@@ -38,7 +38,7 @@ markdown_extensions:
         !!! note 
             content
         
-    === "Code"
+    === "代码"
     
         ```markdown title='markdown'
         !!! [tpye]  # note
@@ -52,7 +52,7 @@ markdown_extensions:
         !!! note "title"
             content
         
-    === "Code"
+    === "代码"
     
         ```markdown title='markdown'
         !!! [tpye] "title"  # note
@@ -65,7 +65,7 @@ markdown_extensions:
         !!! note ""
             content
         
-    === "Code"
+    === "代码"
     
         ```markdown title='markdown'
         !!! [tpye] "" # note
@@ -177,7 +177,7 @@ markdown_extensions:
          - stylesheets/extre.css
        ```
 
-2. 自定义Admonition类型[:material-link:](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions)
+2. 自定义Admonition类型 [:material-link:](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions)
 
 > If you want to add a custom admonition type, all you need is a color and an
 `*.svg` icon. Copy the icon's code from the [`.icons`][custom icons] folder
