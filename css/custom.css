@@ -1,6 +1,7 @@
 :root {
-  --md-text-font: 'Source Han Sans CN', sans-serif!important; 
-  --md-code-font: "JetBrains Mono", 'Source Han Sans CN'!important;
+  /* --md-text-font: 'Source Han Sans', sans-serif!important;  */
+  --md-text-font: 'Source Han Serif', sans-serif!important;
+  --md-code-font: "JetBrains Mono", 'Source Han Sans'!important;
 }
 
 
