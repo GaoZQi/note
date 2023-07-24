@@ -6,7 +6,7 @@
 ```shell
 pip install mkdocs
 ```
-### 常用指令
+## 常用指令
 
 === "创建工作区"
 
