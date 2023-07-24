@@ -1,6 +1,6 @@
 :root {
-  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
-  --md-code-font: "JetBrains Mono", "Microsoft YaHei UI";
+  --md-text-font: 'Times New Roman','宋体', sans-serif; /*"LXGW WenKai Screen"*/
+  --md-code-font: "JetBrains Mono", "Microsoft YaHei UI", monospace;
 }
 
 
