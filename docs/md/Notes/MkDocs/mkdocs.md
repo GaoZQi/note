@@ -1,50 +1,83 @@
-# MkDocs搭建
-
+# MkDocs
+!!! quote "参考"
+    [:material-link: MkDocs官方文档](https://www.mkdocs.org/)
 ## MkDocs安装
 
-1. 安装 ```pip install mkdocs```
-2. 常用指令
+```shell
+pip install mkdocs
+```
+### 常用指令
 
-   + `mkdocs new <work-space-name> #创建工作区`
+=== "创建工作区"
 
-   + `mkdocs serve #启动服务`
+    ```
+    mkdocs new <work-space-name>
+    ```
+=== "启动服务"
 
-   + `mkdocs build #构建静态文件`
+    ```
+    mkdocs serve
+    ```
+=== "构建静态文件"
 
-   + `mkdocs gh-deploy #部署到github`
-   
-   + `mkdocs -h    #查看帮助`
+    ```
+    mkdocs build
+    ```
+=== "部署到github"
 
-## MkDocs
+    ```
+    mkdocs gh-deploy
+    ```
+=== "查看帮助"
 
-## mkdocs-material主题安装
+    ```
+    mkdocs -h
+    ```
 
-1. 安装 `pip install mkdocs-material`
-2. 配置 `mkdocs.yml`
+## 目录结构
+    
+```text
+    <work-space-name>
+    ├── mkdocs.yml
+    ├── site
+    │   ├── ...
+    │   └── ...
+    ├── docs
+    │   ├── ...
+    │   │   ├── ...
+    │   │   └── ...
+    │   └── index.md
+    └── README.md
+```
+## 配置文件
 
-   ```yml
-   site_name: mkdocs-material
-   theme: material
-   ```
+```yaml title='mkdocs.yml'
+site_name: <site-name>  # 网站名称
+site_url: <site-url>    # 网站地址
+site_description: <site-description>    # 网站描述
+site_author: <site-author>  # 网站作者
 
-3. 配置 `mkdocs.yml` 侧边栏
+repo_url: <repo-url>    # 仓库地址(1)
+edit_uri: <edit-uri>    # 编辑地址(2)
 
-   ```yml
-   nav:
-       - 主页: index.md
-       - 文档:
-           - mkdocs: mkdocs.md
-           - mkdocs-material: mkdocs-material.md
-       - 关于: about.md
-   ```
+theme: <theme-name> # 主题名称
+markdown_extensions: # 扩展语法
+    - ...
+    - ...
+extra_css: # 额外的css
+    - ...
+    - ...
+extra_javascript: # 额外的js
+    - ...
+    - ...
+plugins: # 插件
+    - ...
+    - ...
+nav:    # 导航栏
+    - <nav-name>: <nav-link>
+    - <nav-name>: <nav-link>
+    - <nav-name>: <nav-link>
+```
 
-4. 配置 `mkdocs.yml` 顶部导航栏
-
-   ```yml
-   nav:
-       - 主页: index.md
-       - 文档:
-           - mkdocs: mkdocs.md
-           - mkdocs-material: mkdocs-material.md
-       - 关于: about.md
-   ```
+1. 用于部署到 :material-github:github
+2. 用于编辑页面的 :material-file-edit-outline:编辑按钮
