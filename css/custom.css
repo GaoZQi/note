@@ -1,6 +1,7 @@
 
 :root {
-  --md-text-font: 'Source Han Serif SC', sans-serif;
+  /* --md-text-font: 'Source Han Serif SC', sans-serif; */
+  --md-text-font: 'Source Han Sans CN', sans-serif;
   --md-code-font: "JetBrains Mono NL", 'Source Han Sans CN', source-han-sans-simplified-c, sans-serif;
 }
 
@@ -20,8 +21,9 @@ code {
 
 }
 
-
-
+/* 将搜索表单变为圆角
+.md-search__inner {
+  border-radius: 20px; /* 调整这里的数值来设置合适的圆角大小 */
 @media screen and (min-width: 960px) {
   /* body {
     zoom: 1.1;

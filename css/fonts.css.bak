@@ -45,3 +45,47 @@
   font-weight: 400;
   src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Normal.otf') format('opentype');
 } 
+
+/* Source Han Serif SC */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: normal;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-Regular.otf') format('opentype');
+}
+/* Source Han Serif SC Medium */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 500;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-Medium.otf') format('opentype');
+}
+/* Source Han Serif SC Bold */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: bold;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-Bold.otf') format('opentype');
+}
+/* Source Han Serif SC Heavy */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 800;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-Heavy.otf') format('opentype');
+}
+/* Source Han Serif SC ExtraLight */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 200;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-ExtraLight.otf') format('opentype');
+}
+/* Source Han Serif SC Light */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 300;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-Light.otf') format('opentype');
+}
+/* Source Han Serif SC SemiBold */
+@font-face {
+  font-family: 'Source Han Serif SC';
+  font-weight: 600;
+  src: url('../fonts/SourceHanSerifSC/SourceHanSerifSC-SemiBold.otf') format('opentype');
+}
+
