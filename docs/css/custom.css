@@ -4,6 +4,13 @@
   --md-code-font: "JetBrains Mono", 'Noto Sans SC','Source Han Sans';
 }
 
+/* .twemoji {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden; 
+}*/
 
 @media screen and (min-width: 960px) {
   /* body {
