@@ -1,17 +1,47 @@
 /* JetBrains Mono */
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('../fonts/JetBrains_Mono/JETBRAINSMONO[WGHT].TTF') format('truetype')!important;
+  src: url('../fonts/JetBrains_Mono/JETBRAINSMONO[WGHT].TTF') format('truetype');
 }
 /* Source Han Sans CN */
 @font-face {
   font-family: 'Source Han Sans CN';
   font-weight: normal;
-  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Regular.otf') format('opentype')!important;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Regular.otf') format('opentype');
+}
+/* Source Han Sans CN Medium */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-weight: 500;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Medium.otf') format('opentype');
 }
 /* Source Han Sans CN Bold */
 @font-face {
   font-family: 'Source Han Sans CN';
   font-weight: bold;
-  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Bold.otf') format('opentype')!important;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Bold.otf') format('opentype');
 }
+/* Source Han Sans CN Heavy */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-weight: 800;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Heavy.otf') format('opentype');
+}
+/* Source Han Sans CN ExtraLight */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-weight: 200;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-ExtraLight.otf') format('opentype');
+}
+/* Source Han Sans CN Light */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-weight: 300;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Light.otf') format('opentype');
+}
+/* Source Han Sans CN Normal */
+@font-face {
+  font-family: 'Source Han Sans CN';
+  font-weight: 400;
+  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Normal.otf') format('opentype');
+} 
