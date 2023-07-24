@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+.center-container, state, text {
+    white-space: nowrap;
+}
+
 .center-container {
     display: flex;
     flex-wrap: wrap; /* Add this line to allow flex items to wrap to new lines */
