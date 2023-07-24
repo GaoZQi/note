@@ -9,12 +9,6 @@ html {
   font-size: 110%;
 }
 
-/* 修改代码块字体大小 */
-pre,
-code {
-  font-size: medium; /* 调整这里的数值来设置合适的字体大小 */
-}
-
 /* 修改自由注释字体大小 */
 .md-typeset {
   font-size:smaller;
