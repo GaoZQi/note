@@ -1,6 +1,6 @@
 # Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+*For full documentation visit [mkdocs.org](https://www.mkdocs.org).*
 
 ## Commands
 
@@ -33,15 +33,12 @@ def sayhi():
     # 01ilOoIL(2)
 ```
 
-1. 这是我自由注释的内容，欢迎关注我的公众号。
-2. ### 01ilOoIL(2) 这是我自由注释的内容，欢迎关注我的公众号。
+1. > 这是我自由注释的内容，欢迎关注我的公众号。
+2. 这是我自由注释的内容。
 ```python title='demo.py' linenums="1" hl_lines="2 4"
 def sayhi():
-    return "hi,Python全栈开发" #hjh (1)
-    # 01ilOoIL(2)
+    return "hi,Python全栈开发" 
 ```
-1. 这是我自由注释的内容，欢迎关注我的公众号。
-2. 我的
 
 
 !!! note "这是 note 类型的提示框"
@@ -59,12 +56,24 @@ def sayhi():
 ??? note "这是 note 类型的提示框"
 
     提示：更多精彩内容记得关注我啊
-
+    
     第二行
-
+    
     第三行
-
+    
     第四行
-
+    
     第五行
     ...
+
+- [ ] 选项一
+- [x] 选项二
+
+!!! example "这是 example 类型的提示框"
+    这是一个例子
+
+```python
+a#(1)
+```
+
+1. abc

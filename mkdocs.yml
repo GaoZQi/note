@@ -10,113 +10,103 @@ edit_uri: tree/main/md  # 编辑链接
 theme: 
   name: 'material'  # 主题名称
   language: 'zh'  # 网站语言
-  icon: 
-    logo: material/notebook-outline
-  features:
-    - content.code.annotate
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.indexes
-    - navigation.top
-    - content.code.copy
-    - content.code.annotate  
-#   features:
-#     - content.code.annotate
-#     - navigation.tracking
-#     - navigation.tabs
-#     - navigation.indexes
-#     - navigation.top
-#   font: false
-#   palette:
-#     - scheme: default
-  # logo: assets/logo.png # 网站logo
   favicon: images/star.png  # 网站图标
-  # icon:
-    # admonition:
-    #   note: octicons/tag-16
-    #   abstract: octicons/checklist-16
-    #   info: octicons/info-16
-    #   tip: octicons/squirrel-16
-    #   success: octicons/check-16
-    #   question: octicons/question-16
-    #   warning: octicons/alert-16
-    #   failure: octicons/x-circle-16
-    #   danger: octicons/zap-16
-    #   bug: octicons/bug-16
-    #   example: octicons/beaker-16
-    #   quote: octicons/quote-16
+  icon:   # 网站图标
+    logo: material/arrow-bottom-right-thick
+  
+  # custom_dir: 'docs\stylesheets'  # 自定义目录
 
-
+  features: # 特性
+    - content.code.annotate # 代码注释
+    - navigation.tracking # 导航栏跟踪
+    - navigation.tabs # 导航栏标签
+    - navigation.indexes  # 导航栏索引
+    - navigation.top  # 导航栏顶部
+    - content.code.copy # 代码复制
+    - content.code.annotate   # 代码注释
   palette:
-  # scheme: shafish
-      # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+    primary: 'white' # 主色
+    # accent: 'black' # 强调色
+  # #   toggle: # 切换
+  # #     icon: 'material/brightness-4' # 图标
+  # #     name: 'Switch to dark mode' # 名称
+  # #   mode: # 模式
+  # #     default: # 默认
+  # #       primary: 'blue' # 主色
+  # #       accent: 'blue' # 强调色
+  # #     dark: # 暗色
+  # #       primary: 'blue' # 主色
+  # #       accent: 'blue' # 强调色
+  # #     light: # 亮色
+  # #       primary: 'blue' # 主色
+  # #       accent: 'blue' # 强调色
+  font: # 字体
+  #   # text: 'Open Sans' # 文本              
+    code: 'JetBrains Mono' # 字体代码及备用字体
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default 
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+# extra_css:
+#   - custom.css
+extra_css:
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  # - https://cdn.tonycrane.cc/utils/katex.min.css
+  # - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  # - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - css/tasklist.css
+  - css/fonts.css
+  - css/custom.css
 
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
-    
-  # extra_css:
-  #     - stylesheets/extra.css # md/stylesheets/extra.css
-  font:
-    text: 'Noto Sans SC'
-    code: 'Noto Sans Mono SC'
 
+# extra_css:
+#   - css/custom.css
 
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - toc:
-      permalink: true
-      toc_depth: 4
-  - meta
-  - def_list
-  - attr_list
-  - md_in_html
-  - sane_lists
-  - admonition
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.snippets
-  - pymdownx.magiclink
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true 
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.arithmatex:
-      generic: true
+  - abbr  # 缩写
+  - pymdownx.snippets # 代码块
+  - pymdownx.highlight: # 代码高亮
+      anchor_linenums: true # 代码行号
+  - pymdownx.inlinehilite # 行内代码高亮
+  - pymdownx.superfences  # 内置标题栏
+  - attr_list # 属性列表
+
+  - toc:  # 目录
+      permalink: true # 目录链接
+      toc_depth: 4  # 目录深度
+  - meta  # 元数据
+  - def_list  # 定义列表
+  - attr_list # 属性列表
+  - md_in_html  # HTML中的Markdown
+  - sane_lists  # 列表
+  - admonition  # 警告
+  - pymdownx.keys # 键盘
+  - pymdownx.mark # 标记
+    # 格式化处理
+  - pymdownx.caret  # 上标
+  - pymdownx.keys  # 键盘
+  - pymdownx.mark  # 标记
+  - pymdownx.tilde  # 删除线
+  - pymdownx.critic # 评论
+
+  - pymdownx.details  # 详情
+  - pymdownx.magiclink  # 链接
+  - tables  # 表格
+
+  - pymdownx.tabbed:  # 标签
+      alternate_style: true   # 标签样式
+  - pymdownx.tasklist:   # 任务列表
+      custom_checkbox: true # 自定义复选框
+  - pymdownx.arithmatex:  # 数学公式
+      generic: true # 通用
+  - pymdownx.emoji: # emoji
+      # emoji_index: !!python/name:materialx.emoji.twemoji  # emoji索引
+      # emoji_generator: !!python/name:materialx.emoji.to_svg # emoji生成器
 
 # 导航栏
 nav:
-  - 主页: 
-      - 主页: index.md
+  - 链接: 
+      - Home: md/Home/home.md
       - git: https://git.qwq.cc/
       - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
   - 笔记:

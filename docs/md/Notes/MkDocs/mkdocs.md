@@ -4,10 +4,15 @@
 
 1. 安装 ```pip install mkdocs```
 2. 常用指令
+
    + `mkdocs new <work-space-name> #创建工作区`
+
    + `mkdocs serve #启动服务`
+
    + `mkdocs build #构建静态文件`
+
    + `mkdocs gh-deploy #部署到github`
+   
    + `mkdocs -h    #查看帮助`
 
 ## MkDocs
