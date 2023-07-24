@@ -1,8 +1,9 @@
 
+
 :root {
   /* --md-text-font: 'Source Han Serif SC', sans-serif; */
   --md-text-font: 'Source Han Sans CN', sans-serif!important; 
-  --md-code-font: "JetBrains Mono", 'Source Han Sans CN', monospace!important;
+  --md-code-font: "JetBrains Mono", 'Source Han Sans CN'!important;
 }
 
 
@@ -10,17 +11,6 @@
 html {
   font-size: 110%;
 }
-
-/* 导航栏图标样式 */
-/* nav a {
-  display: flex;
-  align-items: left;
-}
-
-nav i {
-  margin-right: 5px;
-} */
-
 
 
 @media screen and (min-width: 960px) {
