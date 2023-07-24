@@ -4,6 +4,9 @@
   --md-code-font: "JetBrains Mono NL", 'Noto Sans CJK SC', 'Noto Sans CJK', 'Source Han Sans', source-han-sans-simplified-c, sans-serif;
 }
 
+html {
+  font-size: 150%;
+}
 
 @media screen and (min-width: 960px) {
   /* body {
