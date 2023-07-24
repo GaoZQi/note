@@ -26,23 +26,6 @@ theme:
     - content.code.annotate   # 代码注释
   palette:
     primary: 'white' # 主色
-    # accent: 'black' # 强调色
-  # #   toggle: # 切换
-  # #     icon: 'material/brightness-4' # 图标
-  # #     name: 'Switch to dark mode' # 名称
-  # #   mode: # 模式
-  # #     default: # 默认
-  # #       primary: 'blue' # 主色
-  # #       accent: 'blue' # 强调色
-  # #     dark: # 暗色
-  # #       primary: 'blue' # 主色
-  # #       accent: 'blue' # 强调色
-  # #     light: # 亮色
-  # #       primary: 'blue' # 主色
-  # #       accent: 'blue' # 强调色
-  font: # 字体
-  #   # text: 'Open Sans' # 文本              
-    code: 'JetBrains Mono' # 字体代码及备用字体
 
 # extra_css:
 #   - custom.css
@@ -58,8 +41,9 @@ extra_css:
   - css/custom.css
 
 
-# extra_css:
-#   - css/custom.css
+# extra_javascript:
+#   - js/dark-mode.js
+
 
 
 markdown_extensions:
@@ -109,6 +93,7 @@ nav:
       - Home: md/Home/home.md
       - git: https://git.qwq.cc/
       - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
+      - github: https://github.com/GaoZQi
   - 笔记:
       - mkdocs: md/Notes/MkDocs/mkdocs.md
       - mkdocs-material: md/Notes/MkDocs/mkdocs-material.md

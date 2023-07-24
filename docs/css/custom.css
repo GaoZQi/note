@@ -1,29 +1,16 @@
-
 :root {
-  /* --md-text-font: 'Source Han Serif SC', sans-serif; */
-  --md-text-font: 'Source Han Sans CN', sans-serif;
-  --md-code-font: "JetBrains Mono NL", 'Source Han Sans CN', source-han-sans-simplified-c, sans-serif;
+  /* --md-text-font: 'Noto Sans SC', 'Source Han Sans', sans-serif;  */
+  --md-text-font: 'Noto Serif SC','Source Han Serif',sans-serif;
+  --md-code-font: "JetBrains Mono", 'Noto Sans SC','Source Han Sans';
 }
+
+
 
 html {
   font-size: 110%;
 }
 
-/* 修改代码块字体大小 */
-pre,
-code {
-  font-size: medium; /* 调整这里的数值来设置合适的字体大小 */
-}
 
-/* 修改自由注释字体大小 */
-.md-typeset {
-  font-size:smaller;
-
-}
-
-/* 将搜索表单变为圆角
-.md-search__inner {
-  border-radius: 20px; /* 调整这里的数值来设置合适的圆角大小 */
 @media screen and (min-width: 960px) {
   /* body {
     zoom: 1.1;
