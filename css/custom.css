@@ -1,12 +1,26 @@
 
 :root {
-  --md-text-font: 'Source Han Serif SC', source-han-sans-simplified-c, sans-serif;
+  --md-text-font: 'Source Han Serif SC', sans-serif;
   --md-code-font: "JetBrains Mono NL", 'Source Han Sans CN', source-han-sans-simplified-c, sans-serif;
 }
 
 html {
-  font-size: 150%;
+  font-size: 110%;
 }
+
+/* 修改代码块字体大小 */
+pre,
+code {
+  font-size: medium; /* 调整这里的数值来设置合适的字体大小 */
+}
+
+/* 修改自由注释字体大小 */
+.md-typeset {
+  font-size:smaller;
+
+}
+
+
 
 @media screen and (min-width: 960px) {
   /* body {
