@@ -1,6 +1,16 @@
+/* @font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/path/to/your/font.woff2') format('woff2'),
+        url('/path/to/your/font.woff') format('woff');
+  /* 添加其他字体格式，如ttf、eot等，以提供更好的兼容性 */
+  /* font-weight: normal;
+  font-style: normal;
+/* } */ 
+
 :root {
-  --md-text-font: 'Times New Roman','宋体', sans-serif; /*"LXGW WenKai Screen"*/
-  --md-code-font: "JetBrains Mono", "Microsoft YaHei UI", monospace;
+  /* --md-text-font: 'Times New Roman','宋体'; */
+  --md-text-font: 'Noto Sans CJK SC', 'Noto Sans CJK', 'Source Han Sans', source-han-sans-simplified-c, sans-serif;
+  --md-code-font: "JetBrains Mono NL", 'Noto Sans CJK SC', 'Noto Sans CJK', 'Source Han Sans', source-han-sans-simplified-c, sans-serif;
 }
 
 
