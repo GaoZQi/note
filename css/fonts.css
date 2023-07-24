@@ -1,15 +1,2 @@
-/* JetBrains Mono */
-/* @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('../fonts/JetBrains_Mono/JETBRAINSMONO[WGHT].TTF') format('truetype');
-} */
-/* Source Han Sans CN */
-
 @import url('https://fonts.loli.net/css?family=JetBrains Mono:400,500,600,700&display=swap');
-
-/* 导入思源黑体 Normal 字体 */
-@font-face {
-  font-family: 'Source Han Sans CN';
-  font-weight: 400;
-  src: url('../fonts/SourceHanSansCN/SourceHanSansCN-Normal.otf') format('opentype');
-}
+@import url('https://fonts.loli.net/css2?family=Source+Han+Sans&display=swap');
