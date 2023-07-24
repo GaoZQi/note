@@ -1,7 +1,7 @@
 
 :root {
-  --md-text-font: 'Noto Sans CJK SC', 'Noto Sans CJK', 'Source Han Sans', source-han-sans-simplified-c, sans-serif;
-  --md-code-font: "JetBrains Mono NL", 'Noto Sans CJK SC', 'Noto Sans CJK', 'Source Han Sans', source-han-sans-simplified-c, sans-serif;
+  --md-text-font: 'Source Han Serif SC', source-han-sans-simplified-c, sans-serif;
+  --md-code-font: "JetBrains Mono NL", 'Source Han Sans CN', source-han-sans-simplified-c, sans-serif;
 }
 
 html {
