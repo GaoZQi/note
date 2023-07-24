@@ -5,7 +5,7 @@
 | 文章                                                        |  状态  |
 | :---------------------------------------------------------- | :----: |
 | [Material for MkDocs](.\md\Notes\MkDocs\mkdocs-material.md) | 编辑中 |
-| [MkDocs](.\md\Notes\MkDocs\mkdocs.md)                       | 待修改 |
+| [MkDocs](.\md\Notes\MkDocs\mkdocs.md)                       | 已完成 |
 
 ## :material-pencil-box-multiple: Link
 
