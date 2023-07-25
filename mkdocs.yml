@@ -1,5 +1,5 @@
 site_name: GaoZQi's Note  # 网站名称
-site_url: https://GaoZQi.github.io/note/ # 网站地址
+site_url: https://GaoZQi.github.io/note # 网站地址
 site_description: 个人文档  # 网站描述
 site_author: GaoZQi # 网站作者
 
@@ -14,7 +14,7 @@ theme:
   icon:   # 网站图标
     logo: material/arrow-bottom-right-thick
   
-  # custom_dir: 'docs\stylesheets'  # 自定义目录
+  custom_dir: 'docs/resources'  # 自定义目录
 
   features: # 特性
     - content.code.annotate # 代码注释
@@ -28,31 +28,31 @@ theme:
     - content.action.edit # 编辑
     - content.action.view # 查看
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+    # # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: Switch to light mode
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      palette:
-        primary: white
-        accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+    # # Palette toggle for light mode
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: default
+    #   palette:
+    #     primary: white
+    #     accent: blue
+    #   toggle:
+    #     icon: material/brightness-7
+    #     name: Switch to dark mode
 
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      palette:
-        primary: black
-        accent: blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
+    # # Palette toggle for dark mode
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: slate
+    #   palette:
+    #     primary: black
+    #     accent: blue
+    #   toggle:
+    #     icon: material/brightness-4
+    #     name: Switch to system preference
 
 # extra_css:
 #   - custom.css
@@ -88,7 +88,7 @@ markdown_extensions:
   - attr_list # 属性列表
 
   - toc:  # 目录
-      permalink: true # 目录链接
+      permalink: "☍" # 目录链接
       toc_depth: 4  # 目录深度
   - meta  # 元数据
   - def_list  # 定义列表
@@ -119,24 +119,51 @@ markdown_extensions:
   - pymdownx.emoji: # emoji
       emoji_index: !!python/name:materialx.emoji.twemoji  # emoji索引
       emoji_generator: !!python/name:materialx.emoji.to_svg # emoji生成器
+  
+
 # 导航栏
 nav:
-  - 链接: 
-      - 代办: md/Home/list.md
-      - test: md/Home/a_test.md
-      - git: https://git.qwq.cc/
-      - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
-      - github: https://github.com/GaoZQi
-  - 笔记:
-      - MkDocs搭建: 
-        - mkdocs: md/Notes/MkDocs/mkdocs.md
-        - mkdocs-material: md/Notes/MkDocs/mkdocs-material.md
-      - Python: md/Notes/Python/Python.md
-      - ROS: md/Notes/ROS/ROS.md
-      - 其他:
-        - Matlab: md/Notes/other/Matlab.md
-      # - 关于: about.md
-  - WP:
-      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: md\WriteUp\2023年第三届陕西省大学生网络安全技能大赛--本科高校组\签到题.md
-      - 2023年网络空间安全实验技能竞赛: md\WriteUp\2023年网络空间安全实验技能竞赛\2023年网络空间安全实验技能竞赛.md
-      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: md\WriteUp\第十六届全国大学生信息安全竞赛——创新实践能力赛\第十六届全国大学生信息安全竞赛——创新实践能力赛.md
+  # - 404.md
+  - 导航: 
+      - index.md
+      # - git: https://git.qwq.cc/
+      # - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
+      # - github: https://github.com/GaoZQi
+
+  - CTF:
+      - pages/CTF/index.md
+
+  - WriteUp:
+      - pages/WriteUp/index.md
+
+  - Website:
+      - pages/Website/index.md
+      - MkDocs搭建:
+          - MkDocs: pages/Website/MkDocs/mkdocs.md
+          - Material for MkDocs: 
+              - pages/Website/MkDocs/mkdocs-material/index.md
+              - Material for MkDocs的安装: pages/Website/MkDocs/mkdocs-material/config.md
+              - Material for MkDocs的主题配置: pages/Website/MkDocs/mkdocs-material/theme.md
+              - Material for MkDocs的拓展语法: pages/Website/MkDocs/mkdocs-material/mdextra.md
+
+  # - Python:
+  #     - index.md
+  # - ROS:
+  #     - index.md
+  
+  - 笔记: 
+      - pages/Notes/index.md
+
+  - 存档:
+      - pages/Archive/index.md
+      - Python: pages/Notes/Python/Python.md
+      - ROS: pages/Notes/ROS/ROS.md
+      - Matlab: pages/Other/Matlab.md
+      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/xxx战队writeup.md
+      - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/2023年网络空间安全实验技能竞赛.md
+      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: pages/WriteUp/第十六届全国大学生信息安全竞赛——创新实践能力赛/第十六届全国大学生信息安全竞赛——创新实践能力赛.md
+
+  - 其他:
+      - pages/Other/index.md
+      - 代办: pages/Home/list.md
+      - test: pages/Home/a_test.md

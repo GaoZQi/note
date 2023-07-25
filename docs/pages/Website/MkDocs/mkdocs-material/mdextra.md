@@ -1,23 +1,10 @@
-# Material for MkDocs
-!!! quote "参考"
-        [:simple-github: Material for MkDocs](https://github.com/squidfunk/mkdocs-material) | [:material-link: Material for MkDock文档](https://squidfunk.github.io/mkdocs-material/)
+# Material for MkDocs的拓展语法
 
-## 安装
 
-```bash
-pip install mkdocs-material
-```
+!!! warning
+    尚未完成，仅供参考！
 
-## 基础配置
-
-```yaml title='mkdocs.yml'
-theme:
-    name: material
-    language: zh
-```
-
-## :simple-markdown: 扩展语法
-
+## :simple-markdown: 拓展语法
 ### Admonition标注
 
 #### 配置
@@ -233,3 +220,11 @@ and add the following CSS to an additional style sheet:
     !!! pied-piper "Pied Piper"
 
         使用自定义的Admonition类型
+
+
+<link rel="stylesheet" href="../../../../../css/index_styles.css">
+<div class="center-container">
+  <!-- <h1>Home</h1> -->
+  <state>U•ェ•*U</state>
+  <text>waiting...</h2>
+</div>

@@ -24,5 +24,5 @@
 
 | 文章                                                        |  状态  |
 | :---------------------------------------------------------- | :----: |
-| [Material for MkDocs](../Notes/MkDocs/mkdocs-material.md) | 编辑中 |
-| [MkDocs](../Notes/MkDocs/mkdocs.md)                       | 已完成 |
+| [Material for MkDocs](../Website/MkDocs/mkdocs-material/index.md) | 编辑中 |
+| [MkDocs](../Website/MkDocs/mkdocs.md)                       | 已完成 |
