@@ -71,6 +71,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://GaoZQi.github.io/note/pages/Website/MkDocs/mkdocs-material/mdextra/</loc>
+         <lastmod>2023-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/note/pages/Website/MkDocs/mkdocs-material/theme/</loc>
+         <lastmod>2023-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://GaoZQi.github.io/note/pages/WriteUp/</loc>
          <lastmod>2023-07-25</lastmod>
          <changefreq>daily</changefreq>
