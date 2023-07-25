@@ -31,7 +31,7 @@ html {
 .note-text {
     font-size: clamp(1em, 7vw, 10em);
     font-weight: extra-bold;
-    font-family: 'Noto Sans SC';
+    font-family: 'apple-system', 'Noto Sans SC', 'Arial', 'sans-serif';
     margin-left: 0;
     /* Add this line */
     position: absolute;
