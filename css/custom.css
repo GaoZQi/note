@@ -1,6 +1,6 @@
 :root {
-  /* --md-text-font: 'Noto Sans SC', 'Source Han Sans', sans-serif;  */
-  --md-text-font: '-apple-system','Noto Serif SC';
+  /* --md-text-font: '-apple-system','Noto Sans SC', 'Source Han Sans', sans-serif;  */
+  --md-text-font: 'Noto Serif SC'; /* 'Roboto Slab', */
   --md-code-font: "JetBrains Mono", 'Noto Sans SC','Source Han Sans';
 }
 
@@ -24,8 +24,15 @@
     font-size: 137.5%;
   }
 }
+.md-typeset h1 {
+  color: rgb(40, 40, 40);
+  font-weight: 700;
+  font-size: 2.618em;
+  /* text-shadow: 1px 1px 2px rgb(59, 58, 58); */
+  text-decoration: underline #ff6a1a;
+}
 
-.md-typeset h1, .md-typeset h2 {
+.md-typeset h2 {
   font-weight: 600;
 }
 
