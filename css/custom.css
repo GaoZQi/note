@@ -250,5 +250,6 @@ input#mkdocs-content-password {
 }
 
 .md-typeset :is(.emojione,.twemoji,.gemoji) {
-  vertical-align: sub;
+  /* vertical-align: sub; */
+  vertical-align: -0.15em;
 }
