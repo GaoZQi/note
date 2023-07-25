@@ -4,13 +4,16 @@ body {
     margin: 0;
 }
 
-.center-container, state, text {
+.center-container,
+state,
+text {
     white-space: nowrap;
 }
 
 .center-container {
     display: flex;
-    flex-wrap: wrap; /* Add this line to allow flex items to wrap to new lines */
+    flex-wrap: wrap;
+    /* Add this line to allow flex items to wrap to new lines */
     justify-content: flex-start;
     align-items: flex-end;
     height: 35vh;
@@ -21,12 +24,30 @@ body {
 
 state {
     color: darkgrey;
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: 'Noto Sans SC';
 }
 
 text {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: normal;
     font-family: 'Roboto';
+}
+
+/* typing */
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.line {
+    font: bold 100% JetBrains Mono; 
+    width: 5ch;
+    overflow: hidden;
+    /* white-space: nowrap;
+    border-right: 2px solid; */
+    animation: typing 2s steps(5) infinite;
 }
