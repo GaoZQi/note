@@ -13,19 +13,20 @@ body {
     flex-wrap: wrap; /* Add this line to allow flex items to wrap to new lines */
     justify-content: flex-start;
     align-items: flex-end;
-    height: 60vh;
+    height: 35vh;
     color: darkgrey;
     font-size: 3em;
     font-weight: bold;
-    font-family: 'Noto Sans SC';
 }
 
 state {
     color: darkgrey;
     font-size: 2em;
+    font-family: 'Noto Sans SC';
 }
 
 text {
     font-size: 1em;
     font-weight: normal;
+    font-family: 'Roboto';
 }
