@@ -4,24 +4,31 @@
   --md-code-font: "JetBrains Mono", 'Noto Sans SC','Source Han Sans';
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @media screen and (min-width: 960px) {
   /* body {
     zoom: 1.1;
   } */
   html {
     font-size: 137.5%;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (min-width: 100em) {
   html {
     font-size: 137.5%;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (min-width: 125em) {
   html {
     font-size: 137.5%;
+    overflow-x: hidden;
   }
 }
 .md-typeset h1 {

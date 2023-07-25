@@ -4,7 +4,7 @@
 <div class="center-container">
   <!-- <h1>Home</h1> -->
   <state>(◎﹏◎)</state>
-  <text>buiding...</h2>
+  <text>buiding...</text>
 </div>
 
 ---

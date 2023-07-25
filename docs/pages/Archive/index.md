@@ -5,6 +5,5 @@
 
 <link rel="stylesheet" href="../../css/index_styles.css">
 <div class="center-container">
-  <!-- <h1>Home</h1> -->
   <state>X ﹏ X</state>
 </div>
