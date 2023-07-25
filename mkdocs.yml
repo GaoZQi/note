@@ -21,12 +21,17 @@ theme:
     - navigation.tracking # 导航栏跟踪
     - navigation.tabs # 导航栏标签
     - navigation.indexes # 导航栏索引
-    - navigation.top # 导航栏顶部
+    # - navigation.top # 导航栏顶部
     - content.code.copy # 代码复制
     - content.code.annotate # 代码注释
     - navigation.footer # 导航栏底部
     - content.action.edit # 编辑
     - content.action.view # 查看
+    # - header.autohide
+    # - navigation.sections
+    # - navigation.tabs.sticky
+    # - toc.integrate
+    # - navigation.expand
   palette:
     # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
@@ -66,10 +71,12 @@ extra_css:
   # - css/tasklist.css
   - css/fonts.css
   - css/custom.css
+  # - css/img.css
   - css/admonition_old.css
 
 extra_javascript:
   - js/mathjax.js
+  # - js/img.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
