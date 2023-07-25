@@ -68,6 +68,11 @@ extra_css:
   - css/custom.css
   - css/admonition_old.css
 
+extra_javascript:
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
   - search
   - mkdocs-code-runner
@@ -135,6 +140,10 @@ nav:
 
   - WriteUp:
       - pages/WriteUp/index.md
+      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: pages/WriteUp/第十六届全国大学生信息安全竞赛——创新实践能力赛/writeup.md
+      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/writeup.md
+      - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/writeup.md
+
 
   - Website:
       - pages/Website/index.md
@@ -159,9 +168,6 @@ nav:
       - Python: pages/Notes/Python/Python.md
       - ROS: pages/Notes/ROS/ROS.md
       - Matlab: pages/Other/Matlab.md
-      - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/xxx战队writeup.md
-      - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/2023年网络空间安全实验技能竞赛.md
-      - 第十六届全国大学生信息安全竞赛——创新实践能力赛: pages/WriteUp/第十六届全国大学生信息安全竞赛——创新实践能力赛/第十六届全国大学生信息安全竞赛——创新实践能力赛.md
 
   - 其他:
       - pages/Other/index.md
