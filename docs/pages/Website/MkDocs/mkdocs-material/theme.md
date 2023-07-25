@@ -7,7 +7,8 @@
 <div class="center-container">
   <!-- <h1>Home</h1> -->
   <state>:( </state>
-  <text> Something wrong...</text>
+  <text>Something wrong</text>
+  <text class="line">.....</text>
 </div>
 
 ---

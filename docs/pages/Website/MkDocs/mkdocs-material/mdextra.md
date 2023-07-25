@@ -226,5 +226,6 @@ and add the following CSS to an additional style sheet:
 <div class="center-container">
   <!-- <h1>Home</h1> -->
   <state>U•ェ•*U</state>
-  <text>waiting...</text>
+  <text>waiting</text>
+  <text class="line">.....</text>
 </div>
