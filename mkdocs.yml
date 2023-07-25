@@ -76,6 +76,21 @@ extra_javascript:
 plugins:
   - search
   - mkdocs-code-runner
+  - git-revision-date-localized:
+      type: iso_datetime
+      custom_format: "%d. %B %Y"
+      timezone: Asia/Shanghai
+      locale: zh
+      fallback_to_build_date: false
+      enable_creation_date: true
+      exclude:
+          - index.md
+          - pages/Home/map.md
+          - pages/Website/MkDocs/mkdocs-material/theme.md
+          - pages/CTF/index.md
+          - pages/Notes/index.md
+          - pages/Archive/index.md
+          - pages/Other/index.md
 
 # extra_javascript:
 #   - js/dark-mode.js
@@ -120,9 +135,9 @@ markdown_extensions:
       generic: true # 通用
   - pymdownx.emoji: # emoji
       emoji_index: !!python/name:materialx.emoji.twemoji # emoji索引
-
       emoji_generator: !!python/name:materialx.emoji.to_svg
         # emoji生成器
+  
 
         # 导航栏
 
