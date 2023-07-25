@@ -1,29 +1,29 @@
-site_name: GaoZQi's Note  # 网站名称
+site_name: GaoZQi's Note # 网站名称
 site_url: https://GaoZQi.github.io/note # 网站地址
-site_description: 个人文档  # 网站描述
+site_description: 个人文档 # 网站描述
 site_author: GaoZQi # 网站作者
 
-repo_name: GaoZQi/note  # 仓库名称
-repo_url: https://github.com/GaoZQi/note  # 仓库地址
-edit_uri: tree/main/docs  # 编辑链接
+repo_name: GaoZQi/note # 仓库名称
+repo_url: https://github.com/GaoZQi/note # 仓库地址
+edit_uri: tree/main/docs # 编辑链接
 
-theme: 
-  name: 'material'  # 主题名称
-  language: 'zh'  # 网站语言
-  favicon: images/star.png  # 网站图标
-  icon:   # 网站图标
+theme:
+  name: "material" # 主题名称
+  language: "zh" # 网站语言
+  favicon: images/star.png # 网站图标
+  icon: # 网站图标
     logo: material/arrow-bottom-right-thick
-  
-  custom_dir: 'docs/resources'  # 自定义目录
+
+  custom_dir: "docs/resources" # 自定义目录
 
   features: # 特性
     - content.code.annotate # 代码注释
     - navigation.tracking # 导航栏跟踪
     - navigation.tabs # 导航栏标签
-    - navigation.indexes  # 导航栏索引
-    - navigation.top  # 导航栏顶部
+    - navigation.indexes # 导航栏索引
+    - navigation.top # 导航栏顶部
     - content.code.copy # 代码复制
-    - content.code.annotate   # 代码注释
+    - content.code.annotate # 代码注释
     - navigation.footer # 导航栏底部
     - content.action.edit # 编辑
     - content.action.view # 查看
@@ -77,60 +77,60 @@ plugins:
   - search
   - mkdocs-code-runner
 
-
 # extra_javascript:
 #   - js/dark-mode.js
 
-
-
 markdown_extensions:
-  - abbr  # 缩写
+  - abbr # 缩写
   - pymdownx.snippets # 代码块
   - pymdownx.highlight: # 代码高亮
       anchor_linenums: true # 代码行号
   - pymdownx.inlinehilite # 行内代码高亮
-  - pymdownx.superfences  # 内置标题栏
+  - pymdownx.superfences # 内置标题栏
   - attr_list # 属性列表
 
-  - toc:  # 目录
+  - toc: # 目录
       permalink: "☍" # 目录链接
-      toc_depth: 4  # 目录深度
-  - meta  # 元数据
-  - def_list  # 定义列表
+      toc_depth: 4 # 目录深度
+  - meta # 元数据
+  - def_list # 定义列表
   - attr_list # 属性列表
-  - md_in_html  # HTML中的Markdown
-  - sane_lists  # 列表
-  - admonition  # 警告
+  - md_in_html # HTML中的Markdown
+  - sane_lists # 列表
+  - admonition # 警告
 
   - pymdownx.keys # 键盘
   - pymdownx.mark # 标记
     # 格式化处理
-  - pymdownx.caret  # 上标
-  - pymdownx.keys  # 键盘
-  - pymdownx.mark  # 标记
-  - pymdownx.tilde  # 删除线
+  - pymdownx.caret # 上标
+  - pymdownx.keys # 键盘
+  - pymdownx.mark # 标记
+  - pymdownx.tilde # 删除线
   - pymdownx.critic # 评论
 
-  - pymdownx.details  # 详情
-  - pymdownx.magiclink  # 链接
-  - tables  # 表格
+  - pymdownx.details # 详情
+  - pymdownx.magiclink # 链接
+  - tables # 表格
 
-  - pymdownx.tabbed:  # 标签
-      alternate_style: true   # 标签样式
-  - pymdownx.tasklist:   # 任务列表
+  - pymdownx.tabbed: # 标签
+      alternate_style: true # 标签样式
+  - pymdownx.tasklist: # 任务列表
       custom_checkbox: true # 自定义复选框
-  - pymdownx.arithmatex:  # 数学公式
+  - pymdownx.arithmatex: # 数学公式
       generic: true # 通用
   - pymdownx.emoji: # emoji
-      emoji_index: !!python/name:materialx.emoji.twemoji  # emoji索引
-      emoji_generator: !!python/name:materialx.emoji.to_svg # emoji生成器
-  
+      emoji_index: !!python/name:materialx.emoji.twemoji # emoji索引
 
-# 导航栏
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+        # emoji生成器
+
+        # 导航栏
+
 nav:
   # - 404.md
-  - 导航: 
+  - 导航:
       - index.md
+      - 网站地图: pages/Home/map.md
       # - git: https://git.qwq.cc/
       # - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
       # - github: https://github.com/GaoZQi
@@ -144,12 +144,11 @@ nav:
       - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/writeup.md
       - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/writeup.md
 
-
   - Website:
       - pages/Website/index.md
       - MkDocs搭建:
           - MkDocs: pages/Website/MkDocs/mkdocs.md
-          - Material for MkDocs: 
+          - Material for MkDocs:
               - pages/Website/MkDocs/mkdocs-material/index.md
               - Material for MkDocs的安装: pages/Website/MkDocs/mkdocs-material/config.md
               - Material for MkDocs的主题配置: pages/Website/MkDocs/mkdocs-material/theme.md
@@ -159,8 +158,8 @@ nav:
   #     - index.md
   # - ROS:
   #     - index.md
-  
-  - 笔记: 
+
+  - 笔记:
       - pages/Notes/index.md
 
   - 存档:
