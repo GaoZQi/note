@@ -161,6 +161,7 @@ nav:
 
   - CTF:
       - pages/CTF/index.md
+      - Docker: pages/CTF/docker.md
 
   - WriteUp:
       - pages/WriteUp/index.md
