@@ -1,3 +1,8 @@
+---
+hide:
+    - navigation
+    # - toc
+---
 # Website
 
 !!! info

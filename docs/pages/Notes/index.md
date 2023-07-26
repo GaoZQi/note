@@ -1,3 +1,8 @@
+---
+hide:
+    - navigation
+    - toc
+---
 # 笔记
 
 <link rel="stylesheet" href="../../css/index_styles.css">

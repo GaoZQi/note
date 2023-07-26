@@ -1,3 +1,9 @@
+---
+hide:
+    - navigation
+    - toc
+---
+
 # CTF
 
 <link rel="stylesheet" href="../../css/index_styles.css">

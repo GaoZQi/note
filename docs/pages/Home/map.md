@@ -1,3 +1,8 @@
+---
+hide:
+    - navigation
+    - toc
+---
 # 网站地图
 !!! warning
     部分页面仍在开发中！

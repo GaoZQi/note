@@ -1,4 +1,14 @@
-# 主页
+---
+
+title: 主页
+# description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
+
+hide:
+    - navigation
+    - toc
+    - title
+---
+<!-- # 主页 -->
 
 <link rel="stylesheet" href="css/index.css">
 <div class="center-container">

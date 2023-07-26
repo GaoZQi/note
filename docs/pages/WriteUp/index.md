@@ -1,3 +1,8 @@
+---
+hide:
+    - navigation
+    # - toc
+---
 # WriteUp
 
 <!-- <link rel="stylesheet" href="../../css/index_styles.css">

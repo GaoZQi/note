@@ -134,6 +134,8 @@ markdown_extensions:
   - pymdownx.magiclink # 链接
   - tables # 表格
 
+  - meta
+
   - pymdownx.tabbed: # 标签
       alternate_style: true # 标签样式
   - pymdownx.tasklist: # 任务列表
