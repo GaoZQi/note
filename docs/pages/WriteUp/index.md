@@ -15,7 +15,7 @@ hide:
 
 [:material-home: 回到主页](../../index.md) -->
 
-!!! info 
+!!! info
 
     用于收集整理所参加过的比赛的WriteUp，仅供参考！
 

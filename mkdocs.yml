@@ -21,7 +21,7 @@ theme:
     - navigation.tracking # 导航栏跟踪
     - navigation.tabs # 导航栏标签
     - navigation.indexes # 导航栏索引
-    # - navigation.top # 导航栏顶部
+    - navigation.top # 导航栏顶部
     - content.code.copy # 代码复制
     - content.code.annotate # 代码注释
     - navigation.footer # 导航栏底部
@@ -59,8 +59,6 @@ theme:
     #     icon: material/brightness-4
     #     name: Switch to system preference
 
-# extra_css:
-#   - custom.css
 extra_css:
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
@@ -99,8 +97,6 @@ plugins:
           - pages/Archive/index.md
           - pages/Other/index.md
 
-# extra_javascript:
-#   - js/dark-mode.js
 
 markdown_extensions:
   - abbr # 缩写
@@ -148,8 +144,7 @@ markdown_extensions:
         # emoji生成器
   
 
-        # 导航栏
-
+# 导航栏
 nav:
   # - 404.md
   - 导航:
