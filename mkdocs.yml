@@ -163,7 +163,7 @@ nav:
           - Docker简介: pages/CTF/Docker/overview.md
           - Docker容器的使用: pages/CTF/Docker/containers.md
           - Docker镜像的使用: pages/CTF/Docker/images.md
-        - Docker常用命令: pages/CTF/Docker/commands.md
+        - Docker常用命令: pages/CTF/Docker/command.md
 
   - WriteUp:
       - pages/WriteUp/index.md
