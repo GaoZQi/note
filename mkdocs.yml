@@ -96,6 +96,7 @@ plugins:
           - pages/Notes/index.md
           - pages/Archive/index.md
           - pages/Other/index.md
+          - pages/CTF/PWN/index.md
 
 
 markdown_extensions:
@@ -156,6 +157,9 @@ nav:
 
   - CTF:
       - pages/CTF/index.md
+      - PWN: 
+        - pages/CTF/PWN/index.md
+        - PWN题目部署: pages/CTF/PWN/other/build-pwn.md
       - Docker: 
         - pages/CTF/Docker/index.md
         # - Dockerfile: pages/CTF/Docker/Dockerfile.md

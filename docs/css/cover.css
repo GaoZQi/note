@@ -2,6 +2,8 @@
 .center-container,
 state,
 text {
+    position: relative;
+    z-index: 3;
     white-space: nowrap;
 }
 
@@ -48,9 +50,18 @@ text {
 }
 
 /* 添加页面样式 */
-body{
+body,
+footer {
     margin: 0;
     padding: 0;
+    /* background-image: url('../images/background3.jpg'); */
+    /* background-image: url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg)!important; */
+    /* 设置页面背景图片 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* 保持背景图固定 */
+    /* font-family: Arial, sans-serif; */
 }
 
 /* 创建毛玻璃矩形 */
@@ -61,19 +72,22 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.516);
+    background: rgba(255, 255, 255, 0.877);
     /* 设置半透明背景色 */
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     /* 添加毛玻璃效果，可根据需要调整模糊程度 */
-    z-index: -5;
+    z-index: -2;
     /* 将伪元素放到页面底部，使其不遮挡页面内容 */
 }
 
-/* 添加其他页面样式 */
-/* 在此处添加其他CSS样式，比如设置内容样式、定位等 */
-/* 例如： */
-.md-content__inner{
+
+/* .md-typeset h2, .md-typeset h3, .md-typeset h4 ,.md-typeset code{
     position: relative;
-    z-index: -6;
-    /* 将内容放在伪元素之上 */
+    z-index: -3;
+    padding: 20px;
+} */
+.md-content .md-typeset {
+    position: relative;
+    z-index: -3;
+    padding: 20px;
 }
