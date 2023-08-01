@@ -98,6 +98,13 @@ footer::before {
     /* 将伪元素放到页面底部，使其不遮挡页面内容 */
 }
 
+.md-typeset {
+    position: relative;
+    z-index: 2;
+    /* 将内容放在伪元素之上 */
+    padding: 20px;
+    color: #fff;
+}
 /* 添加其他页面样式 */
 /* 在此处添加其他CSS样式，比如设置内容样式、定位等 */
 /* 例如： */

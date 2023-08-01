@@ -41,6 +41,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://GaoZQi.github.io/note/pages/CTF/PWN/</loc>
+         <lastmod>2023-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/note/pages/CTF/PWN/other/build-pwn/</loc>
+         <lastmod>2023-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://GaoZQi.github.io/note/pages/Home/list/</loc>
          <lastmod>2023-08-01</lastmod>
          <changefreq>daily</changefreq>
