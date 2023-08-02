@@ -657,9 +657,377 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker常用命令
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Docker常用命令
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    容器生命周期管理
+  </a>
+  
+    <nav class="md-nav" aria-label="容器生命周期管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    kill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    pause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpause" class="md-nav__link">
+    unpause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    容器操作
+  </a>
+  
+    <nav class="md-nav" aria-label="容器操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    ps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect" class="md-nav__link">
+    inspect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    top
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attach" class="md-nav__link">
+    attach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait" class="md-nav__link">
+    wait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    stats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rootfs" class="md-nav__link">
+    容器rootfs命令
+  </a>
+  
+    <nav class="md-nav" aria-label="容器rootfs命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    diff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    镜像仓库
+  </a>
+  
+    <nav class="md-nav" aria-label="镜像仓库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    pull
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    push
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    本地镜像管理
+  </a>
+  
+    <nav class="md-nav" aria-label="本地镜像管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmi" class="md-nav__link">
+    rmi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    相关信息
+  </a>
+  
+    <nav class="md-nav" aria-label="相关信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1220,6 +1588,358 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    容器生命周期管理
+  </a>
+  
+    <nav class="md-nav" aria-label="容器生命周期管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    kill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    pause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpause" class="md-nav__link">
+    unpause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    容器操作
+  </a>
+  
+    <nav class="md-nav" aria-label="容器操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ps" class="md-nav__link">
+    ps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect" class="md-nav__link">
+    inspect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    top
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attach" class="md-nav__link">
+    attach
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events" class="md-nav__link">
+    events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wait" class="md-nav__link">
+    wait
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port" class="md-nav__link">
+    port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    stats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rootfs" class="md-nav__link">
+    容器rootfs命令
+  </a>
+  
+    <nav class="md-nav" aria-label="容器rootfs命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    diff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    镜像仓库
+  </a>
+  
+    <nav class="md-nav" aria-label="镜像仓库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    pull
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    push
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    本地镜像管理
+  </a>
+  
+    <nav class="md-nav" aria-label="本地镜像管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmi" class="md-nav__link">
+    rmi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    history
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    相关信息
+  </a>
+  
+    <nav class="md-nav" aria-label="相关信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#info" class="md-nav__link">
+    info
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1250,11 +1970,13 @@
 
 
 <h1 id="docker">Docker指令<a class="headerlink" href="#docker" title="Permanent link">☍</a></h1>
-<div class="highlight"><pre><span></span><code>Usage:  docker [OPTIONS] COMMAND
+<details class="info">
+<summary>全部指令预览：</summary>
+<div class="highlight"><pre><span></span><code>Usage |  docker [OPTIONS] COMMAND
 
 A self-sufficient runtime for containers
 
-Common Commands:
+Common Commands |
 run         Create and run a new container from an image
 exec        Execute a command in a running container
 ps          List containers
@@ -1268,7 +1990,7 @@ search      Search Docker Hub for images
 version     Show the Docker version information
 info        Display system-wide information
 
-Management Commands:
+Management Commands |
 builder     Manage builds
 buildx*     Docker Buildx (Docker Inc., v0.11.0)
 compose*    Docker Compose (Docker Inc., v2.19.1)
@@ -1288,10 +2010,10 @@ system      Manage Docker
 trust       Manage trust on Docker images
 volume      Manage volumes
 
-Swarm Commands:
+Swarm Commands |
 swarm       Manage Swarm
 
-Commands:
+Commands |
 attach      Attach local standard input, output, and error streams to a running container
 commit      Create a new image from a container&#39;s changes
 cp          Copy files/folders between a container and the local filesystem
@@ -1321,7 +2043,7 @@ unpause     Unpause all processes within one or more containers
 update      Update configuration of one or more containers
 wait        Block until one or more containers stop, then print their exit codes
 
-Global Options:
+Global Options |
     --config string      Location of client config files (default &quot;/home/gaozqi/.docker&quot;)
 -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
                         default context set with &quot;docker context use&quot;)
@@ -1337,7 +2059,1115 @@ Global Options:
 
 Run &#39;docker COMMAND --help&#39; for more information on a command.
 
-For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+For more help on how to use Docker, head to https |//docs.docker.com/go/guides/
+</code></pre></div>
+</details>
+<h2 id="_1">容器生命周期管理<a class="headerlink" href="#_1" title="Permanent link">☍</a></h2>
+<h3 id="run">run<a class="headerlink" href="#run" title="Permanent link">☍</a></h3>
+<p>创建一个新的容器并运行一个命令</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE<span class="w"> </span><span class="o">[</span>COMMAND<span class="o">]</span><span class="w"> </span><span class="o">[</span>ARG...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-a stdin</td>
+<td align="left">指定标准输入输出内容类型，可选 <code>STDIN/STDOUT/STDERR</code> 三项</td>
+</tr>
+<tr>
+<td align="left"><code>-d</code></td>
+<td align="left">后台运行容器，并返回容器ID</td>
+</tr>
+<tr>
+<td align="left"><code>-i</code></td>
+<td align="left">以交互模式运行容器，通常与 <code>-t</code> 同时使用</td>
+</tr>
+<tr>
+<td align="left"><code>-P</code></td>
+<td align="left">随机端口映射，容器内部端口随机映射到主机的端口</td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">指定端口映射，格式为：<strong>主机(宿主)端口:容器端口</strong></td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">为容器重新分配一个伪输入终端，通常与 <code>-i</code> 同时使用</td>
+</tr>
+<tr>
+<td align="left"><code>--name="nginx-lb"</code></td>
+<td align="left">为容器指定一个名称</td>
+</tr>
+<tr>
+<td align="left"><code>--dns 8.8.8.8</code></td>
+<td align="left">指定容器使用的DNS服务器，默认和宿主一致</td>
+</tr>
+<tr>
+<td align="left"><code>--dns-search example.com</code></td>
+<td align="left">指定容器DNS搜索域名，默认和宿主一致</td>
+</tr>
+<tr>
+<td align="left"><code>-h "mars"</code></td>
+<td align="left">指定容器的hostname</td>
+</tr>
+<tr>
+<td align="left"><code>-e username="ritchie"</code></td>
+<td align="left">设置环境变量</td>
+</tr>
+<tr>
+<td align="left"><code>--env-file=[]</code></td>
+<td align="left">从指定文件读入环境变量</td>
+</tr>
+<tr>
+<td align="left"><code>--cpuset="0-2" or --cpuset="0,1,2"</code></td>
+<td align="left">绑定容器到指定CPU运行</td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">设置容器使用内存最大值</td>
+</tr>
+<tr>
+<td align="left"><code>--net="bridge"</code></td>
+<td align="left">指定容器的网络连接类型，支持 <code>bridge/host/none/container</code> 四种类型</td>
+</tr>
+<tr>
+<td align="left"><code>--link=[]</code></td>
+<td align="left">添加链接到另一个容器</td>
+</tr>
+<tr>
+<td align="left"><code>--expose=[]</code></td>
+<td align="left">开放一个端口或一组端口</td>
+</tr>
+<tr>
+<td align="left"><code>--volume , -v</code></td>
+<td align="left">绑定一个卷</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">☍</a></h3>
+<p>启动一个或多个已经被停止的容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>start<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">☍</a></h3>
+<p>停止一个运行中的容器
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>stop<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div></p>
+<h3 id="restart">restart<a class="headerlink" href="#restart" title="Permanent link">☍</a></h3>
+<p>重启容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>restart<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="kill">kill<a class="headerlink" href="#kill" title="Permanent link">☍</a></h3>
+<p>杀掉一个运行中的容器。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-s</code></td>
+<td align="left">向容器发送一个信号</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="rm">rm<a class="headerlink" href="#rm" title="Permanent link">☍</a></h3>
+<p>删除一个或多个容器。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>rm<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">强制删除一个运行中的容器</td>
+</tr>
+<tr>
+<td align="left"><code>-l</code></td>
+<td align="left">移除容器间的网络连接，而非容器本身</td>
+</tr>
+<tr>
+<td align="left"><code>-v</code></td>
+<td align="left">删除与容器关联的卷</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="pause">pause<a class="headerlink" href="#pause" title="Permanent link">☍</a></h3>
+<p>暂停容器中所有的进程。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>pause<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="unpause">unpause<a class="headerlink" href="#unpause" title="Permanent link">☍</a></h3>
+<p>恢复容器中所有的进程。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>unpause<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">☍</a></h3>
+<p>创建一个新的容器但不启动它。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE<span class="w"> </span><span class="o">[</span>COMMAND<span class="o">]</span><span class="w"> </span><span class="o">[</span>ARG...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-a stdin</td>
+<td align="left">指定标准输入输出内容类型，可选 <code>STDIN/STDOUT/STDERR</code> 三项</td>
+</tr>
+<tr>
+<td align="left"><code>-d</code></td>
+<td align="left">后台运行容器，并返回容器ID</td>
+</tr>
+<tr>
+<td align="left"><code>-i</code></td>
+<td align="left">以交互模式运行容器，通常与 <code>-t</code> 同时使用</td>
+</tr>
+<tr>
+<td align="left"><code>-P</code></td>
+<td align="left">随机端口映射，容器内部端口随机映射到主机的端口</td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">指定端口映射，格式为：<strong>主机(宿主)端口:容器端口</strong></td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">为容器重新分配一个伪输入终端，通常与 <code>-i</code> 同时使用</td>
+</tr>
+<tr>
+<td align="left"><code>--name="nginx-lb"</code></td>
+<td align="left">为容器指定一个名称</td>
+</tr>
+<tr>
+<td align="left"><code>--dns 8.8.8.8</code></td>
+<td align="left">指定容器使用的DNS服务器，默认和宿主一致</td>
+</tr>
+<tr>
+<td align="left"><code>--dns-search example.com</code></td>
+<td align="left">指定容器DNS搜索域名，默认和宿主一致</td>
+</tr>
+<tr>
+<td align="left"><code>-h "mars"</code></td>
+<td align="left">指定容器的hostname</td>
+</tr>
+<tr>
+<td align="left"><code>-e username="ritchie"</code></td>
+<td align="left">设置环境变量</td>
+</tr>
+<tr>
+<td align="left"><code>--env-file=[]</code></td>
+<td align="left">从指定文件读入环境变量</td>
+</tr>
+<tr>
+<td align="left"><code>--cpuset="0-2" or --cpuset="0,1,2"</code></td>
+<td align="left">绑定容器到指定CPU运行</td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">设置容器使用内存最大值</td>
+</tr>
+<tr>
+<td align="left"><code>--net="bridge"</code></td>
+<td align="left">指定容器的网络连接类型，支持 <code>bridge/host/none/container</code> 四种类型</td>
+</tr>
+<tr>
+<td align="left"><code>--link=[]</code></td>
+<td align="left">添加链接到另一个容器</td>
+</tr>
+<tr>
+<td align="left"><code>--expose=[]</code></td>
+<td align="left">开放一个端口或一组端口</td>
+</tr>
+<tr>
+<td align="left"><code>--volume , -v</code></td>
+<td align="left">绑定一个卷</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="exec">exec<a class="headerlink" href="#exec" title="Permanent link">☍</a></h3>
+<p>在运行的容器中执行命令。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARG...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-d</code></td>
+<td align="left">分离模式: 在后台运行</td>
+</tr>
+<tr>
+<td align="left"><code>-i</code></td>
+<td align="left">即使没有附加也保持 STDIN 打开</td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">分配一个伪终端</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h2 id="_2">容器操作<a class="headerlink" href="#_2" title="Permanent link">☍</a></h2>
+<h3 id="ps">ps<a class="headerlink" href="#ps" title="Permanent link">☍</a></h3>
+<p>列出容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>ps<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-a</code></td>
+<td align="left">列出所有容器，包括未运行的</td>
+</tr>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">按条件过滤显示的内容</td>
+</tr>
+<tr>
+<td align="left"><code>-l</code></td>
+<td align="left">显示最近创建的容器</td>
+</tr>
+<tr>
+<td align="left"><code>-n</code></td>
+<td align="left">显示最近创建的n个容器</td>
+</tr>
+<tr>
+<td align="left"><code>--no-trunc</code></td>
+<td align="left">不截断输出</td>
+</tr>
+<tr>
+<td align="left"><code>-q</code></td>
+<td align="left">静默模式，只显示容器编号</td>
+</tr>
+<tr>
+<td align="left"><code>-s</code></td>
+<td align="left">显示总的文件大小</td>
+</tr>
+<tr>
+<td align="left"><code>--format</code></td>
+<td align="left">指定返回值的模板文件</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>输出详情介绍：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CONTAINER ID</td>
+<td align="left">容器 ID。</td>
+</tr>
+<tr>
+<td align="left">IMAGE</td>
+<td align="left">使用的镜像。</td>
+</tr>
+<tr>
+<td align="left">COMMAND</td>
+<td align="left">启动容器时运行的命令。</td>
+</tr>
+<tr>
+<td align="left">CREATED</td>
+<td align="left">容器的创建时间。</td>
+</tr>
+<tr>
+<td align="left">STATUS</td>
+<td align="left">容器状态。</td>
+</tr>
+<tr>
+<td align="left">PORTS</td>
+<td align="left">容器的端口信息和使用的连接类型（tcp\udp）。</td>
+</tr>
+<tr>
+<td align="left">NAMES</td>
+<td align="left">自动分配的容器名称。</td>
+</tr>
+</tbody>
+</table>
+<p>状态有7种：</p>
+<ul>
+<li>created（已创建）</li>
+<li>restarting（重启中）</li>
+<li>running（运行中）</li>
+<li>removing（迁移中）</li>
+<li>paused（暂停）</li>
+<li>exited（停止）</li>
+<li>dead（死亡）</li>
+</ul>
+</details>
+<h3 id="inspect">inspect<a class="headerlink" href="#inspect" title="Permanent link">☍</a></h3>
+<p>显示一个或多个容器的详细信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>inspect<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">指定返回值的模板文件</td>
+</tr>
+<tr>
+<td align="left"><code>-s</code></td>
+<td align="left">显示总的文件大小</td>
+</tr>
+<tr>
+<td align="left"><code>--type</code></td>
+<td align="left">为指定类型返回JSON</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="top">top<a class="headerlink" href="#top" title="Permanent link">☍</a></h3>
+<p>显示一个容器中运行的进程信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>top<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="attach">attach<a class="headerlink" href="#attach" title="Permanent link">☍</a></h3>
+<p>依附到一个运行的容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>attach<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER
+</code></pre></div>
+<h3 id="events">events<a class="headerlink" href="#events" title="Permanent link">☍</a></h3>
+<p>从服务器获取实时事件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>events<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--since</code></td>
+<td align="left">从指定的时间戳后显示所有事件</td>
+</tr>
+<tr>
+<td align="left"><code>--until</code></td>
+<td align="left">浏览到指定的时间戳后显示所有事件</td>
+</tr>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">根据条件过滤事件</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="logs">logs<a class="headerlink" href="#logs" title="Permanent link">☍</a></h3>
+<p>获取容器的日志</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker<span class="w"> </span>logs<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">跟踪日志输出</td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">显示时间戳</td>
+</tr>
+<tr>
+<td align="left"><code>--tail</code></td>
+<td align="left">仅列出最新N条容器日志</td>
+</tr>
+<tr>
+<td align="left"><code>--since</code></td>
+<td align="left">显示某个开始时间的所有日志</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="wait">wait<a class="headerlink" href="#wait" title="Permanent link">☍</a></h3>
+<p>阻塞运行直到容器停止，然后打印出它的退出代码</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker<span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<h3 id="export">export<a class="headerlink" href="#export" title="Permanent link">☍</a></h3>
+<p>将文件系统作为一个tar归档文件导出到STDOUT</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-o</code></td>
+<td align="left">将输入内容写入文件</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="port">port<a class="headerlink" href="#port" title="Permanent link">☍</a></h3>
+<p>列出指定的容器的端口映射，或者查找将PRIVATE_PORT NAT到面向公众的端口</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker<span class="w"> </span>port<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>PRIVATE_PORT<span class="o">[</span>/PROTO<span class="o">]]</span>
+</code></pre></div>
+<h3 id="stats">stats<a class="headerlink" href="#stats" title="Permanent link">☍</a></h3>
+<p>显示容器的资源使用统计信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker<span class="w"> </span>stats<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>CONTAINER...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--no-stream</code></td>
+<td align="left">只打印一次信息</td>
+</tr>
+<tr>
+<td align="left"><code>--no-trunc</code></td>
+<td align="left">不截断输出</td>
+</tr>
+<tr>
+<td align="left"><code>--format</code></td>
+<td align="left">指定返回值的模板文件</td>
+</tr>
+<tr>
+<td align="left"><code>--all, -a</code></td>
+<td align="left">显示所有容器，默认只显示运行中的容器</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>输出详情介绍：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CONTAINER</td>
+<td align="left">容器 ID</td>
+</tr>
+<tr>
+<td align="left">CPU %</td>
+<td align="left">CPU 使用率</td>
+</tr>
+<tr>
+<td align="left">MEM USAGE / LIMIT</td>
+<td align="left">内存使用量 / 总内存</td>
+</tr>
+<tr>
+<td align="left">MEM %</td>
+<td align="left">内存使用率</td>
+</tr>
+<tr>
+<td align="left">NET I/O</td>
+<td align="left">网络 I/O，容器通过其网络接口发送和接收的数据量</td>
+</tr>
+<tr>
+<td align="left">BLOCK I/O</td>
+<td align="left">块 I/O，容器从主机上的块设备读取和写入的数据量</td>
+</tr>
+<tr>
+<td align="left">PIDS</td>
+<td align="left">PID 总数，容器创建的进程或线程数</td>
+</tr>
+<tr>
+<td align="left">NAME</td>
+<td align="left">容器名</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="rootfs">容器rootfs命令<a class="headerlink" href="#rootfs" title="Permanent link">☍</a></h2>
+<h3 id="commit">commit<a class="headerlink" href="#commit" title="Permanent link">☍</a></h3>
+<p>从容器创建一个新的镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker<span class="w"> </span>commit<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="o">[</span>REPOSITORY<span class="o">[</span>:TAG<span class="o">]]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-a</code></td>
+<td align="left">提交的镜像作者</td>
+</tr>
+<tr>
+<td align="left"><code>-c</code></td>
+<td align="left">使用Dockerfile指令来创建镜像</td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">提交时的说明文字</td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">在commit时，将容器暂停</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="cp">cp<a class="headerlink" href="#cp" title="Permanent link">☍</a></h3>
+<p>从容器里向外拷贝文件或目录到主机</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker<span class="w"> </span>cp<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>CONTAINER:SRC_PATH<span class="w"> </span>DEST_PATH
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>docker<span class="w"> </span>cp<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>SRC_PATH<span class="p">|</span>-<span class="w"> </span>CONTAINER:DEST_PATH
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-L</code></td>
+<td align="left">跟随符号链接</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="diff">diff<a class="headerlink" href="#diff" title="Permanent link">☍</a></h3>
+<p>检查容器里文件结构的更改</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>docker<span class="w"> </span>diff<span class="w"> </span>CONTAINER
+</code></pre></div>
+<h2 id="_3">镜像仓库<a class="headerlink" href="#_3" title="Permanent link">☍</a></h2>
+<h3 id="login">login<a class="headerlink" href="#login" title="Permanent link">☍</a></h3>
+<p>登录到一个Docker镜像仓库，如果未指定镜像仓库地址，默认为Docker Hub</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span>login<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>SERVER<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-u</code></td>
+<td align="left">用户名</td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">密码</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="logout">logout<a class="headerlink" href="#logout" title="Permanent link">☍</a></h3>
+<p>从一个Docker镜像仓库登出，如果未指定镜像仓库地址，默认为Docker Hub</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker<span class="w"> </span><span class="nb">logout</span><span class="w"> </span><span class="o">[</span>SERVER<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-u</code></td>
+<td align="left">用户名</td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">密码</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="pull">pull<a class="headerlink" href="#pull" title="Permanent link">☍</a></h3>
+<p>从一个Docker镜像仓库拉取镜像或仓库</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>docker<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME<span class="o">[</span>:TAG<span class="p">|</span>@DIGEST<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-a</code></td>
+<td align="left">拉取所有 tagged 镜像</td>
+</tr>
+<tr>
+<td align="left"><code>--disable-content-trust</code></td>
+<td align="left">跳过镜像验证，默认开启</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="push">push<a class="headerlink" href="#push" title="Permanent link">☍</a></h3>
+<p>将本地的镜像上传到镜像仓库，如果未指定镜像仓库地址，默认为Docker Hub</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>docker<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME<span class="o">[</span>:TAG<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--disable-content-trust</code></td>
+<td align="left">跳过镜像验证，默认开启</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="search">search<a class="headerlink" href="#search" title="Permanent link">☍</a></h3>
+<p>在Docker Hub中搜索镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>docker<span class="w"> </span>search<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>TERM
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--automated</code></td>
+<td align="left">只列出 automated build 类型的镜像</td>
+</tr>
+<tr>
+<td align="left"><code>--no-trunc</code></td>
+<td align="left">不截断输出</td>
+</tr>
+<tr>
+<td align="left"><code>-f&lt;过滤条件&gt;</code></td>
+<td align="left">根据条件过滤输出</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="note">
+<summary>过滤条件说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>NAME</code></td>
+<td align="left">镜像名称</td>
+</tr>
+<tr>
+<td align="left"><code>DESCRIPTION</code></td>
+<td align="left">镜像描述</td>
+</tr>
+<tr>
+<td align="left"><code>STARS</code></td>
+<td align="left">镜像的star数量</td>
+</tr>
+<tr>
+<td align="left"><code>OFFICIAL</code></td>
+<td align="left">是否官方镜像</td>
+</tr>
+<tr>
+<td align="left"><code>AUTOMATED</code></td>
+<td align="left">是否自动构建</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="_4">本地镜像管理<a class="headerlink" href="#_4" title="Permanent link">☍</a></h2>
+<h3 id="images">images<a class="headerlink" href="#images" title="Permanent link">☍</a></h3>
+<p>列出本地镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>docker<span class="w"> </span>images<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>REPOSITORY<span class="o">[</span>:TAG<span class="o">]]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-a</code></td>
+<td align="left">列出所有镜像，默认只列出非中间层镜像</td>
+</tr>
+<tr>
+<td align="left"><code>-q</code></td>
+<td align="left">只显示镜像ID</td>
+</tr>
+<tr>
+<td align="left"><code>--digests</code></td>
+<td align="left">显示镜像的摘要信息</td>
+</tr>
+<tr>
+<td align="left"><code>--no-trunc</code></td>
+<td align="left">不截断输出</td>
+</tr>
+<tr>
+<td align="left"><code>--format</code></td>
+<td align="left">指定返回值的模板文件</td>
+</tr>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">根据条件过滤输出</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="rmi">rmi<a class="headerlink" href="#rmi" title="Permanent link">☍</a></h3>
+<p>删除本地一个或多少镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>docker<span class="w"> </span>rmi<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE<span class="w"> </span><span class="o">[</span>IMAGE...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">强制删除</td>
+</tr>
+<tr>
+<td align="left"><code>-no-prune</code></td>
+<td align="left">不移除该镜像的过程镜像，默认移除</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="tag">tag<a class="headerlink" href="#tag" title="Permanent link">☍</a></h3>
+<p>给本地镜像打标签</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>docker<span class="w"> </span>tag<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE<span class="o">[</span>:TAG<span class="o">]</span><span class="w"> </span><span class="o">[</span>REGISTRYHOST/<span class="o">][</span>USERNAME/<span class="o">]</span>NAME<span class="o">[</span>:TAG<span class="o">]</span>
+</code></pre></div>
+<h3 id="build">build<a class="headerlink" href="#build" title="Permanent link">☍</a></h3>
+<p>使用Dockerfile创建镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>docker<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PATH<span class="w"> </span><span class="p">|</span><span class="w"> </span>URL<span class="w"> </span><span class="p">|</span><span class="w"> </span>-
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--tag, -t</code></td>
+<td align="left">指定要创建的目标镜像名。镜像的名字及标签，通常 name:tag 或者 name 格式；可以在一次构建中为一个镜像设置多个标签。</td>
+</tr>
+<tr>
+<td align="left"><code>--quiet, -q</code></td>
+<td align="left">不输出镜像构建过程</td>
+</tr>
+<tr>
+<td align="left"><code>--build-arg=[]</code></td>
+<td align="left">设置镜像创建时的变量</td>
+</tr>
+<tr>
+<td align="left"><code>--disable-content-trust</code></td>
+<td align="left">跳过镜像验证，默认开启</td>
+</tr>
+<tr>
+<td align="left"><code>--no-cache</code></td>
+<td align="left">创建镜像的过程不使用缓存</td>
+</tr>
+<tr>
+<td align="left"><code>--pull</code></td>
+<td align="left">尝试去更新镜像的新版本</td>
+</tr>
+<tr>
+<td align="left"><code>--rm</code></td>
+<td align="left">设置镜像成功后删除中间容器</td>
+</tr>
+<tr>
+<td align="left"><code>--force-rm</code></td>
+<td align="left">设置镜像过程中删除中间容器</td>
+</tr>
+<tr>
+<td align="left"><code>--memory-swap</code></td>
+<td align="left">设置Swap的最大值为内存+swap，"-1"表示不限swap</td>
+</tr>
+<tr>
+<td align="left"><code>--ulimit</code></td>
+<td align="left">Ulimit配置</td>
+</tr>
+<tr>
+<td align="left"><code>--cpu-shares</code></td>
+<td align="left">设置容器CPU权重，默认为0</td>
+</tr>
+<tr>
+<td align="left"><code>--cpu-period</code></td>
+<td align="left">限制CPU CFS周期</td>
+</tr>
+<tr>
+<td align="left"><code>--cpu-quota</code></td>
+<td align="left">限制CPU CFS配额</td>
+</tr>
+<tr>
+<td align="left"><code>--cpuset-cpus</code></td>
+<td align="left">设置容器可以使用哪些CPU，此参数可以用来容器独占CPU</td>
+</tr>
+<tr>
+<td align="left"><code>--cpuset-mems</code></td>
+<td align="left">设置容器可以使用哪些内存，此参数可以用来容器独占内存</td>
+</tr>
+<tr>
+<td align="left"><code>--isolation</code></td>
+<td align="left">使用容器隔离技术</td>
+</tr>
+<tr>
+<td align="left"><code>--network</code></td>
+<td align="left">默认 default。在构建期间设置RUN指令的网络模式</td>
+</tr>
+<tr>
+<td align="left"><code>--label=[]</code></td>
+<td align="left">设置镜像使用的元数据</td>
+</tr>
+<tr>
+<td align="left"><code>--shm-size</code></td>
+<td align="left">设置/dev/shm的大小，默认值是64M</td>
+</tr>
+<tr>
+<td align="left"><code>--squash</code></td>
+<td align="left">将 Dockerfile 中所有的操作压缩为一层</td>
+</tr>
+<tr>
+<td align="left"><code>--file , -f</code></td>
+<td align="left">指定要使用的Dockerfile路径</td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">设置内存最大值</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="history">history<a class="headerlink" href="#history" title="Permanent link">☍</a></h3>
+<p>显示一个镜像的历史</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>docker<span class="w"> </span><span class="nb">history</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--no-trunc</code></td>
+<td align="left">显示完整的提交记录</td>
+</tr>
+<tr>
+<td align="left"><code>-q</code></td>
+<td align="left">仅列出提交记录ID</td>
+</tr>
+<tr>
+<td align="left"><code>-H</code></td>
+<td align="left">以可读的格式打印镜像大小和日期，默认为true</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="save">save<a class="headerlink" href="#save" title="Permanent link">☍</a></h3>
+<p>将一个或多个镜像保存成tar包到本地</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>docker<span class="w"> </span>save<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>IMAGE<span class="w"> </span><span class="o">[</span>IMAGE...<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-o</code></td>
+<td align="left">输出到指定文件</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="load">load<a class="headerlink" href="#load" title="Permanent link">☍</a></h3>
+<p>从tar包中加载一个或多个镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>docker<span class="w"> </span>load<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>--input , -i</code></td>
+<td align="left">从指定文件中读入</td>
+</tr>
+<tr>
+<td align="left"><code>--quiet , -q</code></td>
+<td align="left">静默模式，不输出任何信息</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="import">import<a class="headerlink" href="#import" title="Permanent link">☍</a></h3>
+<p>从归档文件中创建镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>docker<span class="w"> </span>import<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>file<span class="p">|</span>URL<span class="p">|</span>-<span class="w"> </span><span class="o">[</span>REPOSITORY<span class="o">[</span>:TAG<span class="o">]]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-c</code></td>
+<td align="left">应用docker 指令创建镜像</td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">提交时的说明文字</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h2 id="_5">相关信息<a class="headerlink" href="#_5" title="Permanent link">☍</a></h2>
+<h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">☍</a></h3>
+<p>显示 Docker 版本信息。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>docker<span class="w"> </span>version<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+<details class="tip">
+<summary>OPTIONS说明：</summary>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">指定返回值的模板文件</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="info">info<a class="headerlink" href="#info" title="Permanent link">☍</a></h3>
+<p>显示 Docker 系统信息，包括镜像和容器数。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>docker<span class="w"> </span>info<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </code></pre></div>
 
   <hr>
@@ -1345,7 +3175,7 @@ For more help on how to use Docker, head to https://docs.docker.com/go/guides/
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-07-30 00:10:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-08-02 23:42:02</span>
       
         <br>
         创建日期:
