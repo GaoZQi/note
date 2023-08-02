@@ -23,16 +23,8 @@
 + [Docker容器的使用](containers.md)
 + [Docker镜像的使用](images.md)
 
-...
++ ...
 
 ## Docker常用命令
 
-+ [Docker常用命令](command.md)
-
----
-
-+ [ ] 利用docker部署pwn题目
-    + [使用docker搭建pwn题靶机](https://www.jianshu.com/p/5afa84465125)
-+ [ ] docker技术
-    + [ ] 常用的docker 命令
-    + [ ] docker exec/run/pull/commit
++ [Docker命令汇总](command.md)
