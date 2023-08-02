@@ -1410,9 +1410,7 @@
 <h1 id="docker">Docker镜像的使用<a class="headerlink" href="#docker" title="Permanent link">☍</a></h1>
 <h2 id="_1">查看镜像列表<a class="headerlink" href="#_1" title="Permanent link">☍</a></h2>
 <p>可以通过指令查看本地主机上的镜像有关信息。</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker images
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>images
 </code></pre></div>
 <p>其中，每一列的含义如下：</p>
 <ul>
@@ -1424,26 +1422,18 @@ docker images
 </ul>
 <h2 id="_2">拉取镜像<a class="headerlink" href="#_2" title="Permanent link">☍</a></h2>
 <p>当我们在本地主机上使用一个不存在的镜像时 Docker 就会自动下载这个镜像。如果我们想预先下载这个镜像，我们可以使用 docker pull 命令来下载它。</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker pull [image name]
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>image<span class="w"> </span>name<span class="o">]</span>
 </code></pre></div>
 <p>当一个仓库中有多个镜像时，我们可以通过标签来指定具体是哪个镜像。例如，我们可以通过下面的命令来下载 Ubuntu 18.04 版本的镜像：</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker pull ubuntu:18.04
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:18.04
 </code></pre></div>
 <h2 id="_3">查找镜像<a class="headerlink" href="#_3" title="Permanent link">☍</a></h2>
 <p>可以通过指令在<a href="https://hub.docker.com/">Docker Hub</a> 上查找镜像。</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker search [image name]
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>search<span class="w"> </span><span class="o">[</span>image<span class="w"> </span>name<span class="o">]</span>
 </code></pre></div>
 <h2 id="_4">删除镜像<a class="headerlink" href="#_4" title="Permanent link">☍</a></h2>
 <p>可以通过指令删掉本地拉取的镜像。</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker rmi [image id]
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>rmi<span class="w"> </span><span class="o">[</span>image<span class="w"> </span>id<span class="o">]</span>
 </code></pre></div>
 <h2 id="_5">构造镜像流程<a class="headerlink" href="#_5" title="Permanent link">☍</a></h2>
 <p>当仓库中的镜像无法满足要求，可以通过下面两种方式来构造镜像：</p>
@@ -1494,9 +1484,7 @@ docker rmi [image id]
 </ol>
 <h3 id="_7">设置镜像标签<a class="headerlink" href="#_7" title="Permanent link">☍</a></h3>
 <p>可以通过指令为镜像设置标签。</p>
-<div class="highlight"><pre><span></span><code>```bash
-docker tag [image id] [image name]:[tag]
-```
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>tag<span class="w"> </span><span class="o">[</span>image<span class="w"> </span>id<span class="o">]</span><span class="w"> </span><span class="o">[</span>image<span class="w"> </span>name<span class="o">]</span>:<span class="o">[</span>tag<span class="o">]</span>
 </code></pre></div>
 
   <hr>
