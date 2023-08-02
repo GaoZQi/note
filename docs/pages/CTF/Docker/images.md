@@ -4,9 +4,9 @@
 
 可以通过指令查看本地主机上的镜像有关信息。
 
-    ```bash
-    docker images
-    ```
+```bash
+docker images
+```
 
 其中，每一列的含义如下：
 
@@ -20,31 +20,31 @@
 
 当我们在本地主机上使用一个不存在的镜像时 Docker 就会自动下载这个镜像。如果我们想预先下载这个镜像，我们可以使用 docker pull 命令来下载它。
 
-    ```bash
-    docker pull [image name]
-    ```
+```bash
+docker pull [image name]
+```
 
 当一个仓库中有多个镜像时，我们可以通过标签来指定具体是哪个镜像。例如，我们可以通过下面的命令来下载 Ubuntu 18.04 版本的镜像：
 
-    ```bash
-    docker pull ubuntu:18.04
-    ```
+```bash
+docker pull ubuntu:18.04
+```
 
 ## 查找镜像
 
 可以通过指令在[Docker Hub](https://hub.docker.com/) 上查找镜像。
 
-    ```bash
-    docker search [image name]
-    ```
+```bash
+docker search [image name]
+```
 
 ## 删除镜像
 
 可以通过指令删掉本地拉取的镜像。
 
-    ```bash
-    docker rmi [image id]
-    ```
+```bash
+docker rmi [image id]
+```
 
 ## 构造镜像流程
 
@@ -105,6 +105,6 @@
 
 可以通过指令为镜像设置标签。
 
-    ```bash
-    docker tag [image id] [image name]:[tag]
-    ```
+```bash
+docker tag [image id] [image name]:[tag]
+```

@@ -42,37 +42,37 @@
 
 ### 查看所有容器
 
-```bash
-    docker ps -a
+    ```bash
+docker ps -a
     ```
 
 ### 启动已经停止的容器
 
-    ```bash
-    docker start [container id]
-    ```
+```bash
+docker start [container id]
+```
 
 ### 进入容器
 
-    ```bash
-    docker attach [container id]
-    ```
+```bash
+docker attach [container id]
+```
 
 ### 停止容器
 
-    ```bash
-    docker stop [container id]
-    ```
+```bash
+docker stop [container id]
+```
 
 ### 删除容器
 
-    ```bash
-    docker rm [container id]
-    ```
+```bash
+docker rm [container id]
+```
 
 ### 导入与导出
 
-    ```bash
-    docker export [container id] > [file name].tar
-    docker import [file name].tar [image name]
-    ```
+```bash
+docker export [container id] > [file name].tar
+docker import [file name].tar [image name]
+```
