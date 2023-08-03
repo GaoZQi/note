@@ -300,8 +300,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -535,7 +533,21 @@
       
         <li class="md-nav__item">
   <a href="#docker" class="md-nav__link">
-    Docker技术
+    制作Docker镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwn" class="md-nav__link">
+    部署PWN题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    启动容器
   </a>
   
 </li>
@@ -1241,9 +1253,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1263,7 +1273,21 @@
       
         <li class="md-nav__item">
   <a href="#docker" class="md-nav__link">
-    Docker技术
+    制作Docker镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwn" class="md-nav__link">
+    部署PWN题目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    启动容器
   </a>
   
 </li>
@@ -1300,21 +1324,164 @@
 
 
 <h1 id="dockerpwn">利用Docker技术部署PWN题目<a class="headerlink" href="#dockerpwn" title="Permanent link">☍</a></h1>
-<h2 id="docker">Docker技术<a class="headerlink" href="#docker" title="Permanent link">☍</a></h2>
-<p>跳转至 <a href="../../../Docker/">Docker</a> 文章列表</p>
-<p><link rel="stylesheet" href="../../../../../css/cover.css"></p>
-<div class="center-container">
-  <state>(◎﹏◎)</state>
-  <text>buiding</text>
-  <text class="line">.....</text>
+<h2 id="docker">制作Docker镜像<a class="headerlink" href="#docker" title="Permanent link">☍</a></h2>
+<ol>
+<li>
+<p>拉取镜像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:16.04
+</code></pre></div>
+</li>
+<li>
+<p>运行容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu:16.04<span class="w"> </span>/bin/bash<span class="w"> </span><span class="c1">#启动容器(1)</span>
+</code></pre></div>
+<ol>
+<li>
+<p><code>-it</code>：交互式运行容器</p>
+<p><code>ubuntu:16.04</code>：镜像名字</p>
+<p><code>/bin/bash</code>：容器启动后执行的命令</p>
+</li>
+</ol>
+</li>
+<li>
+<p>安装工具</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g&quot;</span><span class="w"> </span>/etc/apt/sources.list<span class="w"> </span><span class="c1">#将源替换为阿里云源</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>-y<span class="w"> </span>dist-upgrade<span class="w"> </span><span class="c1">#更新源</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>lib32z1<span class="w"> </span>xinetd<span class="w"> </span>build-essential<span class="w"> </span>python<span class="w"> </span>python-dev<span class="w"> </span><span class="c1">#安装工具</span>
+</code></pre></div>
+</li>
+<li>
+<p>退出容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">exit</span>
+</code></pre></div>
+</li>
+<li>
+<p>提交容器</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>commit<span class="w"> </span>CONTAINER_HASH<span class="w"> </span>pwn_server:16.04<span class="w"> </span><span class="c1">#参数含义(1) </span>
+</code></pre></div>
+<ol>
+<li>
+<p><code>CONTAINER_HASH</code>：容器的hash值</p>
+<p><code>pwn_server:16.04</code>：镜像名字</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="pwn">部署PWN题目<a class="headerlink" href="#pwn" title="Permanent link">☍</a></h2>
+<ol>
+<li>
+<p>创建目录</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/home/pwn_server
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">目录结构</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/home/pwn_server
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├──<span class="w"> </span>pwn<span class="w"> </span><span class="c1">#binary文件(1)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>├──<span class="w"> </span>pxi<span class="w"> </span><span class="c1">#xinetd脚本(2)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├──<span class="w"> </span>start.sh<span class="w"> </span><span class="c1">#启动脚本(3)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>└──<span class="w"> </span>flag<span class="w"> </span><span class="c1">#flag文件</span>
+</code></pre></div>
+<ol>
+<li>
+<p>pwn题目的二进制文件</p>
+</li>
+<li>
+<p>用于配置pwn题服务</p>
+</li>
+<li>
+<p>启动container时运行的脚本</p>
+</li>
+</ol>
 </div>
+</li>
+<li>
+<p>创建flag文件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;flag{test}&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/home/pwn_server/flag
+</code></pre></div>
+</li>
+<li>
+<p>创建xinetd配置文件</p>
+<div class="highlight"><span class="filename">pxi</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>service<span class="w"> </span>pwn<span class="w"> </span><span class="c1">#服务名</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="o">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nv">disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>no<span class="w"> </span><span class="c1">#是否禁用</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nv">socket_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>stream<span class="w"> </span><span class="c1">#socket类型</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nv">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span>tcp<span class="w"> </span><span class="c1">#协议</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nb">wait</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>no<span class="w"> </span><span class="c1">#是否等待</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nv">user</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>root<span class="w"> </span><span class="c1">#运行用户</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nb">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>UNLISTED<span class="w"> </span><span class="c1">#类型</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nv">port</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">8888</span><span class="w"> </span><span class="c1">#端口</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nb">bind</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span><span class="c1">#绑定地址</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="nv">server</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/usr/sbin/chroot<span class="w"> </span><span class="c1">#服务程序</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="nv">server_args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>--userspec<span class="o">=</span>ctf:ctf<span class="w"> </span>/<span class="w"> </span>timeout<span class="w"> </span><span class="m">30</span><span class="w"> </span>./home/ctf/pwn<span class="w"> </span><span class="c1">#服务程序参数</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="nv">banner_fail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/etc/banner_fail<span class="w"> </span><span class="c1">#banner文件</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="c1"># safety options</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nv">per_source</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="c1"># the maximum instances of this service per source IP address</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="nv">rlimit_cpu</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="c1"># the maximum number of CPU seconds that the service may use</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nv">rlimit_as</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>1024M<span class="w"> </span><span class="c1"># the Address Space resource limit for the service</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="c1">#access_times = 2:00-9:00 12:00-24:00</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="c1">#Instances   = 20 #process limit</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span><span class="c1">#per_source  = 5 #link ip limit</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">    </span><span class="c1">#log warning die</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">    </span><span class="nv">log_on_success</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>PID<span class="w"> </span>HOST<span class="w"> </span>EXIT<span class="w"> </span>DURATION<span class="w">    </span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="nv">log_on_failure</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>HOST<span class="w"> </span>ATTEMPT<span class="w"> </span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="nv">log_type</span><span class="w"> </span><span class="o">=</span>FILE<span class="w"> </span>/var/log/myservice.log<span class="w"> </span><span class="m">8388608</span><span class="w"> </span><span class="m">15728640</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="o">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>创建启动脚本</p>
+<div class="highlight"><span class="filename">start.sh</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="ch">#!/bin/sh</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>useradd<span class="w"> </span>-m<span class="w"> </span>ctf<span class="w">  </span><span class="c1">#创建用户</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sleep<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="c1">#等待2秒</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>chmod<span class="w"> </span><span class="m">555</span><span class="w"> </span>-R<span class="w"> </span>/home/pwn_server<span class="w">  </span><span class="c1">#修改权限(1)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>cp<span class="w"> </span>/home/pwn_server/pxi<span class="w"> </span>/etc/xinetd.d/pwn<span class="w">  </span><span class="c1">#复制xinetd配置文件</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>/etc/init.d/xinetd<span class="w"> </span>restart<span class="w">  </span><span class="c1">#重启xinetd服务</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">trap</span><span class="w"> </span>:<span class="w"> </span>TERM<span class="w"> </span>INT<span class="p">;</span><span class="w"> </span>sleep<span class="w"> </span>infinity<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nb">wait</span><span class="w">  </span><span class="c1">#等待</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># /bin/sh</span>
+</code></pre></div>
+<ol>
+<li><code>555</code>  <code>r -xr -xr -x</code> 所有组都是读取和执行权限</li>
+</ol>
+</li>
+</ol>
+<h2 id="_1">启动容器<a class="headerlink" href="#_1" title="Permanent link">☍</a></h2>
+<ol>
+<li>
+<p>调试题目
+    用来调试题目环境。启动container之后会有一个交互式的shell，可以用来进行多种后续操作。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="nv">$PORT</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/home/pwn_server<span class="w"> </span>-ti<span class="w"> </span><span class="nv">$IMAGE_NAME</span><span class="w"> </span>/bin/sh<span class="w"> </span><span class="c1">#参数含义(1)</span>
+</code></pre></div>
+<ol>
+<li>
+<p><code>$PORT</code> 为<code>host</code>端映射的端口，请自行修改</p>
+<p><code>$IMAGE_NAME</code>为使用的<code>image</code>的名称</p>
+</li>
+</ol>
+</li>
+<li>
+<p>启动题目</p>
+<p>用来部署题目环境。启动container之后会自动启动<code>xinetd</code>服务，监听<code>8888</code>端口。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>chmod<span class="w"> </span><span class="m">555</span><span class="w"> </span>-R<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span><span class="nv">$NAME</span><span class="w"> </span>-p<span class="w"> </span><span class="nv">$PORT</span>:8888<span class="w"> </span>-v<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>:/home/pwn_server<span class="w"> </span>-d<span class="w"> </span><span class="nv">$IMAGE_NAME</span><span class="w"> </span>/home/pwn_server/start.sh<span class="w"> </span><span class="c1">#参数含义(1)</span>
+</code></pre></div>
+<ol>
+<li>
+<p><code>$NAME</code> 为<code>container</code>的名称，请自行修改</p>
+<p><code>$PORT</code> 为<code>host</code>端映射的端口，请自行修改</p>
+<p><code>$IMAGE_NAME</code>为使用的<code>image</code>的名称</p>
+</li>
+</ol>
+</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-08-02 00:39:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-08-03 13:24:01</span>
       
         <br>
         创建日期:
@@ -1325,8 +1492,6 @@
 </div>
 
 
-
-  
 
 
 
@@ -1347,8 +1512,6 @@
         <footer class="md-footer">
   
     
-      
-        
       
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
