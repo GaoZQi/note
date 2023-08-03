@@ -13,4 +13,7 @@ hide:
 </div>
 
 ---
-[使用docker搭建pwn题靶机 :material-link:](https://www.jianshu.com/p/5afa84465125)
+
+## 文章列表
+
++ [x] [利用Docker技术部署PWN题目](other/build-pwn.md)
