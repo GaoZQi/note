@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
         "https://json.schemastore.org/mkdocs-1.0.json": "file:///c%3A/Users/GaoZQi/Desktop/notes/mkdocs.yml"
-    }
+    },
+    "todo-tree.tree.scanMode": "workspace only"
 }
