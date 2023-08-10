@@ -159,6 +159,7 @@ nav:
       - pages/CTF/index.md
       - PWN: 
         - pages/CTF/PWN/index.md
+        - PWN环境配置记录: pages/CTF/PWN/env.md
         - PWN题目部署: pages/CTF/PWN/other/build-pwn.md
       - Docker: 
         - pages/CTF/Docker/index.md
