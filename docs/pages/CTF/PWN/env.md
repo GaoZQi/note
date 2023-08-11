@@ -1,17 +1,24 @@
 # PWN环境配置记录
 
-## WSL环境配置
+## Linux环境搭建
+
+### 通过WSL配置环境
 
 !!! warning "使用前提"
-    必须运行 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11 才能使用以下命令。 如果使用的是更早的版本，请参阅[手动安装页](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)。
+    + 必须运行 **Windows 10 版本 2004 及更高版本**（内部版本 19041 及更高版本）或 Windows 11 才能使用以下命令。 如果使用的是更早的版本，请参阅[手动安装页](https://learn.microsoft.com/zh-cn/windows/wsl/install-manual)。
+    + 在设置>应用>应用和功能>可选功能中启用适用于 Linux 的 Windows 子系统和虚拟机平台功能。
+    + 家庭版通过下面指令开启虚拟机平台功能。
+        ```powershell
+        dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+        ```
 
-### 安装 WSL 命令
+#### 安装 WSL 命令
 
 ```powershell
 wsl --install
 ```
 
-### 检查 WSL 版本
+#### 检查 WSL 版本
 
 ```powershell
 wsl -l -v
@@ -23,7 +30,7 @@ wsl -l -v
 wsl --set-default-version 2
 ```
 
-### 安装 Ubuntu ( WSL )
+#### 安装 Ubuntu ( WSL )
 
 1. 打开 Microsoft Store
 
@@ -41,7 +48,84 @@ wsl --set-default-version 2
         ![setting](assets/image-2.png)
         如果已经进行初始化可以参考网络教程进行迁移。
 
-    设定UNIX账户和密码。
+    设定UNIX账户名和密码。等待WSL自动配置完成。
+    ![kali](assets/image-3.png)
+
+    !!! note "WSL使用技巧"
+        !!! tip "常用命令"
+            === "查看WSL已安装发行版状态和WSL版本"
+                ```powershell
+                wsl -l -v
+                ```
+
+            === "启动WSL"
+                ```powershell
+                wsl
+                ```
+
+            === "结束运行WSL"
+                ```powershell
+                wsl --shutdown
+                ```
+                当VmmemWSL进程占用内存过高时，可以通过此指令结束WSL运行。
+
+            === "注销WSL"
+                ```powershell
+                wsl --unregister <distribution name> #发行版名称(1)
+                ```
+
+                此命令将会清除WSL中的所有数据，包括文件系统、Linux系统设置等。
+
+                1. 可通过 `wsl -l` 查看已安装的发行版名称。
+        ??? tip "WSL文件系统"
+            WSL文件系统位于可以通过`\\wsl$`访问WSL文件系统。
+
+            !!! warning "注意"
+                由于文件系统位于系统盘，因此不要在WSL中进行大量文件操作，以免占用过多系统盘空间。
+
+        WSL可以与Windows下的应用联动，例如VScode：
+        ??? tip "与VScodr联动"
+            可以通过安装[Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)插件，将VScode与WSL联动，可以在WSL中直接打开VScode，也可以在VScode中打开WSL。
+            !!! note "`code`指令"
+                ```bash
+                code <file path> #文件路径 [可选](1)
+                ```
+
+                1. `code`会直接打开VScode空工作区。
+
+                    `code .`即可在VScode中打开所在目录。
+
+        同时也可以在Window下直接运行Liunux下的GUI应用，例如Wireshark等。
+        可以在 开始 > Ubuntu 20.04 中看到已安装的GUI应用。
+
+### 通过VMware等配置虚拟机（暂略安装过程）
+
+安装WMware Workstation Pro或其他虚拟化软件，在相关Linux发行版网站下载镜像文件，进行安装。
+
+### 通过存储介质安装双系统（暂略安装过程）
+
+!!! warning "注意"
+    双系统安装过程中可能会出现数据丢失等情况，建议提前备份重要数据。
+
+1. 下载相关Linux发行版镜像文件，制作启动盘。
+
+    !!! note "制作启动盘"
+        可以使用[UltraISO](https://cn.ultraiso.net/xiazai.html)等软件制作启动盘。
+
+2. 在Windows中分出一定空间，用于安装Linux系统。
+
+    !!! note "分区工具"
+        可以使用[DiskGenius](https://www.diskgenius.cn/)等工具进行分区。
+
+3. 重启电脑，通过启动盘安装Linux系统。
+
+    !!! note "安装过程"
+        安装过程中需要注意分区，可以选择手动分区，将空间分出来，用于安装Linux系统。
+
+    !!! warning "注意"
+        安装过程中可能会出现数据丢失等情况，建议提前备份重要数据。
+
+4. 安装完成后，重启电脑，选择启动项，进入Linux系统。
 
 ## zch相关配置
 
@@ -73,6 +157,231 @@ oh-my-zsh是一个开源的、社区驱动的框架，用于管理zsh配置，�
 
     ```bash
     sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    ```
+
+??? example "配置文件"
+
+    ```zsh title="~/.zshrc"
+
+        # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc
+
+        # Initialization code that may require console input (password prompts, [y/n]
+
+        # confirmations, etc.) must go above this block; everything else may go below
+
+        eval "$(zoxide init zsh)"
+        [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+        if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+        fi
+
+        # If you come from bash you might have to change your $PATH
+
+        # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+        # Path to your oh-my-zsh installation
+
+        export ZSH="$HOME/.oh-my-zsh"
+
+        # Set name of the theme to load --- if set to "random", it will
+
+        # load a random theme each time oh-my-zsh is loaded, in which case
+
+        # to know which specific one was loaded, run: echo $RANDOM_THEME
+
+        # See <https://github.com/ohmyzsh/ohmyzsh/wiki/Themes>
+
+        ZSH_THEME="powerlevel10k/powerlevel10k"
+
+        # Set list of themes to pick from when loading at random
+
+        # Setting this variable when ZSH_THEME=random will cause zsh to load
+
+        # a theme from this variable instead of looking in $ZSH/themes/
+
+        # If set to an empty array, this variable will have no effect
+
+        # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+        # Uncomment the following line to use case-sensitive completion
+
+        # CASE_SENSITIVE="true"
+
+        # Uncomment the following line to use hyphen-insensitive completion
+
+        # Case-sensitive completion must be off. _ and - will be interchangeable
+
+        # HYPHEN_INSENSITIVE="true"
+
+        # Uncomment one of the following lines to change the auto-update behavior
+
+        # zstyle ':omz:update' mode disabled  # disable automatic updates
+
+        # zstyle ':omz:update' mode auto      # update automatically without asking
+
+        # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+        # Uncomment the following line to change how often to auto-update (in days)
+
+        # zstyle ':omz:update' frequency 13
+
+        # Uncomment the following line if pasting URLs and other text is messed up
+
+        # DISABLE_MAGIC_FUNCTIONS="true"
+
+        # Uncomment the following line to disable colors in ls
+
+        # DISABLE_LS_COLORS="true"
+
+        # Uncomment the following line to disable auto-setting terminal title
+
+        # DISABLE_AUTO_TITLE="true"
+
+        # Uncomment the following line to enable command auto-correction
+
+        # ENABLE_CORRECTION="true"
+
+        # Uncomment the following line to display red dots whilst waiting for completion
+
+        # You can also set it to another string to have that shown instead of the default red dots
+
+        # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+
+        # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+
+        # COMPLETION_WAITING_DOTS="true"
+
+        # Uncomment the following line if you want to disable marking untracked files
+
+        # under VCS as dirty. This makes repository status check for large repositories
+
+        # much, much faster
+
+        # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+        # Uncomment the following line if you want to change the command execution time
+
+        # stamp shown in the history command output
+
+        # You can set one of the optional three formats
+
+        # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+
+        # or set a custom format using the strftime function format specifications
+
+        # see 'man strftime' for details
+
+        # HIST_STAMPS="mm/dd/yyyy"
+
+        # Would you like to use another custom folder than $ZSH/custom?
+
+        # ZSH_CUSTOM=/path/to/new-custom-folder
+
+        # Which plugins would you like to load?
+
+        # Standard plugins can be found in $ZSH/plugins/
+
+        # Custom plugins may be added to $ZSH_CUSTOM/plugins/
+
+        # Example format: plugins=(rails git textmate ruby lighthouse)
+
+        # Add wisely, as too many plugins slow down shell startup
+
+        plugins=(
+        git
+        web-search
+        )
+
+        # This speeds up pasting w/ autosuggest
+
+        # <https://github.com/zsh-users/zsh-autosuggestions/issues/238>
+
+        pasteinit() {
+        OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+        zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+        }
+
+        pastefinish() {
+        zle -N self-insert $OLD_SELF_INSERT
+        }
+        zstyle :bracketed-paste-magic paste-init pasteinit
+        zstyle :bracketed-paste-magic paste-finish pastefinish
+
+        source $ZSH/oh-my-zsh.sh
+
+        source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+        source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
+        source ~/.zsh/fzf.zsh
+
+        alias ls="exa --icons"
+        alias cls="clear"
+        alias ll="exa -l --icons"
+        alias la="exa -a --icons"
+        alias lla="exa -la --icons"
+        alias q="exit"
+        alias find="fdfind"
+        alias cat="batcat"
+        alias os="neofetch"
+
+        HISTFILE=$HOME/.zsh/cache/zsh_history
+        HISTSIZE=5000
+        SAVEHIST=5000
+
+        ## Settings for umask
+
+        setopt appendhistory
+        setopt appendhistory
+        setopt INC_APPEND_HISTORY
+        setopt SHARE_HISTORY
+
+        # User configuration
+
+        # export MANPATH="/usr/local/man:$MANPATH"
+
+        # You may need to manually set your language environment
+
+        # export LANG=en_US.UTF-8
+
+        # Preferred editor for local and remote sessions
+
+        # if [[ -n $SSH_CONNECTION ]]; then
+
+        # export EDITOR='vim'
+
+        # else
+
+        # export EDITOR='mvim'
+
+        # fi
+
+        # Compilation flags
+
+        # export ARCHFLAGS="-arch x86_64"
+
+        # Set personal aliases, overriding those provided by oh-my-zsh libs
+
+        # plugins, and themes. Aliases can be placed here, though oh-my-zsh
+
+        # users are encouraged to define aliases within the ZSH_CUSTOM folder
+
+        # For a full list of active aliases, run `alias`
+
+        #
+
+        # Example aliases
+
+        # alias zshconfig="mate ~/.zshrc"
+
+        # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+        # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+        [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
     ```
 
 ### 安装[Powerlevel10k](https://github.com/romkatv/powerlevel10k)(推荐)
@@ -115,6 +424,9 @@ Powerlevel10k是一个zsh主题，可以自定义配置，提供了丰富的配�
 安装完成后，重启终端将会自动进入配置页面，根据个人喜好进行配置。
 
 ??? example "参考配置"
+
+    !!! warning "注意"
+        此配置需要oh-my-zsh支持
 
     ``` zsh title=".p10k.zsh"
     # Generated by Powerlevel10k configuration wizard on 2023-08-08 at 13:30 CST.
@@ -1952,4 +2264,114 @@ Powerlevel10k是一个zsh主题，可以自定义配置，提供了丰富的配�
     'builtin' 'unset' 'p10k_config_opts'
     ```
 
+### zsh插件安装
+
+=== "zsh-autosuggestions"
+
+    [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)是一个zsh的插件，可以根据历史命令，自动提示命令，
+
+    + 安装方法：
+    :material-github:<https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md>
+
+=== "zsh-syntax-highlighting"
+
+    [zsh-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)是一个zsh的插件，可以根据命令的语法，自动高亮命令。
+
+    + 安装方法：
+    :material-github:<https://github.com/zdharma-continuum/fast-syntax-highlighting#installation>
+
+=== "fzf"
+
+    [fzf](https://github.com/junegunn/fzf)是一个命令行模糊搜索工具，可以用来快速搜索历史命令。
+
+    + 安装方法：
+    :material-github:<<https://github.com/junegunn/fzf#installation>
+
+    + 配置文档：:material-github:<https://github.com/junegunn/fzf#usage>
+
+    ??? example "fzf配置"
+
+        ``` shell title="fzf.sh" hl_lines="4"
+            export RUNEWIDTH_EASTASIAN=0
+
+            export FZF_COMPLETION_TRIGGER='?'
+            export FZF_DEFAULT_OPTS="--preview 'bash ~/.zsh/file_preview.sh {}' --height 12 --layout=reverse"
+            export FZF_DEFAULT_COMMAND="fdfind --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
+
+            zstyle ':completion:complete:*:options' sort false
+            zstyle ':fzf-tab:complete:cd:*' query-string input
+            zstyle ':completion:*:descriptions' format "[%d]"
+            zstyle ':fzf-tab:*' group-colors $'\033[15m' $'\033[14m' $'\033[33m' $'\033[35m' $'\033[15m' $'\033[14m' $'\033[33m' $'\033[35m'
+            zstyle ':fzf-tab:*' prefix ''
+            zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+            zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[ "$group" = "process ID" ] && ps --pid=$word -o cmd --no-headers -w -w'
+            zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+            zstyle ':fzf-tab:complete:*:options' fzf-flags --preview-window=down:0:wrap
+            zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+
+            # zstyle ':fzf-tab:complete:yay:*' fzf-preview 'yay -Qi $word || yay -Si $word'
+
+            # zstyle ':fzf-tab:complete:pacman:*' fzf-preview 'pacman -Qi $word || pacman -Si $word'
+
+            zstyle ':fzf-tab:complete:(\\|)run-help:*' fzf-preview 'run-help $word'
+            zstyle ':fzf-tab:complete:(\\|*/|)man:*' fzf-preview 'man $word'
+
+            zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview 'git diff --color=always $word'
+            zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
+            zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word'
+            zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
+
+            # brew
+
+            zstyle ':fzf-tab:complete:brew-(install|uninstall|search|info):*-argument-rest' fzf-preview 'brew info $word'
+
+            zstyle ':fzf-tab:complete:*:*' fzf-preview 'bash ~/.zsh/file_preview.sh ${(Q)realpath}'
+            zstyle ':fzf-tab:complete:*:*' fzf-flags --height=12
+
+        ```
+
+        高亮部分可根据实际情况进行修改（需要fzf-tab支持）。
+
+=== "fzf-tab"
+
+    [fzf-tab](https://github.com/Aloxaf/fzf-tab)是一个zsh的插件，可以用来快速搜索历史命令。
+
+    + 安装方法：:material-github:<https://github.com/Aloxaf/fzf-tab#install>
+
+    + 预览配置：:material-github:<https://github.com/Aloxaf/fzf-tab/wiki/Preview>
+
+    ??? example "文件预览配置文件"
+
+        ```shell title="file_preview.sh" hl_lines="6 8 12 15-16"
+        # ! /usr/bin/env sh
+
+        mime=$(file -bL --mime-type "$1")
+        category=${mime%%/*}
+        if [ -d "$1" ]; then
+            exa -l --no-user --no-time --icons --no-permissions --no-filesize "$1" 2>/dev/null
+        elif [ "$category" = text ]; then
+            (batcat -p --style numbers --color=always "$1" ) 2>/dev/null | head -1000
+
+        # elif [ "$mime" = application/pdf ]; then (1)
+
+        # pdftotext $1 - |less
+
+        elif [ "$category" = image ]; then
+        chafa "$1"
+        exiftool "$1"
+        else
+            echo $1 is a $category file
+        fi
+        ```
+
+        1. 如果是pdf文件，可以使用`pdftotext`命令将pdf文件转换为文本文件，然后使用`less`命令查看。如果需要可以解除注释。
+
+        高亮位置需要安装对应的软件，例如：`batcat`，`exa`，`chafa`，`exiftool`等。
+
 ## PWN有关应用配置
+
+### pwntools
+
+### pwndbg
+
+### IDA Pro
