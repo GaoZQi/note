@@ -11,9 +11,9 @@
 
 2. 普通的Python库
 
-```python
-import pwnlib.util
-```
+    ```python
+    import pwnlib.util
+    ```
 
 ## pwntools安装略
 
@@ -44,4 +44,22 @@ clean() # 丢弃所有缓冲数据
 ```python
 send(data) # 发送数据
 sendline(line) # 发送数据加换行符
+```
+<!-- NOTE 没看懂这个  -->
+### 操作整数
+
++ `pack(int)` - 发送一个字大小的打包整数
++ `unpack()` - 接收和解压缩字大小的整数
+
+### 连接流程
+
+创造通道与进程对话前，需创建一个 process 对象并为其指定目标二进制文件的名称。
+
+```python
+from pwn import *
+
+io = process('sh')
+io.sendline('echo Hello, world')
+io.recvline()
+# 'Hello, world\n'
 ```
