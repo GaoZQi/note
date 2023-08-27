@@ -157,12 +157,12 @@ nav:
 
   - CTF:
       - pages/CTF/index.md
-      - PWN: 
+      - PWN:
         - pages/CTF/PWN/index.md
         - PWN环境配置记录: pages/CTF/PWN/env.md
         - PWN题目部署: pages/CTF/PWN/other/build-pwn.md
-        - pwntools: pages/CTF/PWN/pwntools/note.md
-      - Docker: 
+        - pwntools: pages/CTF/PWN/pwntools/notes.md
+      - Docker:
         - pages/CTF/Docker/index.md
         # - Dockerfile: pages/CTF/Docker/Dockerfile.md
         - Docker的使用:
