@@ -178,6 +178,9 @@ nav:
       - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/writeup.md
       - NSCTF四校联合CTF邀请赛: pages/WriteUp/NSCTF四校联合CTF邀请赛/writeup.md
 
+      - CCBC:
+        - pages/Other/CCBC/index.md
+
   - Website:
       - pages/Website/index.md
       - MkDocs搭建:
