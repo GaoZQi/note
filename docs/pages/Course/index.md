@@ -1,3 +1,7 @@
+---
+password: NPU
+---
+
 # 课程文件
 
 !!! quote ""
