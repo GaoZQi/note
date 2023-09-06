@@ -34,62 +34,7 @@ function decrypt_content_from_bundle(password, ciphertext_bundle) {
     return false;
 };
 
-/* Set key:value with expire time in sessionStorage/localStorage */
-function setItemExpiry(key, value, ttl) {
-    const now = new Date()
-    const item = {
-        value: encodeURIComponent(value),
-        expiry: now.getTime() + ttl,
-    }
-    sessionStorage.setItem('encryptcontent_' + encodeURIComponent(key), JSON.stringify(item))
-};
 
-/* Delete key with specific name in sessionStorage/localStorage */
-function delItemName(key) {
-    sessionStorage.removeItem('encryptcontent_' + encodeURIComponent(key));
-};
-
-/* Get key:value from sessionStorage/localStorage */
-function getItemExpiry(key) {
-    let ret = {
-        value: null,
-        fallback: false
-    };
-    let remember_password;
-    remember_password = sessionStorage.getItem('encryptcontent_' + encodeURIComponent(key));
-    if (!remember_password) {
-        ret.fallback = true; //fallback is set to not display a "decryption failed" message
-        // fallback one level up
-        let last_slash = key.slice(0, -1).lastIndexOf('/')
-        if (last_slash !== -1 && last_slash > 0) {
-            let keyup = key.substring(0,last_slash+1);
-            remember_password = sessionStorage.getItem('encryptcontent_' + encodeURIComponent(keyup));
-        }
-        if (!remember_password) {
-            // fallback site_path
-            remember_password = sessionStorage.getItem('encryptcontent_' + encodeURIComponent("note/"));
-            if (!remember_password) {
-                // fallback global
-                remember_password = sessionStorage.getItem('encryptcontent_');
-                if (!remember_password) {
-                    //no password saved and no fallback found
-                    return null;
-                }
-            }
-        }
-    }
-    const item = JSON.parse(remember_password)
-    if (!ret.fallback) { //no need to do this if fallback was used
-        const now = new Date()
-        if (now.getTime() > item.expiry) {
-            // if the item is expired, delete the item from storage and return null
-            delItemName(key);
-            return null;
-        }
-    }
-    ret.value = decodeURIComponent(item.value);
-    return ret;
-};
 
 /* Reload scripts src after decryption process */
 function reload_js(src) {
@@ -182,24 +127,17 @@ function decryptor_reaction(content_decrypted, password_input, fallback_used, se
         location_path = encryptcontent_path;
     }
     if (content_decrypted) {
-        // keep password value on sessionStorage/localStorage with specific path (relative)
-        if (set_global) {
-            setItemExpiry("", password_input.value, 1000*3600*24);
-        }
-        else if (!fallback_used) {
-            setItemExpiry(location_path, password_input.value, 1000*3600*24);
-        }
+        
         // continue to decrypt others parts
         
-        let encrypted_something = {'mkdocs-encrypted-toc': ['nav', 'class']};
-        decrypt_somethings(password_input.value, encrypted_something);
+        
     } else {
         // remove item on sessionStorage/localStorage if decryption process fail (Invalid item)
         if (!fallback_used || set_global) {
             // create HTML element for the inform message
             let mkdocs_decrypt_msg = document.getElementById('mkdocs-decrypt-msg');
             mkdocs_decrypt_msg.textContent = decryption_failure_message;
-            delItemName(location_path);
+            
         }
         password_input.value = '';
         password_input.focus();
@@ -215,15 +153,7 @@ function init_decryptor() {
     }
     var encrypted_content = document.getElementById('mkdocs-encrypted-content');
     var decrypted_content = document.getElementById('mkdocs-decrypted-content');
-    /* If remember_password is set, try to use sessionStorage/localstorage item to decrypt content when page is loaded */
-    let password_cookie = getItemExpiry(encryptcontent_path);
-    if (password_cookie) {
-        password_input.value = password_cookie.value;
-        let content_decrypted = decrypt_action(
-            password_input, encrypted_content, decrypted_content
-        );
-        decryptor_reaction(content_decrypted, password_input, password_cookie.fallback, false, false); //dont save cookie as it was loaded from cookie
-    }
+    
     
     /* Default, try decrypt content when key (ctrl) enter is press */
     password_input.addEventListener('keypress', function(event) {
