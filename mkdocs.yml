@@ -44,8 +44,7 @@ theme:
     # # Palette toggle for light mode
     # - media: "(prefers-color-scheme: light)"
     #   scheme: default
-      palette:
-        primary: white
+    primary: white
     #     accent: blue
     #   toggle:
     #     icon: material/brightness-7
@@ -99,6 +98,10 @@ plugins:
           - pages/Archive/index.md
           - pages/Other/index.md
           - pages/CTF/PWN/index.md
+  - statistics:
+      codelines_per_minute: 10
+      page_check_metadata: data
+
 
 
 markdown_extensions:
@@ -203,6 +206,9 @@ nav:
       - pages\Other\python\index.md
       - ROS: pages/Notes/ROS/ROS.md
       - Matlab: pages/Other/Matlab.md
+
+  - 课程:
+      - pages/Course/index.md
 
   - 其他:
       - pages/Other/index.md
