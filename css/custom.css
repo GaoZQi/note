@@ -27,6 +27,28 @@
         overflow-x: hidden;
     }
 }
+
+/* input#mkdocs-content-password {
+    background-color: transparent;
+    border-style: none;
+    background: #dcdcdc;
+    width: 2rem;
+    font-size: 125%;
+        width: 100000000px;
+            height: 300px;
+            background-color: #9ea7aa;
+} */
+
+/* button#mkdocs-decrypt-button {
+    color: rgb(0, 0, 0);
+    font-size: 150%;
+} */
+
+/* form#mkdocs-decrypt-form
+{
+    size: 150%;
+} */
+
 .md-typeset h1 {
     color: rgb(40, 40, 40);
     font-weight: 700;
