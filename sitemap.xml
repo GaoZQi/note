@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://GaoZQi.github.io/note/Course/</loc>
-         <lastmod>2023-09-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://GaoZQi.github.io/note/pages/Archive/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
@@ -62,6 +57,11 @@
     </url>
     <url>
          <loc>https://GaoZQi.github.io/note/pages/CTF/PWN/pwntools/notes/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GaoZQi.github.io/note/pages/Course/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
