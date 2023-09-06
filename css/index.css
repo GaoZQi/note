@@ -9,6 +9,10 @@ html {
     padding: 0;
 }
 
+b {
+    /* text-decoration: underline #ff6a1a; */
+    border-bottom: 2px solid #ff6a1a;
+}
 /* Style for the container that will center its content */
 .center-container {
     display: flex;
