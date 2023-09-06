@@ -28,10 +28,12 @@ theme:
     - content.action.edit # 编辑
     - content.action.view # 查看
     # - header.autohide
-    # - navigation.sections
-    # - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.tabs.sticky  #粘滞选项卡
     # - toc.integrate
-    # - navigation.expand
+    - navigation.expand #目录展开
+    - navigation.path
+    - toc.follow
   palette:
     # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
@@ -42,8 +44,8 @@ theme:
     # # Palette toggle for light mode
     # - media: "(prefers-color-scheme: light)"
     #   scheme: default
-    #   palette:
-    #     primary: white
+      palette:
+        primary: white
     #     accent: blue
     #   toggle:
     #     icon: material/brightness-7
@@ -143,7 +145,6 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji # emoji索引
       emoji_generator: !!python/name:materialx.emoji.to_svg
         # emoji生成器
-  
 
 # 导航栏
 nav:
@@ -151,9 +152,6 @@ nav:
   - 导航:
       - index.md
       - 网站地图: pages/Home/map.md
-      # - git: https://git.qwq.cc/
-      # - notion: https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4
-      # - github: https://github.com/GaoZQi
 
   - CTF:
       - pages/CTF/index.md

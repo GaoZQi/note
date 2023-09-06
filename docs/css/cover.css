@@ -7,6 +7,10 @@ text {
     white-space: nowrap;
 }
 
+/* body {
+    overflow-x: hidden;
+} */
+
 .center-container {
     display: flex;
     flex-wrap: wrap;
