@@ -102,6 +102,13 @@ wsl --set-default-version 2
 
 安装WMware Workstation Pro或其他虚拟化软件，在相关Linux发行版网站下载镜像文件，进行安装。
 
+1. 在Ubuntu官网查找需要的版本进行下载
+    ![Ubuntu](assets/image-4.png)
+
+2. 在WMware Workstation Pro中创建虚拟机，选择下载好的IOS，进行安装。
+
+3. 根据提示设置Linux账户和系统配置。
+
 ### 通过存储介质安装双系统（暂略安装过程）
 
 !!! warning "注意"
