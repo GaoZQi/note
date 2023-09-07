@@ -1,6 +1,7 @@
 ---
 hide:
     - navigation
+    - statistics
     # - toc
 ---
 # Website

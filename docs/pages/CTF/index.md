@@ -2,6 +2,7 @@
 hide:
     - navigation
     - toc
+    - statistics
 ---
 
 # CTF

@@ -6,3 +6,7 @@ site
 
 # font
 docs/fonts
+
+# passward
+
+passwards.yml

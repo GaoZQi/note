@@ -1,4 +1,9 @@
 ---
+hide:
+    - navigation
+    - toc
+    - title
+    - statistics
 password: NPU
 ---
 

@@ -2,6 +2,7 @@
 hide:
     - navigation
     - toc
+    - statistics
 ---
 # 网站地图
 !!! warning

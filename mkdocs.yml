@@ -80,7 +80,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - search
+  - search: {}
   - mkdocs-code-runner
   - git-revision-date-localized:
       type: iso_datetime
@@ -100,23 +100,27 @@ plugins:
           - pages/CTF/PWN/index.md
   - statistics:
       codelines_per_minute: 10
-      page_check_metadata: data
+      # page_check_metadata: data
   # - changelog:
   #     changelog: docs\pages\Home\changelog.yml
   - encryptcontent:
-      title_prefix: "🔒 "
+      title_prefix: "🫥 "
       remember_password: True
-      summary: '加密页面 ⚠️'
-      placeholder: '输入密码'
+      summary: '⚠️ 文章已加密'
+      placeholder: '输入口令'
       # placeholder_user: User
       password_button_text: '校验'
-      decryption_failure_message: '密码错误！'
-      encryption_info_message: '输入口令查看是否有权限查看该页面。'
+      decryption_failure_message: '口令错误或没有权限！'
+      encryption_info_message: '输入口令以查看该页面。'
       password_button: True
+
+      encrypted_something:
+          mkdocs-encrypted-toc: [div, id]
       # encrypted_something:
       # mkdocs-encrypted-toc: [nav, class]
           # myToc: [div, id]
           # myTocButton: [div, id]
+      # password_file: 'passwords.yml'
 
 
 
@@ -225,7 +229,7 @@ nav:
 
   - 项目:
       - pages/Project/index.md
-      - 大创: pages/Project/creation/index.md
+      # - 大创: pages/Project/creation/index.md
 
   - 课程:
       - page: pages/Course/index.md
