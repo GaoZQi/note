@@ -35,6 +35,10 @@ theme:
     - navigation.path
     - toc.follow
   palette:
+    accent: deep orange
+
+
+
     # # Palette toggle for automatic mode
     # - media: "(prefers-color-scheme)"
     #   toggle:
@@ -44,7 +48,7 @@ theme:
     # # Palette toggle for light mode
     # - media: "(prefers-color-scheme: light)"
     #   scheme: default
-    primary: white
+
     #     accent: blue
     #   toggle:
     #     icon: material/brightness-7
@@ -72,6 +76,7 @@ extra_css:
   - css/custom.css
   # - css/img.css
   - css/admonition_old.css
+  - css/flink.css
 
 extra_javascript:
   - js/mathjax.js
@@ -236,6 +241,7 @@ nav:
 
   - 其他:
       - pages/Other/index.md
+      - 测试: pages/Home/test.md
       - 代办: pages/Home/list.md
       - CCBC:
         - pages/Other/CCBC/index.md

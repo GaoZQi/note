@@ -1,16 +1,13 @@
 ---
-title: 主页
-# description: Nullam urna elit, malesuada eget finibus ut, ac tortor. 
-
 hide:
     - navigation
     - toc
-    - title
     - statistics
 
 statistics: True
 ---
-<!-- # 主页 -->
+
+# U•ェ•*U
 
 <link rel="stylesheet" href="css/index.css">
 <div class="center-container">
