@@ -2,6 +2,23 @@
 
 @import url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg);
 
+
+.line {
+    /* 充满整个屏幕 */
+    width: 110%;
+    /* 线的宽度 */
+    height: 1px;
+    /* 实体白线，因为需要贯穿整个屏幕，所以第三个值不需要设置 */
+    border-top: 1px solid white;
+
+    /* 固定在页面底部 */
+    position: absolute;
+
+    margin-bottom: -0.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .center-container,
 state,
 text {
@@ -16,7 +33,7 @@ text {
     /* Add this line to allow flex items to wrap to new lines */
     justify-content: flex-start;
     align-items: flex-end;
-    height: 50vh;
+    height: 20vh;
     color: rgba(177, 177, 177, 0.879);
     font-size: 3em;
     font-weight: bold;
@@ -43,14 +60,6 @@ text {
     }
 }
 
-.line {
-    font: bold 100% JetBrains Mono;
-    width: 4ch;
-    overflow: hidden;
-    /* white-space: nowrap;
-    border-right: 2px solid; */
-    animation: typing 2s steps(4) infinite;
-}
 
 /* 添加页面样式 */
 body,
