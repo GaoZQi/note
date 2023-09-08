@@ -9,6 +9,16 @@ hide:
     部分页面仍在开发中！
 ??? example
     改用网格布局。
+    <div class="flink-list-item">
+        <a href="https://gaozqi.github.io/note/pages/Home/map/" title="cappo" target="_blank">
+            <div class="flink-item-icon">
+                <img src="../../../images/capoo.jpg" alt="">
+            </div>
+            <div class="flink-item-name heti-skip">capoo</div>
+            <div class="flink-item-desc">这是一只capoo</div>
+        </a>
+    </div>
+
 ## [CTF](../CTF/index.md)
 <!-- !!! info
     CTF学习内容记录 -->
