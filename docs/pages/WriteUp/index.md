@@ -6,17 +6,7 @@ hide:
 ---
 # WriteUp
 
-<!-- <link rel="stylesheet" href="../../css/index_styles.css">
-<div class="center-container">
-  <state>(◎﹏◎)</state>
-  <text>buiding...</text>
-</div>
- -->
-<!-- ---
-
-[:material-home: 回到主页](../../index.md) -->
-
-!!! info
+!!! info "WriteUp"
 
     用于收集整理所参加过的比赛的WriteUp，仅供参考！
 

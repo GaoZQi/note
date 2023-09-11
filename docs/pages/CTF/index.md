@@ -7,6 +7,9 @@ hide:
 
 # CTF
 
+!!! info "CTF"
+    记录CTF的学习过程
+
 ## PWN
 
 + [PWN环境配置](PWN/env.md)
