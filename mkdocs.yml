@@ -179,7 +179,7 @@ nav:
   # - 404.md
   - 导航:
       - 主页: index.md
-      - 网站地图: pages/Home/map.md
+      # - 网站地图: pages/Home/map.md
 
   - CTF:
       - pages/CTF/index.md
@@ -237,7 +237,7 @@ nav:
       # - 大创: pages/Project/creation/index.md
 
   - 课程:
-      - page: pages/Course/index.md
+      - 课程: pages/Course/index.md
 
   - 其他:
       - pages/Other/index.md
