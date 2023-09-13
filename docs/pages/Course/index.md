@@ -24,3 +24,4 @@ password: NPU
 ### 大二秋季学期
 
 + [信息安全数学基础](xasx.md)
++ [电子实习](%E7%94%B5%E5%AD%90%E5%AE%9E%E4%B9%A0/index.md)
