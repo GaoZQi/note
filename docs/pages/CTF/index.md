@@ -38,4 +38,4 @@ hide:
 <!-- --- -->
 
 <!-- [:material-home: 回到主页](../../index.md) -->
-<link rel="stylesheet" href="../../css/index_ctf.css">
+<link rel="stylesheet" href="../../css/CTF/index_ctf.css">
