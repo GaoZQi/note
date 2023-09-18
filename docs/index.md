@@ -22,7 +22,7 @@ statistics: True
 [:fontawesome-brands-github: GaoZQi](https://github.com/GaoZQi)　·　
 [:simple-notion: GGCTF](https://gaozqi.notion.site/d89d2c01587a4e87bd173ad8c8fd52f7?v=1a424dd567664341957429ba3a4b8ac4&pvs=4)
 
-[:fontawesome-regular-clock: 近期文章：](.\pages\Home\list.md)[其他 > CCBC](.\pages\Other\CCBC\index.md)
+<!-- [:fontawesome-regular-clock: 近期文章：](.\pages\Home\list.md)[其他 > CCBC](.\pages\Other\CCBC\index.md) -->
 <!-- 
 <script>
 function updateTime() {
