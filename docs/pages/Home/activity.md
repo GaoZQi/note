@@ -52,13 +52,13 @@
 !!! warning ""
     图片加载加速
 
-+ [x] [题解-首页](../题解/index.md)
++ [x] [题解-首页](../WriteUp//index.md)
 
 + [ ] [CCBC](../Other/CCBC/index.md) （待定）
 
 ## 网站
 
-+ [ ] [网站-首页](../网站/index.md) （待完善）
++ [ ] [网站-首页](../Website/index.md) （待完善）
 
 ### MkDocs
 
@@ -100,6 +100,6 @@
 
 ## 其他
 
-+ [x] [其他-首页](../Others/index.md)
++ [x] [其他-首页](../Other/index.md)
 + [ ] 测试页面 （加密）
 + [x] [待定](../Home/list.md)
