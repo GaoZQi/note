@@ -14,6 +14,10 @@ hide:
 <!-- !!! info "CTF"
     记录CTF的学习过程 -->
 
+## Misc
+
++ [Misc题解](Misc/index.md)
+
 ## PWN
 
 + [PWN环境配置](PWN/env.md)

@@ -197,7 +197,7 @@ nav:
           - Docker镜像的使用: pages/CTF/Docker/images.md
         - Docker常用命令: pages/CTF/Docker/command.md
 
-  - WriteUp:
+  - 题解:
       - pages/WriteUp/index.md
       - 第十六届全国大学生信息安全竞赛——创新实践能力赛: pages/WriteUp/第十六届全国大学生信息安全竞赛——创新实践能力赛/writeup.md
       - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/writeup.md
@@ -206,7 +206,7 @@ nav:
 
 
 
-  - Website:
+  - 网站:
       - pages/Website/index.md
       - MkDocs搭建:
           - MkDocs: pages/Website/MkDocs/mkdocs.md
@@ -233,7 +233,7 @@ nav:
       - Matlab: pages/Other/Matlab.md
 
   - 项目:
-      - pages/Project/index.md
+      - 项目: pages/Project/index.md
       # - 大创: pages/Project/creation/index.md
 
   - 课程:
