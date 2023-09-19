@@ -50,3 +50,7 @@ password: test
 <div style="display: flex; justify-content: center;">
 <iframe id="embedPlayer" src="https://embed.music.apple.com/cn/album/%E8%9C%97%E7%89%9B-live/536110584?i=536110585&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=dark" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
 </div>
+
+---
+
+<a href="../../../download/favicon.png" download="">下载文件</a>
