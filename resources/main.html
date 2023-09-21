@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+        {% block content %}
+        {% include "partials/content.html" %}
+        {% if page and page.meta and page.meta.comment %}
+        <script src="https://giscus.app/client.js"
+            data-repo="GaoZQi/note"
+            data-repo-id="R_kgDOJ-f4Gw"
+            data-category="Ideas"
+            data-category-id="DIC_kwDOJ-f4G84CZhkt" data-mapping="title"
+            data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light"
+            data-lang="zh-CN" crossorigin="anonymous" async>
+            </script>
+        <!-- <script>
+            if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+                var giscus = document.querySelector("script[src*=giscus]")
+                giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/TonyCrane/note/docs/css/giscus.css")
+            }
+        </script> -->
+        {% endif %}
+        {% endblock %}
+    </article>
+</div>
