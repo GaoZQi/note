@@ -3,7 +3,6 @@ hide:
     - navigation
     - toc
     - statistics
-
 statistics: True
 ---
 
