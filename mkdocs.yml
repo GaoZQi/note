@@ -171,8 +171,7 @@ markdown_extensions:
       generic: true # 通用
   - pymdownx.emoji: # emoji
       emoji_index: !!python/name:materialx.emoji.twemoji # emoji索引
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-        # emoji生成器
+      emoji_generator: !!python/name:materialx.emoji.to_svg # emoji生成器
 
 # 导航栏
 nav:
