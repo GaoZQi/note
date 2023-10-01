@@ -77,6 +77,7 @@ extra_css:
   # - css/img.css
   - css/admonition_old.css
   - css/flink.css
+  - css/block-link.css
 
 extra_javascript:
   - js/mathjax.js
@@ -227,7 +228,7 @@ nav:
       - pages/Archive/index.md
       - Python: pages/Notes/Python/Python.md
       - pages\Other\python\data_model.md
-      - pages\Other\python\index.md
+      # - pages\Other\python\index.md
       - ROS: pages/Notes/ROS/ROS.md
       - Matlab: pages/Other/Matlab.md
 
