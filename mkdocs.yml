@@ -177,10 +177,7 @@ markdown_extensions:
 
 # 导航栏
 nav:
-  # - 404.md
-  - 导航:
-      - 主页: index.md
-      # - 网站地图: pages/Home/map.md
+  - 主页: index.md
 
   - CTF:
       - pages/CTF/index.md
