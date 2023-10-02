@@ -11,4 +11,4 @@ hide:
 
 + [ ] [PWNtools](pwntools/notes.md)
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../css/CTF/custom.css">
