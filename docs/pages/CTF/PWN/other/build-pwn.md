@@ -155,3 +155,5 @@
         `$PORT` 为`host`端映射的端口，请自行修改
 
         `$IMAGE_NAME`为使用的`image`的名称
+
+<link rel="stylesheet" href="../../../../css/CTF/custom.css">

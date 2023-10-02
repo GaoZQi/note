@@ -63,3 +63,5 @@ io.sendline('echo Hello, world')
 io.recvline()
 # 'Hello, world\n'
 ```
+
+<link rel="stylesheet" href="../../../../css/CTF/custom.css">

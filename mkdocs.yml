@@ -35,6 +35,7 @@ theme:
     - navigation.path
     - toc.follow
   palette:
+    primary: white
     accent: deep orange
 
 

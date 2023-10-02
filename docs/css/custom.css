@@ -28,6 +28,10 @@
     }
 }
 
+.md-footer-meta.md-typeset {
+    display: none;
+}
+
 /* input#mkdocs-content-password {
     background-color: transparent;
     border-style: none;
