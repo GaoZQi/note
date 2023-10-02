@@ -108,3 +108,5 @@ docker rmi [image id]
 ```bash
 docker tag [image id] [image name]:[tag]
 ```
+
+<link rel="stylesheet" href="../../../../css/CTF/custom.css">

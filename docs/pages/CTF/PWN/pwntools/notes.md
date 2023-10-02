@@ -64,4 +64,4 @@ io.recvline()
 # 'Hello, world\n'
 ```
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../../css/CTF/custom.css">

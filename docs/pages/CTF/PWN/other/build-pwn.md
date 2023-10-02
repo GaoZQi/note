@@ -156,4 +156,4 @@
 
         `$IMAGE_NAME`为使用的`image`的名称
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../../css/CTF/custom.css">
