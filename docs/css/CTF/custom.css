@@ -123,19 +123,29 @@ footer::before {
     .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
         background: #11181f;
         box-shadow: 0 0 1rem 0.8rem #11181f;
+        font-weight: 700;
         margin-top: 5%;
         padding-top: 5%;
         position: sticky;
+        top: 0;
+        z-index: 1;
+        font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
     }
 
     .md-nav--secondary .md-nav__title {
         background: #11181f;
         box-shadow: 0 0 1rem 0.8rem #11181f;
+        font-weight: 700;
         margin-top: 5%;
         padding-top: 5%;
         margin-bottom: 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        color: white;
     }
 
     /* 圆角矩形背景 */
