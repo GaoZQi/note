@@ -71,7 +71,8 @@ footer::before{
     box-shadow: 0 0 1rem 0.8rem #11181f;
     font-weight: 700;
     margin-top: 5%;
-    padding: 0 .6rem;
+    padding-top: 5%;
+    /* padding: 0 .6rem; */
     position: sticky;
     top: 0;
     z-index: 1;
@@ -83,8 +84,9 @@ footer::before{
     box-shadow: 0 0 1rem 0.8rem #11181f;
     font-weight: 700;
     margin-top: 5%;
+    padding-top: 5%;
     margin-bottom: 8%;
-    padding: 0 .6rem;
+    /* padding: 0 .6rem; */
     position: sticky;
     top: 0;
     z-index: 1;
@@ -105,16 +107,16 @@ footer::before{
     min-width: 0;
     scrollbar-gutter: auto;
     border-radius: 10px;
-    background: #11235629;
-    border: solid #1b244abf;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    box-shadow: 0 0 7rem 1rem #00000070;
+    /* background: #11235629;
+    border: solid #1b244abf; */
+    /* margin-top: 2%;
+    margin-bottom: 2%; */
+    /* box-shadow: 0 0 7rem 1rem #00000070; */
 }
 /* H1标题样式 */
-.md-typeset h1 {
+/* .md-typeset h1 {
     color: rgba(255, 255, 255, 0.932);
     font-weight: 700;
     font-size: 2.618em;
     text-decoration: underline #ff630ff0;
-}
+} */

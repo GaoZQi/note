@@ -25,7 +25,8 @@
 <link href="../../../css/block-link.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="deep-orange" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="slate" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -60,6 +61,16 @@
 </div>
 </div>
 </div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="witch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="witch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
 </label>
@@ -629,7 +640,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<div id="mkdocs-encrypted-content" style="display:none">XxMzYbKFY+QbpFGsl0Bs/A==;novC7/2HeMu2wC+wtO7RgQI32gApI9hnc93XzgTbIf4lt1zNO0ClU2DRFhhT6t1yM+kYMHV/KV2C6lGWFBexFK6mI9fAnyo9scp3+rBTNa9+imSCtAQtiHKX93PRfj0GY2gTOZQ/AjcAjVCM5spL+Zgm4LX6wmwlXNB1OXXHTYoOfAvsJ0BYKWWilfKoBD0dr0s+vVbqar1+GAhjoH8eJmTHJ+9IyDYzOEBk3cj+ai2KURLEHcz/TPBOM0j0/vmUD8iQO/hCajsZwI12wSTcuyZYydZA9KkUiNNydHsqLRoY56DdZyg0noz9cQagQqJaW1aw8uU5XHfvKbqDTNLfyD+Li3hOVoOytGM741thFnH9uvPYxjqSRMfYuk/Q+wOoyjubWJ62M2qcQZGjMVp6cY5XmK8bQ4SC7aZ1hUK9CmgIXOIGATaANGiho4wtWyubcALr/cAVAEZQvOJ3PEb9YHqB2kVDaRBBbLpHEsXwrg8Nm0501Ez60ZTXaUKWFVwe7sf5dd4pOyHnOKvjGcE9tD64TLg9S+3wlJAppfHD+hSvftRHKiyFAe6I91f+tm/urWXURP342VnQRLZifBV7w+M4pJE3wENvTHLMIqbq2NkuNayJrLR8foCw+NQ0kcLmDxFxoOMzkm+GOAcjMQiG1t43F0Qr6WhJZtVAYRJqp5Gh2iAcjHxqQgfJ/nOPOHGJISk4IkVaelrEzzdBR4Jb4wzR8C0qqMiz1id8rYGk5rzbgPxYiF6KyjoPqss9nqkiLBMphu4n6rv5kaUF8VT0ZlOBXLoEi8lS74wnX3cXFFuVSvkRhPquFwdfnkw42wy4vWsdXyILTByNcOG0Tsdu6DSHprq+QpRDmu4CrabTPlK2zZoGqzOpPBx3FaED9iS0WwHc75ljXSyTAP95E3U3w6ZbNGGkwi4n8zYp3jQdgQXqdcntdubwyCjuzHkPturGN9v+46OwAE7yDehIEPwjyUq3rqqrP0erETzIU1U/fncM5LsdwgJpU9SCbZjqibMokUbnU5MiJGOGgzLjibN//OxMQtIj9xigmUYuw1ylVlgpQ9l7jZ3ZSaqT9UydwNKElardSKGzdiRV+kmBo2nywtcj0BSPRrO4O2sE2RQYfRl2DInBajAVTahOMT+vlU4z;^</div>
+<div id="mkdocs-encrypted-content" style="display:none">jlnc+c3xR8sozS2QUqwrtA==;XI6RsOJLF3mjePFKH4aBLe/MlQ3YVlJXrRKp9/5598qorc3w65y6F+ixtmJtcwsWLDp52T9vxRwuBREh/fmVW+FViySqSb04otqC1AOZwQ3Wv4EKdBapV8tUTcKfAWyVlnpupXSxrPphWuFzsIxpNBU0F7VWKSm+dIQ7VvEodg8OSpWwX3dN2Ssl4w3vmpC3taGzoAFgTB0Si636nAVuFCH5lmuaPLQI+G1OvJv7N7KNSpqoSIejFn69Ky78lwfy5IJ34YKLz91Vyv13gKP4HEjE4bb7d4DkdpXKEgkxhOyCueiOWI9BfNsJQU4W8eAlTe5WKo5XtA/p9gLVNp+zGjcliSsUtiksHio61FnDWLgrDQWX37croyxZ7bPNj1pBSm4CtMYOSP0t/HhvwHHnNCCVYkGg3mC043/J61hdXkvZnXYalsmeWgicWYN42CVowyKoTXeOrjh9b3meH8tJfsjC2aaU8JHO1nWzBbVYwQI342YTx4mkBvbi7Ucy/Al5AeTYxM1/4VShKViinE3Yqr1GIuu0dTZKq4u06AEeZD38c5ao9kTltZrstcwXbJ/mHf36bMUKlpXyhqTeIb7yHZShNjNCjsWFWHcec8AQ4mb5L6A7z765ThsHjkdpAxwdcVET9FK3IWIed5WVHWJOuvk+pPCkNGSBhhji7sflAxlxaDdT5Ntka1/nXj/AloCTPMuoqcjvAt3TfSEVTlLIdLyln8yur4EXeL8AcAs0qUjbEXgdtl0AdF0SFaxPo6wqTgY9/mcnGWUOMGFTHRAUr44iSlHRucaE/IeLTrD/fJlUucb/uRLuvnpXJOf1SmaMUlTgxjApUWpsqUMTNoeeLe1hggtAOllQLSoNiPghT/J7+eYWKMDBldxnZTbyWve95Gkb0sGiOz/n1RW1ahbYg6qNvnec/z6QaOTVXpwZLoFn1P02jwyGVgI1ltYWdKnetlvPN9Yn+5f8+xGp3TiR6Ugy+79bO2J/5YCiX5QVDeAidv/wkEDq7sa145+LvwLx8Kz3Pivjwlvuztn/5WaqOHLO34tnkJ2nmFYV/zxqzsGWH+Ra/1mvVhaxt6jckrpQl0nLQTiL1txAYQTWHX000WbN/MkHSLxda2wAVSBts5jbj8/pbFB8PQgUsiJK5/an;^</div>
 <div id="mkdocs-decrypted-content">
 <form id="mkdocs-decrypt-form">
 <h1>⚠️ 文章已加密</h1>
