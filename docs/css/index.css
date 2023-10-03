@@ -11,7 +11,7 @@ html {
 
 b {
     /* text-decoration: underline #ff6a1a; */
-    border-bottom: 2px solid #ff6a1a;
+    border-bottom: 2px solid var(--md-accent-fg-color);
 }
 /* Style for the container that will center its content */
 .center-container {
@@ -22,7 +22,7 @@ b {
     align-items: flex-start;
     /* Change back to 'flex-start' */
     height: 100%;
-    color: #ff6a1a;
+    color:var(--md-accent-fg-color);
     font-weight: bold;
     position: relative;
     margin-top: 45vh;
