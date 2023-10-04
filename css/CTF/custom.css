@@ -37,7 +37,7 @@ nav.md-footer__inner.md-grid {
     border-top-width: 1.5px;
     border-color: rgba(177, 177, 177, 0.879);
 }
-
+/* FIXME 仅对chrome内核浏览器有效，经测试Safari和Firefox存在显示错误 */
 /* 填充背景 */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
