@@ -83,6 +83,10 @@
     font-weight: 700;
     font-size: 2.618em;
     text-decoration: underline var(--md-accent-fg-color);
+    -webkit-text-decoration-line:  underline !important;
+    -webkit-text-decoration-color: var(--md-accent-fg-color);
+    -webkit-text-decoration-style: solid !important;
+    -webkit-text-decoration-thickness: 2px !important;
 }
 
 .md-typeset h2 {
@@ -292,7 +296,6 @@ input#mkdocs-content-password {
     width: 100%;
     display: inline-table;
     table-layout: fixed;
-    
 }
 
 .riscv-table-node {

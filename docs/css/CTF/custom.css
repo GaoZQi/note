@@ -37,8 +37,19 @@ nav.md-footer__inner.md-grid {
     border-top-width: 1.5px;
     border-color: rgba(177, 177, 177, 0.879);
 }
-
+/* FIXME 仅对chrome内核浏览器有效，经测试Safari和Firefox存在显示错误 */
 /* 填充背景 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    /* 在这里添加只在Safari浏览器中执行的CSS代码 */
+    .md-nav--secondary .md-nav__title {
+        -webkit-transform:translateZ(1px);
+        -moz-transform:translateZ(1px);
+        -o-transform:translateZ(1px);
+        transform:translateZ(1px);
+    }
+}
+
 body,
 footer {
     margin: 0;
@@ -61,7 +72,6 @@ body::before {
     /* 模糊效果 */
     background: rgba(0, 0, 0, 0.516);
     backdrop-filter: blur(15px);
-    --webkit-backdrop-filter: blur(15px);
     /* z轴相对位置 */
     z-index: -5;
 }
@@ -77,10 +87,14 @@ footer::before {
     /* 模糊效果 */
     background: rgba(0, 0, 0, 0.516);
     backdrop-filter: blur(15px);
-    --webkit-backdrop-filter: blur(15px);
     /* z轴相对位置 */
     z-index: -1;
 }
+
+/* .md-header {
+    background-color: #06131ff0;
+    backdrop-filter: blur(15px);
+} */
 
 /* 页脚跳转文字 */
 .md-footer {
@@ -131,6 +145,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line: underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
     }
 
     .md-nav--secondary .md-nav__title {
@@ -145,14 +163,45 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line: underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
         color: white;
     }
 
     /* 圆角矩形背景 */
     .md-sidebar__scrollwrap {
-        border-radius: 10px;
+        border-radius:  0.5rem;
         background: #3f4b5c40;
         border: solid #323542a3;
     }
 
+}
+
+@media screen and (min-width: 60em) {
+    .md-nav--secondary .md-nav__title {
+        background: #11181f;
+        box-shadow: 0 0 1rem 0.8rem #11181f;
+        font-weight: 700;
+        margin-top: 5%;
+        padding-top: 5%;
+        margin-bottom: 8%;
+        top: 0;
+        z-index: 1;
+        font-size: 150%;
+        text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line: underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
+        color: white;
+    }
+
+    /* 圆角矩形背景 */
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        border-radius: 0.5rem;
+        background: #3f4b5c40;
+        border: solid #323542a3;
+    }
 }
