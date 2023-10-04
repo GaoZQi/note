@@ -42,14 +42,11 @@ nav.md-footer__inner.md-grid {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
     /* 在这里添加只在Safari浏览器中执行的CSS代码 */
-    body {
-        /* 例如，将背景颜色设置为红色 */
-        background-image: url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg) !important;
-    }
-    body::before{
-        background-color: rgba(0, 0, 0, 0.299);
-        backdrop-filter: none;
-        z-index: none;
+    .md-nav--secondary .md-nav__title {
+        -webkit-transform:translateZ(1px);
+        -moz-transform:translateZ(1px);
+        -o-transform:translateZ(1px);
+        transform:translateZ(1px);
     }
 }
 
@@ -190,7 +187,6 @@ footer::before {
         margin-top: 5%;
         padding-top: 5%;
         margin-bottom: 8%;
-        position: sticky;
         top: 0;
         z-index: 1;
         font-size: 150%;
