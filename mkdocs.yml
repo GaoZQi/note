@@ -163,6 +163,8 @@ nav:
 
   - CTF:
       - pages/CTF/index.md
+      - Misc:
+          - pages/CTF/Misc/index.md
       - PWN:
         - pages/CTF/PWN/index.md
         - PWN环境配置记录: pages/CTF/PWN/env.md
