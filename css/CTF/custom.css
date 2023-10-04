@@ -132,6 +132,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line:  underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
     }
 
     .md-nav--secondary .md-nav__title {
@@ -146,6 +150,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line:  underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
         color: white;
     }
 
@@ -171,6 +179,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
+        -webkit-text-decoration-line:  underline !important;
+        -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 2px !important;
         color: white;
     }
 
