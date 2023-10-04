@@ -1,3 +1,4 @@
+
 [data-md-color-scheme="default"] {
     /* 默认background color */
     --md-default-bg-color: #161616;
@@ -60,8 +61,8 @@ body::before {
     height: 100%;
     /* 模糊效果 */
     background: rgba(0, 0, 0, 0.516);
-    backdrop-filter: blur(15px);
-    --webkit-backdrop-filter: blur(15px);
+    /* -webkit-filter: blur(15px);
+    backdrop-filter: blur(15px); */
     /* z轴相对位置 */
     z-index: -5;
 }
@@ -76,8 +77,8 @@ footer::before {
     height: 100%;
     /* 模糊效果 */
     background: rgba(0, 0, 0, 0.516);
-    backdrop-filter: blur(15px);
-    --webkit-backdrop-filter: blur(15px);
+    /* -webkit-filter: blur(15px);
+    backdrop-filter: blur(15px); */
     /* z轴相对位置 */
     z-index: -1;
 }
