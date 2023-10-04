@@ -39,6 +39,15 @@ nav.md-footer__inner.md-grid {
 }
 
 /* 填充背景 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    /* 在这里添加只在Safari浏览器中执行的CSS代码 */
+    body {
+        /* 例如，将背景颜色设置为红色 */
+        background-image: url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg) !important;
+        background-color: rgba(0, 0, 0, 0.516);
+    }
+}
 body,
 footer {
     margin: 0;
@@ -79,6 +88,11 @@ footer::before {
     /* z轴相对位置 */
     z-index: -1;
 }
+
+/* .md-header {
+    background-color: #06131ff0;
+    backdrop-filter: blur(15px);
+} */
 
 /* 页脚跳转文字 */
 .md-footer {
@@ -156,7 +170,7 @@ footer::before {
 
     /* 圆角矩形背景 */
     .md-sidebar__scrollwrap {
-        border-radius: 10px;
+        border-radius:  0.5rem;
         background: #3f4b5c40;
         border: solid #323542a3;
     }
@@ -185,18 +199,8 @@ footer::before {
 
     /* 圆角矩形背景 */
     .md-sidebar--secondary .md-sidebar__scrollwrap {
-        border-radius: 10px;
+        border-radius: 0.5rem;
         background: #3f4b5c40;
         border: solid #323542a3;
-    }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-    /* 在这里添加只在Safari浏览器中执行的CSS代码 */
-    body {
-        /* 例如，将背景颜色设置为红色 */
-        background-image: url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg) !important;
-        background-color: rgba(0, 0, 0, 0.516);
     }
 }
