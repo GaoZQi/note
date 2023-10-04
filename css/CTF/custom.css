@@ -61,8 +61,8 @@ body::before {
     height: 100%;
     /* 模糊效果 */
     /* background: rgba(0, 0, 0, 0.516); */
-    /* -webkit-filter: blur(15px);
-    backdrop-filter: blur(15px); */
+    -webkit-filter: blur(15px);
+    backdrop-filter: blur(15px);
     /* z轴相对位置 */
     z-index: -5;
 }
@@ -77,8 +77,8 @@ footer::before {
     height: 100%;
     /* 模糊效果 */
     /* background: rgba(0, 0, 0, 0.516); */
-    /* -webkit-filter: blur(15px);
-    backdrop-filter: blur(15px); */
+    -webkit-filter: blur(15px);
+    backdrop-filter: blur(15px);
     /* z轴相对位置 */
     z-index: -1;
 }
@@ -185,9 +185,8 @@ footer::before {
         -webkit-text-decoration-thickness: 2px !important;
         color: white;
     }
-
     /* 圆角矩形背景 */
-    .md-sidebar__scrollwrap {
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
         border-radius: 10px;
         background: #3f4b5c40;
         border: solid #323542a3;
