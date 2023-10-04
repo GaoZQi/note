@@ -45,9 +45,12 @@ nav.md-footer__inner.md-grid {
     body {
         /* 例如，将背景颜色设置为红色 */
         background-image: url(https://s1.ax1x.com/2023/07/27/pCvVnSS.jpg) !important;
-        background-color: rgba(0, 0, 0, 0.516);
+        background-color: rgba(0, 0, 0, 0.299);
+        backdrop-filter: none;
+        z-index: none;
     }
 }
+
 body,
 footer {
     margin: 0;
