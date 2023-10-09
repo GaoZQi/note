@@ -25,7 +25,7 @@
 <link href="../../../css/block-link.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="auto" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -62,12 +62,16 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="witch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="witch to dark mode">
+<input aria-label="自动切换" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: auto)" data-md-color-primary="indigo" data-md-color-scheme="auto" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_3" hidden="" title="自动切换">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"></path></svg>
+</label>
+<input aria-label="亮色模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="亮色模式">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<input aria-label="暗色模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_3" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="暗色模式">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
 </form>
@@ -654,7 +658,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<div id="mkdocs-encrypted-content" style="display:none">L56iYbTwGKbmddhRSmCYbw==;GWU4zgxxSJ0LPjJm/51TJxhNLCYgQCzD5A4Z/ZQQ1vlOhMmCcly438Z4gQG+tXQq5kDTSa7pL6d7IoRiKqc+Lbl5a1+DZsXN8X/vvXflAaSs0gPoJ66xEucI7L8Lg2ufoiK83Kphu+QKuY8WzbXvs/h+GyUwzDnUd5yjNExwaHC3wkWyrVr8oGOChQ/gErgFkqyi2BIgnMs+sQhiRhAQtGI5fnmZ/O9Lh6ljvCCGRmdiONUFEOmiI8w8n5KAT8NRxTarkU+sdXW3u1I9/2Xvr89t1Tz8leUg9QS2gKjpgRCkfrSAQTY8VBRRuSJmZHQrTvr02gUGLNwjgxX/mVjq0gpWz0DxFClfrTGbGLN5w1Saj3ou+5sTB/4BZsYjVEOiN94vhSi5EvwtBBGMduW+EJRsXX/0AaEbOsb175DwDJnYBMc5O04TYFChTr+nA9Ug/F+NLjiHphCfRy969MkXvR1cJzeb54PB8ZUzEXBrpZ5/zuNsjaQDhNy2GaLikFYqKqcGBcZgqiUJmjYty0wdmWcD2Ta/pRV3sh5WlRkFTycyiDuCSnyLlZ9knPaVESY+7orzD6eaLmncNaVXle3gkhqxneZush5ENoEUAhX3IrwR/DNauYqE8O/sHgqS25P7RyRqBy/L6Z8MCPTmR4RnwIVz8tZ5G99m9NE7i1ZXdyxZ02u/wrySzrvR5+ht6yYto6DNb9G+F+9tl+JcL6L//U7CaDNhIToqmiQs+Ppr+5RrQF3Q3tBwri7lxw0Kn5e6UwI4VzKe0pVCK/eRzPnfFCCDvsp4yrLWflR2Xs8cSP5CijmswCHiEpctz83Wgp6Fhj6WN5pWIOYyQOUdxS2oEhXBkEVgdp3qTPCc8caPSSA/Zvyvn13I8D2iFGeGuyHA2cBbt0zuaEtCiwxXkubAcraTrVaGvMIyLTVNsErRXi9Qn8Drt6rWnEZZRovIj+rbNWqxEklSzoRBW/CiczohyaTDuphbV7YiQlRTHDNixrM/u8Hv5DktPJPd2PFgUeTKZwQgpKZvm33HlJrxUV+Ce7klpu8vQPFK23klARYNLTY5+cE0+758ADiBotkYta4Vl/6zX0poIuG1uGjmpceO8ynmR/fIlG51gdtvSq09j1du3UcQJeVrdeKwbvBKUE4I;^</div>
+<div id="mkdocs-encrypted-content" style="display:none">KyA6TdwNWRq/KApTkCH7og==;g0ThoUaNEz4YbEdqJ2Ia7rR1a0GY7jjF+iM50yIFhT0oX6LwWn7Y6DgOYgJwHKuq2bKtxZSjR7NojErvh95pgDF+cIWscrVlYcY6GhFgAEccbMJu9AKrZHTOy35OVP5uk27nglhNFsc5Rd6dk+GQFRcdD5pXtmf8Iy4XgWVLlGf1MDJlENYMw1G8Bh/dsb5tsMUhbN2pt+I+qd3fmhszRWU/xEUb6TvuJI9VYueQ+nXEk/VCoRDG26dWisJj0iYTMSiYRjVQ0l70ulBvJ3d8Gd1f0VoO9GOO6ZYGPc5QntczesBgPC9u0o/Uc8JdIhkKahbTXhLfWGexIosr7W9X/B5+cq6o6sNSkHMNGJfNKEgUbyrDzaggqCP1P4ApPATj/KEMiJBHa+31XkMnbX4rqCZXr7PSkqJ5hruysk/2tJ/frkjQ67byzhkVO4MUV6cWRUEBViubaQI34Ov+W6OfGqMRNin6ssL7xnQ+gQMIROVZ6+zHBYGOHYBUnNgt03knPMydO1nIEkZbJ+jowtp9JcwC1HRNEZgnsoBzEUiTywT7qxalqTeIhTAyf1LwElTrnE1l4BBXkweDBQc9JlNpwzjNUQmbIpoJzoIm4Bkdwq/AGcHtxnbxXUsx9mclK3QsS0tYZ28hKAWMeVNLflB5Yj+IaQDxJGpL5MQjFu7YVV8frYNATdYpKNhOWgG32mZTyQ3gJm2OJg1DEsUD8BzU/MhQ9r6xhAsG00R1H696hgPB1Nl5Tn809Kejk4gce3TqUaHkL6eJ7vH8NAPkHeXh9NuHptO38H2Ujul54d2PTr37Tn4whZinfXAHVUQJfi1OSL7gJa+EsMYIoz8gqWcZ0FVn8coK3g4pKUCRrHT9ARcQrTFv1xlvi/eEPsgce/eKMGjB3mw136PW2ZKAzlJuWUzP32FsGvrVFtFBjFP8vZn74aCZl70mew4686nUi9cBaH+jvrvRyYUluerXdSUvGcFkZpKnpHeH8p8nlga6PYmIdvJZYR6vwuliZUMoOS7Z7v5UkX9FH5Az2iR/p71BX5dSF+ddLYTiNzSW1k7MannXOQ4mvDxMndmVuPcgV12sTFpvfNUkErADBeJQjKJ9Ot/dnMjXyaUj9ZX7/zBkxZiyg0nFFKcwHkeJbvPj0Jmt;^</div>
 <div id="mkdocs-decrypted-content">
 <form id="mkdocs-decrypt-form">
 <h1>⚠️ 文章已加密</h1>
