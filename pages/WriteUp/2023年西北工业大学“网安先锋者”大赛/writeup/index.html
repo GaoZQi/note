@@ -1881,7 +1881,7 @@
 <details class="info" open="open">
 <summary>题目描述</summary>
 <p>TENET</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/TENET.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/TENET.zip" download="">附件下载</a></p>
 </details>
 <ol>
 <li>
@@ -1927,14 +1927,14 @@
 </li>
 </ol>
 <blockquote>
-<p>官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-TENET-200.pdf" download="">Misc-TENET-200.pdf</a></p>
+<p>官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-TENET-200.pdf" download="">Misc-TENET-200.pdf</a></p>
 </blockquote>
 <h2 id="crypto">Crypto<a class="headerlink" href="#crypto" title="Permanent link">☍</a></h2>
 <h3 id="jc">jc<a class="headerlink" href="#jc" title="Permanent link">☍</a></h3>
 <details class="info" open="open">
 <summary>题目描述</summary>
 <p>jc is double!</p>
-<p><a href="../../../download/Packer.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/Packer.zip" download="">附件下载</a></p>
 </details>
 <ol>
 <li>
@@ -1950,14 +1950,14 @@
 </li>
 </ol>
 <blockquote>
-<p>官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-jc-100.pdf" download="">Crypto-jc-100.pdf</a></p>
+<p>官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-jc-100.pdf" download="">Crypto-jc-100.pdf</a></p>
 </blockquote>
 <h2 id="reverse">Reverse<a class="headerlink" href="#reverse" title="Permanent link">☍</a></h2>
 <h3 id="packer">Packer<a class="headerlink" href="#packer" title="Permanent link">☍</a></h3>
 <details class="info" open="open">
 <summary>题目描述</summary>
 <p>大冬天缺要脱外套？</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Packer.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Packer.zip" download="">附件下载</a></p>
 </details>
 <ol>
 <li>
@@ -1969,160 +1969,159 @@
 <p>将脱壳后的程序放入IDA中分析，发现程序中有一个<code>check_flag</code>函数。</p>
 <p><img alt="IDA" src="../assets/image-9.png" /></p>
 <p>进入函数查看反汇编代码，得到flag。</p>
-<p>````c
-  __int64 __fastcall check_flag(char *a1)
-  {
-__int64 result; // rax</p>
-<p>if ( *a1 != 102 )
-  return 0i64;
-result = (unsigned __int8)a1[1];
-if ( (_BYTE)result == 108 )
-{
-  result = (unsigned __int8)a1[2];
-  if ( (_BYTE)result == 97 )
-  {
-    result = (unsigned __int8)a1[3];
-    if ( (_BYTE)result == 103 )
-    {
-      result = (unsigned __int8)a1[4];
-      if ( (_BYTE)result == 123 )
-      {
-        result = (unsigned __int8)a1[5];
-        if ( (_BYTE)result == 115 )
-        {
-          result = (unsigned __int8)a1[6];
-          if ( (_BYTE)result == 65 )
-          {
-            result = (unsigned __int8)a1[7];
-            if ( (_BYTE)result == 100 )
-            {
-              result = (unsigned __int8)a1[8];
-              if ( (_BYTE)result == 102 )
-              {
-                result = (unsigned __int8)a1[9];
-                if ( (_BYTE)result == 95 )
-                {
-                  result = (unsigned __int8)a1[10];
-                  if ( (_BYTE)result == 102 )
-                  {
-                    result = (unsigned __int8)a1[11];
-                    if ( (_BYTE)result == 68 )
-                    {
-                      result = (unsigned __int8)a1[12];
-                      if ( (_BYTE)result == 102 )
-                      {
-                        result = (unsigned __int8)a1[13];
-                        if ( (_BYTE)result == 107 )
-                        {
-                          result = (unsigned __int8)a1[14];
-                          if ( (_BYTE)result == 108 )
-                          {
-                            result = (unsigned __int8)a1[15];
-                            if ( (_BYTE)result == 95 )
-                            {
-                              result = (unsigned __int8)a1[16];
-                              if ( (_BYTE)result == 70 )
-                              {
-                                result = (unsigned __int8)a1[17];
-                                if ( (_BYTE)result == 100 )
-                                {
-                                  result = (unsigned __int8)a1[18];
-                                  if ( (_BYTE)result == 102 )
-                                  {
-                                    result = (unsigned __int8)a1[19];
-                                    if ( (_BYTE)result == 125 )
-                                    {
-                                      printf("yes,this is a flag");
-                                      getchar();
-                                      return 0i64;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-return result;
-  }
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>编写脚本得到flag。
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>```python
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>flag = [102, 108, 97, 103, 123, 115, 65, 100, 102, 95, 102, 68, 102, 107, 108, 95, 70, 100, 102, 125]
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>flag = &#39;&#39;.join([chr(i) for i in flag])
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>print(flag)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">__int64</span><span class="w"> </span><span class="kr">__fastcall</span><span class="w"> </span><span class="n">check_flag</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">a1</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="kr">__int64</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"> </span><span class="c1">// rax</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">a1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">102</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="n">i64</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">108</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">97</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">103</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">          </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">115</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">          </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">65</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">            </span><span class="p">{</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">              </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">              </span><span class="p">{</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">                </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">102</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">                </span><span class="p">{</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">                  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">9</span><span class="p">];</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">                  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">                  </span><span class="p">{</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">                    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">102</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">                    </span><span class="p">{</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">                      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">                      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">68</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">                      </span><span class="p">{</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">                        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">12</span><span class="p">];</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">102</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">                        </span><span class="p">{</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">                          </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">                          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">107</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">                          </span><span class="p">{</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">                            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">14</span><span class="p">];</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">                            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">108</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">                            </span><span class="p">{</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">                              </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">15</span><span class="p">];</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">                              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">                              </span><span class="p">{</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">                                </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">                                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">                                </span><span class="p">{</span>
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">                                  </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">17</span><span class="p">];</span>
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">                                  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">                                  </span><span class="p">{</span>
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">                                    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">18</span><span class="p">];</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">                                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">102</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="w">                                    </span><span class="p">{</span>
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="w">                                      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="p">)</span><span class="n">a1</span><span class="p">[</span><span class="mi">19</span><span class="p">];</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="w">                                      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">_BYTE</span><span class="p">)</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">125</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a><span class="w">                                      </span><span class="p">{</span>
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a><span class="w">                                        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;yes,this is a flag&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a><span class="w">                                        </span><span class="n">getchar</span><span class="p">();</span>
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a><span class="w">                                        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="n">i64</span><span class="p">;</span>
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a><span class="w">                                      </span><span class="p">}</span>
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="w">                                    </span><span class="p">}</span>
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="w">                                  </span><span class="p">}</span>
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a><span class="w">                                </span><span class="p">}</span>
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="w">                              </span><span class="p">}</span>
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="w">                            </span><span class="p">}</span>
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="w">                          </span><span class="p">}</span>
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a><span class="w">                        </span><span class="p">}</span>
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a><span class="w">                      </span><span class="p">}</span>
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a><span class="w">                  </span><span class="p">}</span>
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="w">              </span><span class="p">}</span>
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a><span class="p">}</span>
+</code></pre></div>
+<p>编写脚本得到flag。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">flag</span> <span class="o">=</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">125</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">flag</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">flag</span><span class="p">])</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
 </code></pre></div>
 结果为<code>flag{sAdf_fDfkl_Fdf}</code>。</p>
 </li>
 </ol>
 <blockquote>
-<p>官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-Packer-100.pdf" download="">Reverse-Packer-100.pdf</a></p>
+<p>官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-Packer-100.pdf" download="">Reverse-Packer-100.pdf</a></p>
 </blockquote>
 <h2 id="_1">其他题目<a class="headerlink" href="#_1" title="Permanent link">☍</a></h2>
 <h3 id="wiredsound">WiredSound<a class="headerlink" href="#wiredsound" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>WiredSound</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/WiredSound1.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/WiredSound1.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-WiredSound-200.pdf" download="">Misc-WiredSound-200.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-WiredSound-200.pdf" download="">Misc-WiredSound-200.pdf</a></p>
 <hr />
 <h3 id="ezrsa">ezRSA<a class="headerlink" href="#ezrsa" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>简单的算法</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/ezRSA.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/ezRSA.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-ezRSA-200.pdf" download="">Crypto-ezRSA-200.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-ezRSA-200.pdf" download="">Crypto-ezRSA-200.pdf</a></p>
 <hr />
 <h3 id="easyobf">easyobf<a class="headerlink" href="#easyobf" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>ollvm</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/easyobf.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/easyobf.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-easyobf-200.pdf" download="">Re-easyobf-200.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-easyobf-200.pdf" download="">Re-easyobf-200.pdf</a></p>
 <hr />
 <h3 id="2admin">2admin<a class="headerlink" href="#2admin" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>2admin</p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-2admin-200.pdf" download="">Web-2admin-200.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-2admin-200.pdf" download="">Web-2admin-200.pdf</a></p>
 <hr />
 <h3 id="ezflaskapp">EzFlaskApp<a class="headerlink" href="#ezflaskapp" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>Try to rce me！</p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-EzFlaskApp-300.pdf" download="">Web-EzFlaskApp-300.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-EzFlaskApp-300.pdf" download="">Web-EzFlaskApp-300.pdf</a></p>
 <hr />
 <h3 id="fl0wer_g0d">fl0wer_g0d<a class="headerlink" href="#fl0wer_g0d" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>fl0wer_g0d</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/fl0wer_G0d.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/fl0wer_G0d.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/pwn-fl0werheap-200.pdf" download="">pwn-fl0werheap-200.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/pwn-fl0werheap-200.pdf" download="">pwn-fl0werheap-200.pdf</a></p>
 <hr />
 <h3 id="shellcode">shellcode<a class="headerlink" href="#shellcode" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>shellcode</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/shellcode.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/shellcode.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-shellcode-100.pdf" download="">PWN-shellcode-100.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-shellcode-100.pdf" download="">PWN-shellcode-100.pdf</a></p>
 <hr />
 <h3 id="partial_overwrite">Partial_overwrite<a class="headerlink" href="#partial_overwrite" title="Permanent link">☍</a></h3>
 <p>题目：</p>
 <p>Partial_overwrite</p>
-<p><a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Partial_overwrite.zip" download="">附件下载</a></p>
+<p><a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Partial_overwrite.zip" download="">附件下载</a></p>
 <p>官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-Partial_overwrite-100.pdf" download="">PWN-Partial_overwrite-100.pdf</a></p>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-Partial_overwrite-100.pdf" download="">PWN-Partial_overwrite-100.pdf</a></p>
         
         
               </article>
