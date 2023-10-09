@@ -8,7 +8,7 @@
 
     TENET
 
-    <a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/TENET.zip" download="">附件下载</a>
+    <a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/TENET.zip" download="">附件下载</a>
 
 1. 打开压缩包发现三张图片
 
@@ -63,7 +63,7 @@
 
     注意到字符串每隔一个字符取一位拼出的字符串为`flag{there_4re_n0_fr1ends_a7_dusk}`。
 
-> 官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-TENET-200.pdf" download="">Misc-TENET-200.pdf</a>
+> 官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-TENET-200.pdf" download="">Misc-TENET-200.pdf</a>
 
 ## Crypto
 
@@ -73,7 +73,7 @@
 
     jc is double!
 
-    <a href="../../../download/Packer.zip" download="">附件下载</a>
+    <a href="../../../../download/Packer.zip" download="">附件下载</a>
 
 1. 打开附件，得到`jc.txt`，放到浏览器控制台执行。
 
@@ -89,7 +89,7 @@
 
     结果为`flag{c6348be2adf745973b850af5b22163f4}`
 
-> 官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-jc-100.pdf" download="">Crypto-jc-100.pdf</a>
+> 官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-jc-100.pdf" download="">Crypto-jc-100.pdf</a>
 
 ## Reverse
 
@@ -99,7 +99,7 @@
 
     大冬天缺要脱外套？
 
-    <a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Packer.zip" download="">附件下载</a>
+    <a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Packer.zip" download="">附件下载</a>
 
 1. 检查程序发现UPX，利用脚本脱壳处理。
 
@@ -113,94 +113,94 @@
 
     进入函数查看反汇编代码，得到flag。
 
-    ````c
-  __int64 __fastcall check_flag(char *a1)
-  {
-    __int64 result; // rax
-
-    if ( *a1 != 102 )
-      return 0i64;
-    result = (unsigned __int8)a1[1];
-    if ( (_BYTE)result == 108 )
-    {
-      result = (unsigned __int8)a1[2];
-      if ( (_BYTE)result == 97 )
-      {
-        result = (unsigned __int8)a1[3];
-        if ( (_BYTE)result == 103 )
+    ```c
+        __int64 __fastcall check_flag(char *a1)
         {
-          result = (unsigned __int8)a1[4];
-          if ( (_BYTE)result == 123 )
-          {
-            result = (unsigned __int8)a1[5];
-            if ( (_BYTE)result == 115 )
+            __int64 result; // rax
+
+            if ( *a1 != 102 )
+                return 0i64;
+            result = (unsigned __int8)a1[1];
+            if ( (_BYTE)result == 108 )
             {
-              result = (unsigned __int8)a1[6];
-              if ( (_BYTE)result == 65 )
-              {
-                result = (unsigned __int8)a1[7];
-                if ( (_BYTE)result == 100 )
+                result = (unsigned __int8)a1[2];
+                if ( (_BYTE)result == 97 )
                 {
-                  result = (unsigned __int8)a1[8];
-                  if ( (_BYTE)result == 102 )
-                  {
-                    result = (unsigned __int8)a1[9];
-                    if ( (_BYTE)result == 95 )
+                    result = (unsigned __int8)a1[3];
+                    if ( (_BYTE)result == 103 )
                     {
-                      result = (unsigned __int8)a1[10];
-                      if ( (_BYTE)result == 102 )
-                      {
-                        result = (unsigned __int8)a1[11];
-                        if ( (_BYTE)result == 68 )
+                        result = (unsigned __int8)a1[4];
+                        if ( (_BYTE)result == 123 )
                         {
-                          result = (unsigned __int8)a1[12];
-                          if ( (_BYTE)result == 102 )
-                          {
-                            result = (unsigned __int8)a1[13];
-                            if ( (_BYTE)result == 107 )
+                            result = (unsigned __int8)a1[5];
+                            if ( (_BYTE)result == 115 )
                             {
-                              result = (unsigned __int8)a1[14];
-                              if ( (_BYTE)result == 108 )
-                              {
-                                result = (unsigned __int8)a1[15];
-                                if ( (_BYTE)result == 95 )
+                                result = (unsigned __int8)a1[6];
+                                if ( (_BYTE)result == 65 )
                                 {
-                                  result = (unsigned __int8)a1[16];
-                                  if ( (_BYTE)result == 70 )
-                                  {
-                                    result = (unsigned __int8)a1[17];
+                                    result = (unsigned __int8)a1[7];
                                     if ( (_BYTE)result == 100 )
                                     {
-                                      result = (unsigned __int8)a1[18];
-                                      if ( (_BYTE)result == 102 )
-                                      {
-                                        result = (unsigned __int8)a1[19];
-                                        if ( (_BYTE)result == 125 )
+                                        result = (unsigned __int8)a1[8];
+                                        if ( (_BYTE)result == 102 )
                                         {
-                                          printf("yes,this is a flag");
-                                          getchar();
-                                          return 0i64;
+                                            result = (unsigned __int8)a1[9];
+                                            if ( (_BYTE)result == 95 )
+                                            {
+                                                result = (unsigned __int8)a1[10];
+                                                if ( (_BYTE)result == 102 )
+                                                {
+                                                    result = (unsigned __int8)a1[11];
+                                                    if ( (_BYTE)result == 68 )
+                                                    {
+                                                        result = (unsigned __int8)a1[12];
+                                                        if ( (_BYTE)result == 102 )
+                                                        {
+                                                            result = (unsigned __int8)a1[13];
+                                                            if ( (_BYTE)result == 107 )
+                                                            {
+                                                                result = (unsigned __int8)a1[14];
+                                                                if ( (_BYTE)result == 108 )
+                                                                {
+                                                                    result = (unsigned __int8)a1[15];
+                                                                    if ( (_BYTE)result == 95 )
+                                                                    {
+                                                                        result = (unsigned __int8)a1[16];
+                                                                        if ( (_BYTE)result == 70 )
+                                                                        {
+                                                                            result = (unsigned __int8)a1[17];
+                                                                            if ( (_BYTE)result == 100 )
+                                                                            {
+                                                                                result = (unsigned __int8)a1[18];
+                                                                                if ( (_BYTE)result == 102 )
+                                                                                {
+                                                                                    result = (unsigned __int8)a1[19];
+                                                                                    if ( (_BYTE)result == 125 )
+                                                                                    {
+                                                                                        printf("yes,this is a flag");
+                                                                                        getchar();
+                                                                                        return 0i64;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
-                                      }
                                     }
-                                  }
                                 }
-                              }
                             }
-                          }
                         }
-                      }
                     }
-                  }
                 }
-              }
             }
-          }
+            return result;
         }
-      }
-    }
-    return result;
-  }
     ```
 
     编写脚本得到flag。
@@ -212,7 +212,7 @@
     ```
     结果为`flag{sAdf_fDfkl_Fdf}`。
 
-> 官方题解：<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-Packer-100.pdf" download="">Reverse-Packer-100.pdf</a>
+> 官方题解：<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-Packer-100.pdf" download="">Reverse-Packer-100.pdf</a>
 
 ## 其他题目
 
@@ -222,10 +222,10 @@
 
 WiredSound
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/WiredSound1.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/WiredSound1.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-WiredSound-200.pdf" download="">Misc-WiredSound-200.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Misc-WiredSound-200.pdf" download="">Misc-WiredSound-200.pdf</a>
 
 ---
 
@@ -235,10 +235,10 @@ WiredSound
 
 简单的算法
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/ezRSA.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/ezRSA.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-ezRSA-200.pdf" download="">Crypto-ezRSA-200.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Crypto-ezRSA-200.pdf" download="">Crypto-ezRSA-200.pdf</a>
 
 ---
 
@@ -248,10 +248,10 @@ WiredSound
 
 ollvm
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/easyobf.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/easyobf.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-easyobf-200.pdf" download="">Re-easyobf-200.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Re-easyobf-200.pdf" download="">Re-easyobf-200.pdf</a>
 
 ---
 
@@ -262,7 +262,7 @@ ollvm
 2admin
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-2admin-200.pdf" download="">Web-2admin-200.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-2admin-200.pdf" download="">Web-2admin-200.pdf</a>
 
 ---
 
@@ -273,7 +273,7 @@ ollvm
 Try to rce me！
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-EzFlaskApp-300.pdf" download="">Web-EzFlaskApp-300.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/Web-EzFlaskApp-300.pdf" download="">Web-EzFlaskApp-300.pdf</a>
 
 ---
 
@@ -283,10 +283,10 @@ Try to rce me！
 
 fl0wer_g0d
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/fl0wer_G0d.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/fl0wer_G0d.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/pwn-fl0werheap-200.pdf" download="">pwn-fl0werheap-200.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/pwn-fl0werheap-200.pdf" download="">pwn-fl0werheap-200.pdf</a>
 
 ---
 
@@ -296,10 +296,10 @@ fl0wer_g0d
 
 shellcode
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/shellcode.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/shellcode.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-shellcode-100.pdf" download="">PWN-shellcode-100.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-shellcode-100.pdf" download="">PWN-shellcode-100.pdf</a>
 
 ---
 
@@ -309,7 +309,7 @@ shellcode
 
 Partial_overwrite
 
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Partial_overwrite.zip" download="">附件下载</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/Partial_overwrite.zip" download="">附件下载</a>
 
 官方题解：
-<a href="../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-Partial_overwrite-100.pdf" download="">PWN-Partial_overwrite-100.pdf</a>
+<a href="../../../../download/WriteUp/2023年西北工业大学“网安先锋者”大赛/“网安先锋者”大赛试题/PWN-Partial_overwrite-100.pdf" download="">PWN-Partial_overwrite-100.pdf</a>
