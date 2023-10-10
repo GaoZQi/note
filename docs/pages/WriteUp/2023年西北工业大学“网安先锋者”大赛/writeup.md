@@ -28,7 +28,7 @@
 
     ![part3](assets/image-2.png)
 
-3. 根据压缩包的名称'part1-part2-part3.zip'，可以得出密码为`SATOR-AREPO-OPERA`。
+3. 根据压缩包的名称`part1-part2-part3.zip`，可以得出密码为`SATOR-AREPO-OPERA`。
 
     打卡压缩包，得到一个图片和一个压缩包。
 
@@ -44,7 +44,7 @@
     82, 87, 75, 80, 99, 87, 84, 76, 21, 82, 72, 71, 83, 68, 82, 23, 64, 20, 12, 16, 8, 60, 83
     ```
 
-5. 根据文件名推测为凯撒密码，通过观察发现其偏移量逐个字母加一，写出解密脚本：
+5. 根据文件名推测为凯撒密码，通过观察发现其偏移量逐个字母减一，写出解密脚本：
 
     ```python
     flag=[82, 87, 75, 80, 99, 87, 84, 76, 21, 82, 72, 71, 83, 68, 82, 23, 64, 20, 12, 16, 8, 60, 83]
@@ -109,78 +109,88 @@
 
 2. 将脱壳后的程序放入IDA中分析，发现程序中有一个`check_flag`函数。
 
-    ![IDA](assets/image-9.png)
+```c
+    int __cdecl main(int argc, const char **argv, const char **envp)
+    {
+        char v4[272]; // [rsp+20h] [rbp-60h] BYREF
+
+        _main(argc, argv, envp);
+        printf("Input flag: ");
+        scanf("%s", v4);
+        check_flag(v4);
+        return 0;
+    }
+```
 
     进入函数查看反汇编代码，得到flag。
 
     ```c
-        __int64 __fastcall check_flag(char *a1)
-        {
-            __int64 result; // rax
+    __int64 __fastcall check_flag(char *a1)
+    {
+        __int64 result; // rax
 
-            if ( *a1 != 102 )
-                return 0i64;
-            result = (unsigned __int8)a1[1];
-            if ( (_BYTE)result == 108 )
+        if ( *a1 != 102 )
+            return 0i64;
+        result = (unsigned __int8)a1[1];
+        if ( (_BYTE)result == 108 )
+        {
+            result = (unsigned __int8)a1[2];
+            if ( (_BYTE)result == 97 )
             {
-                result = (unsigned __int8)a1[2];
-                if ( (_BYTE)result == 97 )
+                result = (unsigned __int8)a1[3];
+                if ( (_BYTE)result == 103 )
                 {
-                    result = (unsigned __int8)a1[3];
-                    if ( (_BYTE)result == 103 )
+                    result = (unsigned __int8)a1[4];
+                    if ( (_BYTE)result == 123 )
                     {
-                        result = (unsigned __int8)a1[4];
-                        if ( (_BYTE)result == 123 )
+                        result = (unsigned __int8)a1[5];
+                        if ( (_BYTE)result == 115 )
                         {
-                            result = (unsigned __int8)a1[5];
-                            if ( (_BYTE)result == 115 )
+                            result = (unsigned __int8)a1[6];
+                            if ( (_BYTE)result == 65 )
                             {
-                                result = (unsigned __int8)a1[6];
-                                if ( (_BYTE)result == 65 )
+                                result = (unsigned __int8)a1[7];
+                                if ( (_BYTE)result == 100 )
                                 {
-                                    result = (unsigned __int8)a1[7];
-                                    if ( (_BYTE)result == 100 )
+                                    result = (unsigned __int8)a1[8];
+                                    if ( (_BYTE)result == 102 )
                                     {
-                                        result = (unsigned __int8)a1[8];
-                                        if ( (_BYTE)result == 102 )
+                                        result = (unsigned __int8)a1[9];
+                                        if ( (_BYTE)result == 95 )
                                         {
-                                            result = (unsigned __int8)a1[9];
-                                            if ( (_BYTE)result == 95 )
+                                            result = (unsigned __int8)a1[10];
+                                            if ( (_BYTE)result == 102 )
                                             {
-                                                result = (unsigned __int8)a1[10];
-                                                if ( (_BYTE)result == 102 )
+                                                result = (unsigned __int8)a1[11];
+                                                if ( (_BYTE)result == 68 )
                                                 {
-                                                    result = (unsigned __int8)a1[11];
-                                                    if ( (_BYTE)result == 68 )
+                                                    result = (unsigned __int8)a1[12];
+                                                    if ( (_BYTE)result == 102 )
                                                     {
-                                                        result = (unsigned __int8)a1[12];
-                                                        if ( (_BYTE)result == 102 )
+                                                        result = (unsigned __int8)a1[13];
+                                                        if ( (_BYTE)result == 107 )
                                                         {
-                                                            result = (unsigned __int8)a1[13];
-                                                            if ( (_BYTE)result == 107 )
+                                                            result = (unsigned __int8)a1[14];
+                                                            if ( (_BYTE)result == 108 )
                                                             {
-                                                                result = (unsigned __int8)a1[14];
-                                                                if ( (_BYTE)result == 108 )
+                                                                result = (unsigned __int8)a1[15];
+                                                                if ( (_BYTE)result == 95 )
                                                                 {
-                                                                    result = (unsigned __int8)a1[15];
-                                                                    if ( (_BYTE)result == 95 )
+                                                                    result = (unsigned __int8)a1[16];
+                                                                    if ( (_BYTE)result == 70 )
                                                                     {
-                                                                        result = (unsigned __int8)a1[16];
-                                                                        if ( (_BYTE)result == 70 )
+                                                                        result = (unsigned __int8)a1[17];
+                                                                        if ( (_BYTE)result == 100 )
                                                                         {
-                                                                            result = (unsigned __int8)a1[17];
-                                                                            if ( (_BYTE)result == 100 )
+                                                                            result = (unsigned __int8)a1[18];
+                                                                            if ( (_BYTE)result == 102 )
                                                                             {
-                                                                                result = (unsigned __int8)a1[18];
-                                                                                if ( (_BYTE)result == 102 )
+                                                                                result = (unsigned __int8)a1[19];
+                                                                                if ( (_BYTE)result == 125 )
                                                                                 {
-                                                                                    result = (unsigned __int8)a1[19];
-                                                                                    if ( (_BYTE)result == 125 )
-                                                                                    {
-                                                                                        printf("yes,this is a flag");
-                                                                                        getchar();
-                                                                                        return 0i64;
-                                                                                    }
+                                                                                    printf("yes,this is a flag");
+                                                                                    getchar();
+                                                                                    return 0i64;
                                                                                 }
                                                                             }
                                                                         }
@@ -199,8 +209,9 @@
                     }
                 }
             }
-            return result;
         }
+        return result;
+    }
     ```
 
     编写脚本得到flag。

@@ -1,5 +1,7 @@
 # 更新计划
 
+<a href="../../css/giscus.css" download="">Reverse-Packer-100.pdf</a>
+
 ## Bug列表
 
 !!! bug "CSS显示异常"
