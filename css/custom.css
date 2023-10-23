@@ -2,6 +2,7 @@
 :root {
     /* --md-text-font: '-apple-system','Noto Sans SC', 'Source Han Sans', sans-serif; */
     --md-text-font: 'Noto Serif SC';
+    /* --md-text-font: 'MiSans'; */
     /* 'Roboto Slab', */
     --md-code-font: "JetBrains Mono", 'Noto Sans SC', 'Source Han Sans';
 }

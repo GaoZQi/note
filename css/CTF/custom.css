@@ -98,16 +98,15 @@ nav.md-footer__inner.md-grid {
 
 /* FIXME 仅对Chrome内核浏览器有效，经测试Safari和Firefox存在显示错误 */
 /* 填充背景 */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
 
-    /* 在这里添加只在Safari浏览器中执行的CSS代码 */
     .md-nav--secondary .md-nav__title {
         -webkit-transform: translateZ(1px);
         -moz-transform: translateZ(1px);
         -o-transform: translateZ(1px);
         transform: translateZ(1px);
     }
-}
+} */
 
 body,
 footer {
@@ -204,10 +203,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
-        -webkit-text-decoration-line: underline !important;
+        /* -webkit-text-decoration-line: underline !important;
         -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
         -webkit-text-decoration-style: solid !important;
-        -webkit-text-decoration-thickness: 2px !important;
+        -webkit-text-decoration-thickness: 2px !important; */
     }
 
     .md-nav--secondary .md-nav__title {
@@ -222,10 +221,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
-        -webkit-text-decoration-line: underline !important;
+        /* -webkit-text-decoration-line: underline !important;
         -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
         -webkit-text-decoration-style: solid !important;
-        -webkit-text-decoration-thickness: 2px !important;
+        -webkit-text-decoration-thickness: 2px !important; */
         color: white;
     }
 
@@ -250,10 +249,10 @@ footer::before {
         z-index: 1;
         font-size: 150%;
         text-decoration: underline var(--md-accent-fg-color);
-        -webkit-text-decoration-line: underline !important;
+        /* -webkit-text-decoration-line: underline !important;
         -webkit-text-decoration-color: var(--md-accent-fg-color) !important;
         -webkit-text-decoration-style: solid !important;
-        -webkit-text-decoration-thickness: 2px !important;
+        -webkit-text-decoration-thickness: 2px !important; */
         color: white;
     }
 
