@@ -544,3 +544,14 @@ span.md-nav__icon.md-icon:hover {
 .md-nav--primary .md-nav__title {
     background-color: var(--md-footer-bg-color);
 }
+
+.md-typeset a, .md-typeset a {
+    background: linear-gradient(to right, var(--md-accent-fg-color),var(--md-accent-fg-color)) right bottom no-repeat;
+    background-size: 0px 2px;
+    transition: background-size 0.5s ease-in-out 0s,text-shadow 0.5s ease-in-out 0s;
+}
+.md-typeset a:hover, .md-typeset a:hover {
+    background-position: left bottom;
+    background-size: 100% 2px;
+    text-shadow: var(--md-accent-fg-color) 0px 0px 1px;
+}
