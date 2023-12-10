@@ -190,8 +190,8 @@ nav:
       - 2023年第三届陕西省大学生网络安全技能大赛--本科高校组: pages/WriteUp/2023年第三届陕西省大学生网络安全技能大赛--本科高校组/writeup.md
       - 2023年网络空间安全实验技能竞赛: pages/WriteUp/2023年网络空间安全实验技能竞赛/writeup.md
       - NSCTF四校联合CTF邀请赛: pages/WriteUp/NSCTF四校联合CTF邀请赛/writeup.md
-
-
+      - 2023年西北工业大学“网安先锋者”大赛: pages/WriteUp/2023年西北工业大学“网安先锋者”大赛/writeup.md
+      - 第三届西北工业大学大学生网络空间安全挑战赛: pages/WriteUp/第三届西北工业大学大学生网络空间安全挑战赛/writeup.md
 
   - 网站:
       - pages/Website/index.md
@@ -210,6 +210,9 @@ nav:
 
   - 笔记:
       - pages/Notes/index.md
+      - Mkdocs 教程:
+        - pages/Notes/Mkdocs/index.md
+        - 开始使用 Mkdocs 搭建个人网站: pages/Notes/Mkdocs/start/mkdocs-start.md
 
   - 存档:
       - pages/Archive/index.md
