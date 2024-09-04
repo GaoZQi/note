@@ -4,10 +4,7 @@ hide:
     - statistics
     # - toc
 ---
-# Website
-
-!!! info "网站"
-    记录网站的搭建过程
+# 网站搭建
 
 ## 参考资料
 

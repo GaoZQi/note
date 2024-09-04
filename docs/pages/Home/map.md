@@ -1,1 +1,0 @@
-<img src="https://pic4.zhimg.com/v2-e3c0d4a915e7c1e428ad866452783c97_b.webp">
