@@ -10,7 +10,7 @@ statistics: True
 
 <link rel="stylesheet" href="css/index.css">
 <div class="center-container">
-  <span class="note-text">GaoZQi's Note</span>
+  <span class="note-text">GaoZQi's Note (OLD)</span>
 </div>
 
 ---
