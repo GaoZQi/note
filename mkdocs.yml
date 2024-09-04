@@ -53,23 +53,14 @@ theme:
         name : 暗色模式
 
 extra_css:
-  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
-  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
-  # - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  # - https://cdn.tonycrane.cc/utils/katex.min.css
-  # - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
-  # - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
-  # - css/tasklist.css
   - css/fonts.css
   - css/custom.css
-  # - css/img.css
   - css/admonition_old.css
   - css/flink.css
   - css/block-link.css
 
 extra_javascript:
   - js/mathjax.js
-  # - js/img.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -85,37 +76,12 @@ plugins:
       enable_creation_date: true
       exclude:
           - index.md
-          - pages/Home/map.md
           - pages/Website/MkDocs/mkdocs-material/theme.md
           - pages/CTF/index.md
           - pages/Notes/index.md
-          - pages/Archive/index.md
-          - pages/Other/index.md
           - pages/CTF/PWN/index.md
   - statistics:
       codelines_per_minute: 10
-      # page_check_metadata: data
-  # - changelog:
-  #     changelog: docs\pages\Home\changelog.yml
-  - encryptcontent:
-      title_prefix: "🫥 "
-      remember_password: True
-      summary: '⚠️ 文章已加密'
-      placeholder: '输入口令'
-      # placeholder_user: User
-      password_button_text: '校验'
-      decryption_failure_message: '口令错误或没有权限！'
-      encryption_info_message: '输入口令以查看该页面。'
-      password_button: True
-
-      encrypted_something:
-          mkdocs-encrypted-toc: [div, id]
-      # encrypted_something:
-      # mkdocs-encrypted-toc: [nav, class]
-          # myToc: [div, id]
-          # myTocButton: [div, id]
-      # password_file: 'passwords.yml'
-
 
 
 markdown_extensions:
@@ -159,10 +125,10 @@ markdown_extensions:
   - pymdownx.arithmatex: # 数学公式
       generic: true # 通用
   - pymdownx.emoji: # emoji
-      emoji_index: !!python/name:materialx.emoji.twemoji # emoji索引
-      emoji_generator: !!python/name:materialx.emoji.to_svg # emoji生成器
+        emoji_index: !!python/name:material.extensions.emoji.twemoji # emoji索引
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+              # emoji生成器
 
-# 导航栏
 nav:
   - 主页: index.md
 
