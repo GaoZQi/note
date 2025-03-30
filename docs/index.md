@@ -6,9 +6,9 @@ hide:
 statistics: True
 ---
 
-# U•ェ•*U
+# U•ェ•\*U
 
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="old_theme/css/index.css">
 <div class="center-container">
   <span class="note-text">GaoZQi's Note (OLD)</span>
 </div>

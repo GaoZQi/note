@@ -2383,4 +2383,4 @@ Powerlevel10k是一个zsh主题，可以自定义配置，提供了丰富的配�
 
 ### IDA Pro
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../old_theme/css/CTF/custom.css">

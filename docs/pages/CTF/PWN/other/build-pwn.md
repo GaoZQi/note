@@ -1,4 +1,4 @@
-# 利用Docker技术部署PWN题目
+# 利用 Docker 技术部署 PWN 题目
 
 !!! quote "参考文章"
 
@@ -6,7 +6,7 @@
 
     [Docker的使用 :material-arrow-bottom-right-thick:](../../Docker/index.md)
 
-## 制作Docker镜像
+## 制作 Docker 镜像
 
 1. 拉取镜像
 
@@ -21,9 +21,9 @@
     ```
 
     1. `-it`：交互式运行容器
-    
+
         `ubuntu:16.04`：镜像名字
-        
+
         `/bin/bash`：容器启动后执行的命令
 
 3. 安装工具
@@ -43,16 +43,16 @@
 5. 提交容器
 
     ```bash
-    docker commit CONTAINER_HASH pwn_server:16.04 #参数含义(1) 
+    docker commit CONTAINER_HASH pwn_server:16.04 #参数含义(1)
     ```
 
-    1. `CONTAINER_HASH`：容器的hash值
+    1. `CONTAINER_HASH`：容器的 hash 值
 
         `pwn_server:16.04`：镜像名字
 
-## 部署PWN题目
+## 部署 PWN 题目
 
-1. 创建目录
+1.  创建目录
 
     ```bash
     mkdir -p /home/pwn_server
@@ -74,13 +74,13 @@
 
         3. 启动container时运行的脚本
 
-2. 创建flag文件
+2.  创建 flag 文件
 
     ```bash
     echo "flag{test}" > /home/pwn_server/flag
     ```
 
-3. 创建xinetd配置文件
+3.  创建 xinetd 配置文件
 
     ```bash title="pxi"
     service pwn #服务名
@@ -107,13 +107,13 @@
         #per_source  = 5 #link ip limit
 
         #log warning die
-        log_on_success  = PID HOST EXIT DURATION    
-        log_on_failure  = HOST ATTEMPT 
+        log_on_success  = PID HOST EXIT DURATION
+        log_on_failure  = HOST ATTEMPT
         log_type =FILE /var/log/myservice.log 8388608 15728640
     }
     ```
 
-4. 创建启动脚本
+4.  创建启动脚本
 
     ```bash title="start.sh"
     #!/bin/sh
@@ -126,13 +126,12 @@
     # /bin/sh
     ```
 
-    1. `555`  `r -xr -xr -x` 所有组都是读取和执行权限
-
+    1. `555` `r -xr -xr -x` 所有组都是读取和执行权限
 
 ## 启动容器
 
 1. 调试题目
-    用来调试题目环境。启动container之后会有一个交互式的shell，可以用来进行多种后续操作。
+   用来调试题目环境。启动 container 之后会有一个交互式的 shell，可以用来进行多种后续操作。
 
     ```bash
     docker run -p $PORT:8888 -v `pwd`:/home/pwn_server -ti $IMAGE_NAME /bin/sh #参数含义(1)
@@ -144,7 +143,7 @@
 
 2. 启动题目
 
-    用来部署题目环境。启动container之后会自动启动`xinetd`服务，监听`8888`端口。
+    用来部署题目环境。启动 container 之后会自动启动`xinetd`服务，监听`8888`端口。
 
     ```bash
     chmod 555 -R . && docker run --name $NAME -p $PORT:8888 -v `pwd`:/home/pwn_server -d $IMAGE_NAME /home/pwn_server/start.sh #参数含义(1)
@@ -156,4 +155,4 @@
 
         `$IMAGE_NAME`为使用的`image`的名称
 
-<link rel="stylesheet" href="../../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../../old_theme/css/CTF/custom.css">

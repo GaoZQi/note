@@ -1,10 +1,10 @@
-# Docker容器的使用
+# Docker 容器的使用
 
 ## 构造容器流程
 
 1. 拉取镜像
 
-    在Docker Hub上搜索需要的镜像，如ubuntu:18.04，然后拉取镜像：
+    在 Docker Hub 上搜索需要的镜像，如 ubuntu:18.04，然后拉取镜像：
 
     ```bash
     docker pull ubuntu:18.04
@@ -18,13 +18,13 @@
     docker run -it --name ubuntu ubuntu:18.04 /bin/bash
     ```
 
-    + `-i`：表示以交互模式运行容器
-    + `-t`：表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即分配一个伪终端。
-    + `--name`：为创建的容器命名
-    + `ubuntu:18.04`：表示用 ubuntu:18.04 镜像创建容器
-    + `/bin/bash`：放在镜像名后的是命令，通过该命令可以开启交互式`shell`。
+    - `-i`：表示以交互模式运行容器
+    - `-t`：表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即分配一个伪终端。
+    - `--name`：为创建的容器命名
+    - `ubuntu:18.04`：表示用 ubuntu:18.04 镜像创建容器
+    - `/bin/bash`：放在镜像名后的是命令，通过该命令可以开启交互式`shell`。
 
-    如果是web应用，可以使用`docker port`命令来查看映射的端口：
+    如果是 web 应用，可以使用`docker port`命令来查看映射的端口：
 
     ```bash
     docker port [container id]
@@ -77,4 +77,4 @@ docker export [container id] > [file name].tar
 docker import [file name].tar [image name]
 ```
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../old_theme/css/CTF/custom.css">

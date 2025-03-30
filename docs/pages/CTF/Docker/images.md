@@ -1,4 +1,4 @@
-# Docker镜像的使用
+# Docker 镜像的使用
 
 ## 查看镜像列表
 
@@ -10,11 +10,11 @@ docker images
 
 其中，每一列的含义如下：
 
-+ REPOSITORY：表示镜像的仓库源
-+ TAG：镜像的标签
-+ IMAGE ID：镜像ID
-+ CREATED：镜像创建时间
-+ SIZE：镜像大小
+-   REPOSITORY：表示镜像的仓库源
+-   TAG：镜像的标签
+-   IMAGE ID：镜像 ID
+-   CREATED：镜像创建时间
+-   SIZE：镜像大小
 
 ## 拉取镜像
 
@@ -50,8 +50,8 @@ docker rmi [image id]
 
 当仓库中的镜像无法满足要求，可以通过下面两种方式来构造镜像：
 
-+ 从已经创建的容器中更新镜像，并且提交这个镜像
-+ 使用 Dockerfile 指令来创建一个新的镜像
+-   从已经创建的容器中更新镜像，并且提交这个镜像
+-   使用 Dockerfile 指令来创建一个新的镜像
 
 ### 从容器中更新镜像
 
@@ -109,4 +109,4 @@ docker rmi [image id]
 docker tag [image id] [image name]:[tag]
 ```
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../old_theme/css/CTF/custom.css">

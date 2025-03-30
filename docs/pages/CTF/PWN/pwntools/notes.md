@@ -2,35 +2,35 @@
 
 ## 引入模块
 
-1. 全功优化后的pwn模块
+1. 全功优化后的 pwn 模块
 
     ```python
     import pwn
     from pwn import *
     ```
 
-2. 普通的Python库
+2. 普通的 Python 库
 
     ```python
     import pwnlib.util
     ```
 
-## pwntools安装略
+## pwntools 安装略
 
 ## 基础操作
 
 ### 连接程序
 
 1. 本地程序
-2. 远程TCP/UDP链接
-3. SSH链接
-4. 串行端口I/O
+2. 远程 TCP/UDP 链接
+3. SSH 链接
+4. 串行端口 I/O
 
-### 基础I/O
+### 基础 I/O
 
 #### 接收数据
 
-``` python
+```python
 recv(n) # 接收任意数量的可用字节
 recvline() # 接收数据，直到遇到换行符
 recvuntil(delim) # 接收数据，直到找到分隔符
@@ -45,11 +45,13 @@ clean() # 丢弃所有缓冲数据
 send(data) # 发送数据
 sendline(line) # 发送数据加换行符
 ```
+
 <!-- NOTE 没看懂这个  -->
+
 ### 操作整数
 
-+ `pack(int)` - 发送一个字大小的打包整数
-+ `unpack()` - 接收和解压缩字大小的整数
+-   `pack(int)` - 发送一个字大小的打包整数
+-   `unpack()` - 接收和解压缩字大小的整数
 
 ### 连接流程
 
@@ -64,4 +66,4 @@ io.recvline()
 # 'Hello, world\n'
 ```
 
-<link rel="stylesheet" href="../../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../../old_theme/css/CTF/custom.css">

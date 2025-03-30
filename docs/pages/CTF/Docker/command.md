@@ -704,4 +704,4 @@ docker version [OPTIONS]
 docker info [OPTIONS]
 ```
 
-<link rel="stylesheet" href="../../../../css/CTF/custom.css">
+<link rel="stylesheet" href="../../../../old_theme/css/CTF/custom.css">

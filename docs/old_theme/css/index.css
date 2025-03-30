@@ -3,7 +3,7 @@
 /* Reset default margin and padding to avoid inconsistencies across browsers */
 body,
 html {
-    min-height: 100vh; 
+    min-height: 100vh;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -13,6 +13,7 @@ b {
     /* text-decoration: underline #ff6a1a; */
     border-bottom: 2px solid var(--md-accent-fg-color);
 }
+
 /* Style for the container that will center its content */
 .center-container {
     display: flex;
@@ -22,7 +23,7 @@ b {
     align-items: flex-start;
     /* Change back to 'flex-start' */
     height: 100%;
-    color:var(--md-accent-fg-color);
+    color: var(--md-link-color);
     font-weight: bold;
     position: relative;
     margin-top: 45vh;
